@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { FeaturesSection, ReviewsSection, FAQSection, GrowthSection, PricingSection, TestimonialsSection } from "@/components";
 import { ROUTES } from "@/utils/constants";
+import { Category } from "../ui/Category";
 
 export function LandingPage() {
   const user = {};
@@ -72,6 +73,9 @@ export function LandingPage() {
 
       {/* Features Section */}
       <FeaturesSection />
+
+      {/* Category Section */}
+      <Category />
 
       {/* Reviews Section */}
       {appConfig.reviews.visible && <ReviewsSection />}
