@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Category } from "@/components/ui/Category";
 import categoriesJson from "@/utils/categories.json";
-import { Eye, Mail, Sparkles, X } from "lucide-react";
+import { Eye, ImageIcon, Mail, Sparkles, X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { use, useState } from "react"
@@ -128,7 +128,7 @@ function ImageCard({
     categoryName,
     gradientOverlay,
     onMailto,
-    onView
+    onView,
 }: {
     image: string;
     categoryName: string;
@@ -136,21 +136,36 @@ function ImageCard({
     onMailto: () => void;
     onView: () => void;
 }) {
+    const [imageError, setImageError] = useState(false);
 
     return (
         <Card className="group relative overflow-hidden border-0 h-full cursor-pointer transform-gpu transition-all duration-500 hover:shadow-2xl hover:shadow-black/25 hover:-translate-y-1">
             {/* Image */}
             <div className="relative h-full overflow-hidden">
-                <Image
-                    src={image}
-                    alt={`${categoryName} dupatta`}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                />
+                {!imageError ? (
+                    <Image
+                        src={image}
+                        alt={`${categoryName} dupatta`}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                        onError={() => setImageError(true)}
+                    />
+                ) : (
+                    // Placeholder for broken images
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                        <div className="text-center text-gray-400">
+                            <ImageIcon className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                            <p className="text-sm font-medium">Broken image</p>
+                            <p className="text-xs mt-1">{categoryName}</p>
+                        </div>
+                    </div>
+                )}
 
                 {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div
+                    className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
 
                 {/* Content overlay */}
                 <div className="absolute inset-0 flex flex-col justify-between p-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
@@ -188,7 +203,9 @@ function ImageCard({
                     {/* Bottom actions */}
                     <div className="space-y-3">
                         <div className="text-center">
-                            <h3 className="text-white font-semibold text-sm mb-1 uppercase">{categoryName}</h3>
+                            <h3 className="text-white font-semibold text-sm mb-1 uppercase">
+                                {categoryName}
+                            </h3>
                             <p className="text-white/80 text-xs">Premium Quality</p>
                         </div>
 

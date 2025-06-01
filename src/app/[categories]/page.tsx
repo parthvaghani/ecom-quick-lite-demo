@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Category } from "@/components/ui/Category";
 import categoriesJson from "@/utils/categories.json";
-import { ArrowRight, Sparkles, Grid3X3, Mail, Eye, X } from "lucide-react";
+import { ArrowRight, Sparkles, Grid3X3, Mail, Eye, X, ImageIcon } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { use, useState } from "react";
@@ -326,17 +326,31 @@ function ImageCard({
   onMailto: () => void;
   onView: () => void;
 }) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <Card className="group relative overflow-hidden border-0 h-full cursor-pointer transform-gpu transition-all duration-500 hover:shadow-2xl hover:shadow-black/25 hover:-translate-y-1">
       {/* Image */}
       <div className="relative h-full overflow-hidden">
-        <Image
-          src={image}
-          alt={`${categoryName} dupatta`}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-        />
+        {!imageError ? (
+          <Image
+            src={image}
+            alt={`${categoryName} dupatta`}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          // Placeholder for broken images
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+            <div className="text-center text-gray-400">
+              <ImageIcon className="w-12 h-12 mx-auto mb-2 opacity-50" />
+              <p className="text-sm font-medium">Broken image</p>
+              <p className="text-xs mt-1">{categoryName}</p>
+            </div>
+          </div>
+        )}
 
         {/* Gradient overlay */}
         <div
