@@ -14,14 +14,13 @@ export function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Background Pattern */}
+      <section className="relative overflow-hidden h-[calc(100vh-4rem)] flex items-center">        {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-white/10 bg-grid-pattern dark:bg-grid-slate-800/10" />
 
         {/* Animated Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-teal-400/90 to-pink-600/90 from-orange-800/90 to-pink-800/90 bg-[length:200%_200%] animate-gradient-shift" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-28">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <Badge
               variant="outline"
@@ -48,7 +47,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* Category Section */}
       <Category />
 

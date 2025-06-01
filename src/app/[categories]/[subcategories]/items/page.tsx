@@ -72,8 +72,8 @@ export default function SubCategoryPage(props: { params: Promise<{ categories: s
     return (
         <section className="relative pb-12 pt-32 overflow-hidden">
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-2xl font-bold mb-4 text-center">{mainCategory.name}</h1>
-                <p className="text-center text-gray-600 mb-8">{mainCategory.description}</p>
+                <h1 className="text-2xl font-bold mb-4 text-center">{subCategory.name}</h1>
+                <p className="text-center text-gray-600 mb-8">{subCategory.description}</p>
 
                 {/* Display all subcategories */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
