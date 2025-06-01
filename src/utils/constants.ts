@@ -1,4 +1,5 @@
-export const WEBAPP_URL = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+export const WEBAPP_URL =
+  process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
 export const AUTH_MESSAGES = {
   LOGIN_SUCCESS: "Successfully logged in!",
@@ -53,7 +54,8 @@ export const ROUTES = {
   ADMIN_USERS: "/admin/users",
   ADMIN_SETTINGS: "/admin/settings",
 
-  APP_URL: "https://next-family-tree.vercel.app"
+  APP_URL: "",
+  CATEGORIES: "/categories",
 } as const;
 
 export const IGNORE_NAV = [

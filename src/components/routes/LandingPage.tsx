@@ -2,15 +2,14 @@
 
 import { appConfig } from "@/appConfig";
 import Link from "next/link";
-import { ArrowRight, Shield, Zap, Users } from "lucide-react";
+import { ArrowRight, Award, Truck, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FeaturesSection, ReviewsSection, FAQSection, GrowthSection, PricingSection, TestimonialsSection } from "@/components";
-import { ROUTES } from "@/utils/constants";
+import { FeaturesSection, ReviewsSection, FAQSection, GrowthSection, TestimonialsSection } from "@/components";
 import { Category } from "../ui/Category";
+import { ROUTES } from "@/utils/constants";
 
 export function LandingPage() {
-  const user = {};
 
   return (
     <div className="min-h-screen bg-background">
@@ -20,7 +19,7 @@ export function LandingPage() {
         <div className="absolute inset-0 bg-grid-white/10 bg-grid-pattern dark:bg-grid-slate-800/10" />
 
         {/* Animated Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-400/90 to-pink-600/90 dark:from-teal-800/90 dark:to-pink-800/90 bg-[length:200%_200%] animate-gradient-shift" />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-400/90 to-pink-600/90 from-orange-800/90 to-pink-800/90 bg-[length:200%_200%] animate-gradient-shift" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-28">
           <div className="text-center">
@@ -28,45 +27,24 @@ export function LandingPage() {
               variant="outline"
               className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
             >
-              🌳 Uncover Your FinFlex&lsquo;s Legacy
+              🌈 Explore Colors, Patterns & Traditions
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white bg-clip-text dark:text-slate-100">
               {appConfig.title}
             </h1>
-            <p className="text-xl md:text-2xl mb-10 text-white/80 max-w-3xl mx-auto dark:text-slate-300">
+            <p className="text-xl md:text-xl mb-10 text-white max-w-3xl mx-auto dark:text-slate-300">
               {appConfig.description}
             </p>
-            {!user && (
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button
-                  size="lg"
-                  variant="default"
-                  className="bg-white text-blue-600 hover:bg-white/90 dark:bg-white dark:text-blue-600 dark:hover:bg-white/90"
-                >
-                  <Link href="/signup" className="flex items-center gap-2">
-                    Get Started <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-white hover:bg-white/10 dark:border-slate-600"
-                >
-                  <Link href="/login">Sign In</Link>
-                </Button>
-              </div>
-            )}
-            {user && (
-              <Button
-                size="lg"
-                variant="default"
-                className="bg-white text-blue-600 hover:bg-white/90 dark:bg-white dark:text-blue-600 dark:hover:bg-white/90"
-              >
-                <Link href={ROUTES.APP_URL} className="flex items-center gap-2">
-                  Go to Dashboard <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            )}
+
+            <Button
+              size="lg"
+              variant="default"
+              className="bg-white text-blue-600 hover:bg-white/90 dark:bg-white dark:text-blue-600 dark:hover:bg-white/90"
+            >
+              <Link href={ROUTES.CATEGORIES} className="flex items-center gap-2">
+                View our collections <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -93,23 +71,23 @@ export function LandingPage() {
           <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
         </div>
         {/* Dynamic background with gradient overlay */}
-        <div className="p-8 lg:p-12 bg-gradient-to-r from-blue-600/10 to-violet-600/10 dark:from-blue-900/10 dark:to-violet-900/10 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/20">
+        <div className="p-8 lg:p-12 bg-gradient-to-r from-amber-600/10 to-orange-600/10 dark:from-amber-900/10 dark:to-orange-900/10 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/20">
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Ready to Explore Your FinFlex’s Heritage?
+              Ready to Explore Our Premium Dupatta Collection?
             </h2>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Join thousands of families who trust {appConfig.title} to build and discover their family legacy with ease and precision.
+              Join thousands of customers who trust {appConfig.title} for premium quality dupattas with exceptional craftsmanship and competitive pricing.
             </p>
 
             <div className="relative inline-block group">
-              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 opacity-50 group-hover:opacity-70 blur transition duration-200" />
+              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-amber-600 to-orange-600 opacity-50 group-hover:opacity-70 blur transition duration-200" />
               <Link
-                href={ROUTES.APP_URL}
-                className="relative inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-violet-600 rounded-lg hover:from-blue-700 hover:to-violet-700 transition-all duration-200 hover:-translate-y-0.5"
+                href={`https://wa.me/${appConfig.contact.whatsapp.replace('+', '')}?text=Hi, I'm interested in your dupatta collection`}
+                className="relative inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all duration-200 hover:-translate-y-0.5"
               >
-                Start Building Your FinFlex
+                Contact Us
                 <ArrowRight className="w-5 h-5 animate-bounce-x" />
               </Link>
             </div>
@@ -117,25 +95,21 @@ export function LandingPage() {
             {/* Trust indicators */}
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 dark:text-gray-400">
               <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5" />
-                Enterprise-grade Security
+                <Award className="w-5 h-5" />
+                Premium Quality Guarantee
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5" />
-                Lightning-fast Tree Visualization
+                <Truck className="w-5 h-5" />
+                Fast Nationwide Shipping
               </div>
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                Collaborative FinFlex Building
+                <ShoppingCart className="w-5 h-5" />
+                Wholesale & Retail Options
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
-      {appConfig.pricing.visible && <PricingSection />}
-
       {/* FAQ Section */}
       {appConfig.help.visible && <FAQSection />}
     </div >

@@ -27,11 +27,11 @@ export function GrowthSection() {
                 {/* Section Header */}
                 <div className="relative text-center mb-12">
                     <h2 className="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
-                        FAMILY TREE TOOLS
+                        PREMIUM DUPATTA COLLECTION
                         <span className="ml-2 w-12 h-px bg-blue-600 dark:bg-blue-400"></span>
                     </h2>
                     <h3 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400">
-                        All the tools to build, explore, and share your family’s legacy in one place.
+                        All the finest dupattas to elevate your style and business in one place.
                     </h3>
                 </div>
 
@@ -56,7 +56,7 @@ export function GrowthSection() {
                                 <p className={`${feature.size === "sm" ? "w-[85%]" : ""} text-white/80 mb-4`}>{feature.description}</p>
 
                                 <div className="absolute bottom-4 right-4 opacity-10">
-                                    <feature.icon size={64} />
+                                    <feature.icon />
                                 </div>
                             </div>
                         </div>

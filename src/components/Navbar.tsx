@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, User, Sparkles, LayoutDashboard, Shield } from "lucide-react";
+import { Menu, Sparkles, Instagram, Mail } from "lucide-react";
 import { appConfig } from "@/appConfig";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -10,8 +10,6 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { ROUTES } from "@/utils/constants";
 
 export function Navbar() {
-  const user = {}
-  const isAdmin = false;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -84,23 +82,26 @@ export function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden sm:flex sm:items-center sm:space-x-1">
-              {user ? (
-                <>
-                  {/* <NavLink href="/feature">
+
+              <>
+                {/* {/* <NavLink href="/feature">
                     <Sparkles className="h-4 w-4" />
                     Feature
-                  </NavLink>
-                  <NavLink href={ROUTES.DASHBOARD}>
-                    <LayoutDashboard className="h-4 w-4" />
-                    Dashboard
                   </NavLink> */}
-                  {isAdmin && (
-                    <NavLink href={ROUTES.ADMIN_DASHBOARD}>
-                      <Shield className="h-4 w-4" />
-                      Admin
-                    </NavLink>
-                  )}
-                  {/* <NavLink href="/profile">
+                <NavLink href={ROUTES.CATEGORIES}>
+                  <Sparkles className="h-4 w-4" />
+                  Our Collection
+                </NavLink>
+                <NavLink href="https://www.instagram.com/kkdupatta2025?igsh=MXowNGdwN2xoaDh6">
+                  <Instagram className="h-4 w-4" />
+                  Instagram
+                </NavLink>
+
+                <NavLink href="mailto:kkdupattahouse5080@gmail.com">
+                  <Mail className="h-4 w-4" />
+                  Email Support
+                </NavLink>
+                {/* <NavLink href="/profile">
                     {metadata?.photoURL ? (
                       <Avatar className="h-6 w-6">
                         <AvatarImage src={metadata.photoURL} alt="Profile" />
@@ -113,17 +114,8 @@ export function Navbar() {
                     )}
                     Profile
                   </NavLink> */}
-                </>
-              ) : (
-                <div className="flex items-center gap-3">
-                  <Button variant="ghost">
-                    <Link href="/login">Login</Link>
-                  </Button>
-                  <Button variant="default">
-                    <Link href="/signup">Sign Up</Link>
-                  </Button>
-                </div>
-              )}
+              </>
+
               <ThemeToggle />
             </div>
 
@@ -141,37 +133,23 @@ export function Navbar() {
                     {appConfig.title}
                   </SheetTitle>
                   <div className="flex flex-col space-y-2 mt-8 bg-background">
-                    {user ? (
-                      <>
-                        <MobileNavLink href="/feature">
-                          <Sparkles className="h-4 w-4" />
-                          Feature
-                        </MobileNavLink>
-                        <MobileNavLink href={ROUTES.DASHBOARD}>
-                          <LayoutDashboard className="h-4 w-4" />
-                          Dashboard
-                        </MobileNavLink>
-                        {isAdmin && (
-                          <MobileNavLink href={ROUTES.ADMIN_DASHBOARD}>
-                            <Shield className="h-4 w-4" />
-                            Admin
-                          </MobileNavLink>
-                        )}
-                        <MobileNavLink href="/profile">
-                          <User className="h-4 w-4" />
-                          Profile
-                        </MobileNavLink>
-                      </>
-                    ) : (
-                      <>
-                        <Button className="mt-2" variant="outline">
-                          <Link href="/login">Login</Link>
-                        </Button>
-                        <Button className="mt-2" variant="default">
-                          <Link href="/signup">Sign Up</Link>
-                        </Button>
-                      </>
-                    )}
+
+                    <MobileNavLink href="/categories">
+                      <Sparkles className="h-4 w-4" />
+                      Our Collection
+                    </MobileNavLink>
+
+                    <MobileNavLink
+                      href="https://www.instagram.com/kkdupatta2025?igsh=MXowNGdwN2xoaDh6"
+                    >
+                      <Instagram className="h-4 w-4" />
+                      Instagram
+                    </MobileNavLink>
+
+                    <MobileNavLink href="mailto:kkdupattahouse5080@gmail.com">
+                      <Mail className="h-4 w-4" />
+                      Email Support
+                    </MobileNavLink>
                   </div>
                 </SheetContent>
               </Sheet>
