@@ -224,11 +224,11 @@ function ImageCard({
           {/* Bottom actions */}
           <div className="space-y-3">
             <div className="text-center">
-              <h3 className="text-white font-semibold text-sm mb-1">{categoryName}</h3>
+              <h3 className="text-white font-semibold text-sm mb-1 uppercase">{categoryName}</h3>
               <p className="text-white/80 text-xs">Premium Quality</p>
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <button
                 onClick={() => {
                   // e.stopPropagation();

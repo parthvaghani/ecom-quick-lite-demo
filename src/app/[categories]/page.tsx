@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Category } from "@/components/ui/Category";
 import categoriesJson from "@/utils/categories.json";
@@ -18,7 +18,7 @@ const subcategoryGradients = [
   "from-cyan-500 to-blue-600",
   "from-red-500 to-pink-600",
   "from-green-500 to-emerald-600",
-  "from-orange-500 to-red-600"
+  "from-orange-500 to-red-600",
 ];
 
 const subcategoryBackgrounds = [
@@ -31,16 +31,38 @@ const subcategoryBackgrounds = [
   "from-cyan-50 to-blue-50 dark:from-cyan-950/20 dark:to-blue-950/20",
   "from-red-50 to-pink-50 dark:from-red-950/20 dark:to-pink-950/20",
   "from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20",
-  "from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20"
+  "from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20",
 ];
 
 const clothLayouts = {
   1: ["col-span-2 row-span-2"],
   2: ["col-span-1 row-span-2", "col-span-1 row-span-2"],
-  3: ["col-span-2 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1"],
-  4: ["col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1"],
-  5: ["col-span-2 row-span-2", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1"],
-  6: ["col-span-1 row-span-2", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-2", "col-span-1 row-span-1", "col-span-1 row-span-1"]
+  3: [
+    "col-span-2 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
+  4: [
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
+  5: [
+    "col-span-2 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
+  6: [
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
 };
 
 const gradientOverlays = [
@@ -49,15 +71,17 @@ const gradientOverlays = [
   "from-amber-600/80 to-orange-600/80",
   "from-pink-600/80 to-rose-600/80",
   "from-indigo-600/80 to-blue-600/80",
-  "from-violet-600/80 to-purple-600/80"
+  "from-violet-600/80 to-purple-600/80",
 ];
 
-
-export default function CategoryPage(props: { params: Promise<{ categories: string }> }) {
-  const { categories } = use(props.params)
-  const category = categoriesJson.categories.find((category) => category.category === categories);
+export default function CategoryPage(props: {
+  params: Promise<{ categories: string }>;
+}) {
+  const { categories } = use(props.params);
+  const category = categoriesJson.categories.find(
+    (category) => category.category === categories
+  );
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
 
   if (!category) {
     return <Category />;
@@ -65,10 +89,11 @@ export default function CategoryPage(props: { params: Promise<{ categories: stri
 
   const handleMailto = (categoryName: string, imageSrc: string) => {
     const subject = encodeURIComponent(`Inquiry about ${categoryName} Dupatta`);
-    const body = encodeURIComponent(`Hi,\n\nI'm interested in this beautiful dupatta from your ${categoryName} collection.\n\nImage: ${imageSrc}\n\nCould you please provide more details about pricing and availability?\n\nThank you!`);
+    const body = encodeURIComponent(
+      `Hi,\n\nI'm interested in this beautiful dupatta from your ${categoryName} collection.\n\nImage: ${imageSrc}\n\nCould you please provide more details about pricing and availability?\n\nThank you!`
+    );
     window.open(`mailto:?subject=${subject}&body=${body}`);
   };
-
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 dark:from-slate-950 dark:via-gray-900 dark:to-slate-950">
@@ -96,15 +121,15 @@ export default function CategoryPage(props: { params: Promise<{ categories: stri
         </div>
 
         {/* Enhanced Subcategory Grid or Coming Soon */}
-        {category?.subCategories && category.subCategories.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        {category?.subCategories && category.subCategories.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-10">
             {category.subCategories.map((subCategory, index) => (
               <div
                 key={subCategory.name}
                 className="animate-fade-in-up"
                 style={{
                   animationDelay: `${index * 100}ms`,
-                  animationFillMode: 'both'
+                  animationFillMode: "both",
                 }}
               >
                 <CategoryCard
@@ -118,34 +143,53 @@ export default function CategoryPage(props: { params: Promise<{ categories: stri
               </div>
             ))}
           </div>
-        ) :
-          category.images && category.images.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
-              {category.images.map((image, index) => {
-                const layoutClass = clothLayouts[Math.min(category.images!.length, 6) as keyof typeof clothLayouts]?.[index % clothLayouts[Math.min(category.images!.length, 6) as keyof typeof clothLayouts].length] || "col-span-1 row-span-1";
-                const gradientOverlay = gradientOverlays[index % gradientOverlays.length];
+        )}
+        {category.images && category.images.length > 0 && (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
+            {category.images.map((image, index) => {
+              const layoutClass =
+                clothLayouts[
+                Math.min(
+                  category.images!.length,
+                  6
+                ) as keyof typeof clothLayouts
+                ]?.[
+                index %
+                clothLayouts[
+                  Math.min(
+                    category.images!.length,
+                    6
+                  ) as keyof typeof clothLayouts
+                ].length
+                ] || "col-span-1 row-span-1";
+              const gradientOverlay =
+                gradientOverlays[index % gradientOverlays.length];
 
-                return (
-                  <div
-                    key={image}
-                    className={`animate-fade-in-up ${layoutClass}`}
-                    style={{
-                      animationDelay: `${index * 100}ms`,
-                      animationFillMode: 'both'
-                    }}
-                  >
-                    <ImageCard
-                      image={image}
-                      categoryName={category.name}
-                      gradientOverlay={gradientOverlay}
-                      onMailto={() => handleMailto(category.name, image)}
-                      onView={() => setSelectedImage(image)}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
+              return (
+                <div
+                  key={image}
+                  className={`animate-fade-in-up ${layoutClass}`}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    animationFillMode: "both",
+                  }}
+                >
+                  <ImageCard
+                    image={image}
+                    categoryName={category.name}
+                    gradientOverlay={gradientOverlay}
+                    onMailto={() => handleMailto(category.name, image)}
+                    onView={() => setSelectedImage(image)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {!category.images ||
+          category.images.length === 0 &&
+          ((!category.subCategories || category.subCategories.length === 0) && (
             <div className="flex items-center justify-center min-h-[400px]">
               <div className="text-center max-w-md mx-auto">
                 <div className="relative mb-8">
@@ -156,16 +200,19 @@ export default function CategoryPage(props: { params: Promise<{ categories: stri
                 </div>
 
                 <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                  Coming <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Soon</span>
+                  Coming{" "}
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Soon
+                  </span>
                 </h2>
 
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  We&apos;re working hard to bring you an amazing collection in this category. Stay tuned for updates!
+                  We&apos;re working hard to bring you an amazing collection in
+                  this category. Stay tuned for updates!
                 </p>
               </div>
             </div>
-          )
-        }
+          ))}
       </div>
 
       {/* Image Modal */}
@@ -191,14 +238,14 @@ export default function CategoryPage(props: { params: Promise<{ categories: stri
         </div>
       )}
     </div>
-  )
+  );
 }
 
 function CategoryCard({
   title,
   description,
   route,
-  index
+  index,
 }: {
   title: string;
   description: string;
@@ -209,7 +256,8 @@ function CategoryCard({
 }) {
   const router = useRouter();
   const gradient = subcategoryGradients[index % subcategoryGradients.length];
-  const bgPattern = subcategoryBackgrounds[index % subcategoryBackgrounds.length];
+  const bgPattern =
+    subcategoryBackgrounds[index % subcategoryBackgrounds.length];
 
   return (
     <Card
@@ -217,17 +265,23 @@ function CategoryCard({
       onClick={() => router.push(route)}
     >
       {/* Gradient overlay on hover */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`} />
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`}
+      />
 
       {/* Animated border glow */}
-      <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`} />
+      <div
+        className={`absolute inset-0 rounded-xl bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`}
+      />
 
       {/* Decorative elements */}
       <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
         <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${gradient}`} />
       </div>
       <div className="absolute bottom-4 left-4 opacity-5 group-hover:opacity-10 transition-opacity duration-300">
-        <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${gradient}`} />
+        <div
+          className={`w-12 h-12 rounded-full bg-gradient-to-r ${gradient}`}
+        />
       </div>
 
       <CardContent className="relative h-full flex flex-col justify-between min-h-[200px] p-6">
@@ -248,7 +302,9 @@ function CategoryCard({
           <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
             Explore products
           </span>
-          <div className={`p-2 rounded-full bg-gradient-to-r ${gradient} text-white transform translate-x-2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg`}>
+          <div
+            className={`p-2 rounded-full bg-gradient-to-r ${gradient} text-white transform translate-x-2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg`}
+          >
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>
@@ -257,13 +313,12 @@ function CategoryCard({
   );
 }
 
-
 function ImageCard({
   image,
   categoryName,
   gradientOverlay,
   onMailto,
-  onView
+  onView,
 }: {
   image: string;
   categoryName: string;
@@ -271,7 +326,6 @@ function ImageCard({
   onMailto: () => void;
   onView: () => void;
 }) {
-
   return (
     <Card className="group relative overflow-hidden border-0 h-full cursor-pointer transform-gpu transition-all duration-500 hover:shadow-2xl hover:shadow-black/25 hover:-translate-y-1">
       {/* Image */}
@@ -285,7 +339,9 @@ function ImageCard({
         />
 
         {/* Gradient overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+        <div
+          className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+        />
 
         {/* Content overlay */}
         <div className="absolute inset-0 flex flex-col justify-between p-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
@@ -323,11 +379,13 @@ function ImageCard({
           {/* Bottom actions */}
           <div className="space-y-3">
             <div className="text-center">
-              <h3 className="text-white font-semibold text-sm mb-1">{categoryName}</h3>
+              <h3 className="text-white font-semibold text-sm mb-1 uppercase">
+                {categoryName}
+              </h3>
               <p className="text-white/80 text-xs">Premium Quality</p>
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <button
                 onClick={() => {
                   // e.stopPropagation();
