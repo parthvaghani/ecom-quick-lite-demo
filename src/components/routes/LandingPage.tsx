@@ -49,11 +49,11 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <FeaturesSection />
-
       {/* Category Section */}
       <Category />
+
+      {/* Features Section */}
+      <FeaturesSection />
 
       {/* Reviews Section */}
       {appConfig.reviews.visible && <ReviewsSection />}
