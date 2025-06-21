@@ -2,7 +2,15 @@
 
 import { appConfig } from "@/appConfig";
 import Link from "next/link";
-import { ArrowRight, Award, Truck, ShoppingCart } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  Truck,
+  ShoppingCart,
+  Leaf,
+  ShieldCheck,
+  Globe,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -53,6 +61,22 @@ export function LandingPage() {
                 View our collections <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
+
+            {/* Trust Badges */}
+            <div className="mt-8 flex justify-center items-center space-x-8 flex-wrap gap-4">
+              <div className="flex items-center text-white text-sm font-mono">
+                <Leaf className="w-5 h-5 mr-2 text-green-400" />
+                <span>100% Veg</span>
+              </div>
+              <div className="flex items-center text-white text-sm font-mono">
+                <ShieldCheck className="w-5 h-5 mr-2 text-blue-300" />
+                <span>FSSAI Approved</span>
+              </div>
+              <div className="flex items-center text-white text-sm font-mono">
+                <Globe className="w-5 h-5 mr-2 text-yellow-400" />
+                <span>Export Ready</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
