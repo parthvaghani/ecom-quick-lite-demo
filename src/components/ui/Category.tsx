@@ -1,6 +1,6 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
-import { categories } from "@/utils/categories.json";
+import { default as categoriesData } from "@/utils/categories.json";
 import {
   Zap,
   Crown,
@@ -81,6 +81,7 @@ function getIconForCategory(category: string) {
 }
 
 export function Category() {
+  const { categories } = categoriesData;
   return (
     <section className="relative pb-20 pt-32 overflow-hidden">
       {/* Enhanced Background decoration */}

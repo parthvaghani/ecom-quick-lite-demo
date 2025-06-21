@@ -6,10 +6,12 @@ import { Category } from "@/components/ui/Category";
 export async function generateMetadata({
   params,
 }: {
-  params: { categories: string };
+  params: Promise<{ categories: string }>;
 }): Promise<Metadata> {
+  const { categories } = await params;
+
   const category = categoriesJson.categories.find(
-    (c) => c.category === params.categories
+    (c) => c.category === categories
   );
 
   if (!category) {
@@ -25,12 +27,13 @@ export async function generateMetadata({
   };
 }
 
-export default function CategoryPage({
+export default async function CategoryPage({
   params,
 }: {
-  params: { categories: string };
+  params: Promise<{ categories: string }>;
 }) {
-  const { categories } = params;
+  const { categories } = await params;
+
   const category = categoriesJson.categories.find(
     (category) => category.category === categories
   );

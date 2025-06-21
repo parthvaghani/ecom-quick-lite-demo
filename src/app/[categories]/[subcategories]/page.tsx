@@ -6,13 +6,15 @@ import { Category } from "@/components/ui/Category";
 export async function generateMetadata({
   params,
 }: {
-  params: { categories: string; subcategories: string };
+  params: Promise<{ categories: string; subcategories: string }>;
 }): Promise<Metadata> {
+  const { categories, subcategories } = await params;
+
   const category = categoriesJson.categories.find(
-    (c) => c.category === params.categories
+    (c) => c.category === categories
   );
   const subCategory = category?.subCategories?.find(
-    (sc) => sc.category === params.subcategories
+    (sc) => sc.category === subcategories
   );
 
   if (!subCategory) {
@@ -28,12 +30,13 @@ export async function generateMetadata({
   };
 }
 
-export default function SubCategoryPage({
-  params,
-}: {
-  params: { categories: string; subcategories: string };
-}) {
-  const { categories, subcategories } = params;
+interface PageProps {
+  params: Promise<{ categories: string; subcategories: string }>;
+}
+
+export default async function SubCategoryPage({ params }: PageProps) {
+  const { categories, subcategories } = await params;
+
   const category = categoriesJson.categories.find(
     (category) => category.category === categories
   );
