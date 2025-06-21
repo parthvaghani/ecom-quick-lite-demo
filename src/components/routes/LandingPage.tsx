@@ -25,6 +25,7 @@ import { ROUTES } from "@/utils/constants";
 import { TestimonialsSection } from "../TestimonialsSection";
 import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
 import Image from "next/image";
+import { IngredientsGuide } from "../ui/IngredientsGuide";
 
 export function LandingPage() {
   return (
@@ -106,6 +107,7 @@ export function LandingPage() {
 
       {/* Category Section */}
       <PromotionalProductsBanner />
+      <IngredientsGuide />
       <Category />
 
       {/* Product Details Section */}
