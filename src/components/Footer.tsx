@@ -81,7 +81,7 @@ export function Footer() {
                 href="https://ripplestacks.com"
                 className="font-semibold text-white hover:text-white/80 transition-colors"
               >
-                RIPPLESTACKS TEAM ❤️
+                RIPPLESTACKS TEAM 💚
               </a>
             </div>
           </div>
