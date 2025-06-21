@@ -6,7 +6,7 @@ import { appConfig } from "@/appConfig";
 
 export function FeaturesSection() {
   return (
-    <section className="relative pb-12 pt-32 overflow-hidden">
+    <section className="relative pb-12 pt-6 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-secondary/50 dark:bg-secondary/20">
         <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />

@@ -56,7 +56,7 @@ export function ProductDetailsSection() {
   return (
     <section className="relative py-16 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950">
+      <div className="absolute inset-0 bg-secondary/50 dark:bg-secondary/20">
         <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
       </div>
 
@@ -78,7 +78,7 @@ export function ProductDetailsSection() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {Object.entries(products).map(([key, product]) => (
             <ProductCard key={key} product={product as Product} />
           ))}

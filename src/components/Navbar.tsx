@@ -40,7 +40,7 @@ export function Navbar() {
   }) => (
     <Link
       href={href}
-      className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors"
+      className="text-primary hover:text-primary/80 flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors"
     >
       {children}
     </Link>
@@ -55,7 +55,7 @@ export function Navbar() {
   }) => (
     <Link
       href={href}
-      className="flex items-center gap-2 p-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
+      className="flex items-center gap-2 p-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors text-primary"
       onClick={() => setIsSheetOpen(false)}
     >
       {children}
@@ -89,36 +89,37 @@ export function Navbar() {
                   height={40}
                   className="rounded-full"
                 />
-                <span className="text-lg sm:text-xl">{appConfig.title}</span>
+                <span className="text-lg sm:text-xl text-primary">
+                  {appConfig.title}™
+                </span>
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden sm:flex sm:items-center sm:space-x-1">
-              <>
-                {/* {/* <NavLink href="/feature">
+            <div className="hidden sm:flex sm:items-center sm:space-x-1 text-primary">
+              {/* {/* <NavLink href="/feature">
                     <Sparkles className="h-4 w-4" />
                     Feature
                   </NavLink> */}
-                <NavLink href={ROUTES.CATEGORIES}>
-                  <Sparkles className="h-4 w-4" />
-                  Our Collection
-                </NavLink>
-                <NavLink href="https://www.instagram.com/aavkarmukhwas?igsh=MXowNGdwN2xoaDh6">
-                  <Instagram className="h-4 w-4" />
-                  Instagram
-                </NavLink>
+              <NavLink href={ROUTES.CATEGORIES}>
+                <Sparkles className="h-4 w-4" />
+                Our Collection
+              </NavLink>
+              <NavLink href="https://www.instagram.com/aavkarmukhwas?igsh=MXowNGdwN2xoaDh6">
+                <Instagram className="h-4 w-4" />
+                Instagram
+              </NavLink>
 
-                <NavLink href="mailto:aavkarmukhwas@gmail.com">
-                  <Mail className="h-4 w-4" />
-                  Email Support
-                </NavLink>
+              <NavLink href="mailto:aavkarmukhwas@gmail.com">
+                <Mail className="h-4 w-4" />
+                Email Support
+              </NavLink>
 
-                <NavLink href="tel:+918128826764">
-                  <Phone className="h-4 w-4" />
-                  Call Us
-                </NavLink>
-                {/* <NavLink href="/profile">
+              <NavLink href="tel:+918128826764">
+                <Phone className="h-4 w-4" />
+                Call Us
+              </NavLink>
+              {/* <NavLink href="/profile">
                     {metadata?.photoURL ? (
                       <Avatar className="h-6 w-6">
                         <AvatarImage src={metadata.photoURL} alt="Profile" />
@@ -131,7 +132,6 @@ export function Navbar() {
                     )}
                     Profile
                   </NavLink> */}
-              </>
 
               {/* <ThemeToggle /> */}
             </div>
@@ -146,7 +146,7 @@ export function Navbar() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-72 bg-background">
-                  <SheetTitle className="flex items-center gap-2">
+                  <SheetTitle className="flex items-center gap-2 text-primary">
                     <Image
                       src="/images/logo.png"
                       alt="Aavkar Mukhwas Logo"
@@ -154,9 +154,9 @@ export function Navbar() {
                       height={32}
                       className="rounded-full"
                     />
-                    <span>{appConfig.title}</span>
+                    <span>{appConfig.title}™</span>
                   </SheetTitle>
-                  <div className="flex flex-col space-y-2 mt-8 bg-background">
+                  <div className="flex flex-col space-y-2 mt-8 bg-background text-primary">
                     <MobileNavLink href="/categories">
                       <Sparkles className="h-4 w-4" />
                       Our Collection

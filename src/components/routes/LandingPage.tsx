@@ -33,7 +33,7 @@ export function LandingPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-white/10 bg-grid-pattern dark:bg-grid-slate-800/10" />
         {/* Animated Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-green/70 to-brand-green/70 bg-[length:200%_200%] animate-gradient-shift" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/70 bg-[length:200%_200%] animate-gradient-shift" />
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <Badge
@@ -100,13 +100,13 @@ export function LandingPage() {
       {appConfig.testimonials.visible && <TestimonialsSection />}
 
       {/* CTA Section */}
-      <section className="relative py-8 overflow-hidden">
+      <section className="relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950">
+        {/* <div className="absolute inset-0 bg-secondary dark:bg-secondary/20">
           <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
-        </div>
+        </div> */}
         {/* Dynamic background with gradient overlay */}
-        <div className="p-8 lg:p-12 bg-gradient-to-r from-brand-green-light/50 to-brand-green/20 dark:from-brand-green/10 dark:to-brand-green-dark/20 backdrop-blur-sm border-border">
+        <div className="p-8 lg:p-12 bg-secondary dark:bg-secondary/20 backdrop-blur-sm border-border">
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6 text-foreground">
               Ready to Explore Our Premium Homemade Mukhwas Collection?
@@ -137,7 +137,7 @@ export function LandingPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Truck className="w-5 h-5" />
-                Fast Nationwide Shipping
+                Fast Shipping Nationwide & Internationally
               </div>
               <div className="flex items-center gap-2">
                 <ShoppingCart className="w-5 h-5" />
