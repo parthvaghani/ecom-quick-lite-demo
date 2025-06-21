@@ -1,40 +1,18 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  ArrowRight,
   Sparkles,
   Grid3X3,
   Mail,
   Eye,
   X,
   ImageIcon,
+  MessageSquare,
 } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
-
-// Gradient color schemes for different subcategories
-const subcategoryGradients = [
-  "from-brand-green to-primary",
-  "from-primary to-brand-green-dark",
-  "from-brand-green-dark to-brand-green",
-  "from-primary to-brand-green",
-  "from-brand-green to-primary",
-  "from-primary to-brand-green-dark",
-  "from-brand-green-dark to-brand-green",
-  "from-primary to-brand-green",
-];
-
-const subcategoryBackgrounds = [
-  "from-brand-green/20 to-primary/20 dark:from-brand-green/30 dark:to-primary/30",
-  "from-primary/20 to-brand-green-dark/20 dark:from-primary/30 dark:to-brand-green-dark/30",
-  "from-brand-green-dark/20 to-brand-green/20 dark:from-brand-green-dark/30 dark:to-brand-green/30",
-  "from-primary/20 to-brand-green/20 dark:from-primary/30 dark:to-brand-green/30",
-  "from-brand-green/20 to-primary/20 dark:from-brand-green/30 dark:to-primary/30",
-  "from-primary/20 to-brand-green-dark/20 dark:from-primary/30 dark:to-brand-green-dark/30",
-  "from-brand-green-dark/20 to-brand-green/20 dark:from-brand-green-dark/30 dark:to-brand-green/30",
-  "from-primary/20 to-brand-green/20 dark:from-primary/30 dark:to-brand-green/30",
-];
+import { Button } from "@/components/ui/button";
 
 // Product layouts for different image counts
 const productLayouts = {
@@ -144,10 +122,10 @@ export default function CategoryClientPage({
                   animationFillMode: "both",
                 }}
               >
-                <CategoryCard
-                  title={subCategory.name}
+                <SubCategoryProductCard
+                  name={subCategory.name}
                   description={subCategory.description}
-                  route={`/${category.category}/${subCategory.category}`}
+                  image={subCategory.images ? subCategory.images[0] : ""}
                   index={index}
                 />
               </div>
@@ -248,91 +226,77 @@ export default function CategoryClientPage({
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in-up {
-          animation: fade-in-up 0.6s ease-out;
-        }
-      `}</style>
     </div>
   );
 }
 
-function CategoryCard({
-  title,
+const WHATSAPP_NUMBER = "918128826764";
+
+function SubCategoryProductCard({
+  name,
   description,
-  route,
+  image,
   index,
 }: {
-  title: string;
+  name: string;
   description: string;
-  route: string;
+  image: string;
   index: number;
 }) {
-  const router = useRouter();
-  const gradient = subcategoryGradients[index % subcategoryGradients.length];
-  const bgPattern =
-    subcategoryBackgrounds[index % subcategoryBackgrounds.length];
+  const [imageError, setImageError] = useState(false);
+  const whatsappInquiryText = `Hi, I'm interested in the ${name}. Could you please provide more details?`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    whatsappInquiryText
+  )}`;
 
   return (
-    <Card
-      className={`group relative overflow-hidden border-0 transition-all duration-500 hover:shadow-2xl hover:shadow-black/10 dark:hover:shadow-black/30 hover:-translate-y-2 cursor-pointer transform-gpu bg-gradient-to-br ${bgPattern} backdrop-blur-sm hover:rotate-1`}
-      onClick={() => router.push(route)}
+    <div
+      className="animate-fade-in-up h-full"
+      style={{
+        animationDelay: `${index * 100}ms`,
+        animationFillMode: "both",
+      }}
     >
-      {/* Gradient overlay on hover */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl`}
-      />
-
-      {/* Animated border glow */}
-      <div
-        className={`absolute inset-0 rounded-xl bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10`}
-      />
-
-      <CardContent className="relative h-full flex flex-col justify-between min-h-[240px] p-6">
-        <div className="flex-grow">
-          {/* Icon with gradient background */}
-          <div
-            className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${gradient} text-white mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300`}
-          >
-            <ImageIcon className="w-5 h-5" />
+      <Card className="group relative overflow-hidden rounded-2xl border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
+        <CardContent className="p-0 flex flex-col flex-grow">
+          <div className="relative h-60 w-full overflow-hidden">
+            {image && !imageError ? (
+              <Image
+                src={image}
+                alt={name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-full h-full bg-secondary flex items-center justify-center">
+                <ImageIcon className="w-12 h-12 text-muted-foreground" />
+              </div>
+            )}
           </div>
-
-          {/* Title */}
-          <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100 leading-tight uppercase group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-gray-900 group-hover:to-gray-700 dark:group-hover:from-gray-100 dark:group-hover:to-gray-300 transition-all duration-300">
-            {title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-3">
-            {description}
-          </p>
-        </div>
-
-        {/* Enhanced Call to action */}
-        <div className="flex items-center justify-between pt-4 border-t border-primary/10">
-          <span className="text-sm font-semibold text-primary">
-            Explore Our Range
-          </span>
-          <div
-            className={`p-2 rounded-full bg-primary/10 text-primary group-hover:bg-gradient-to-r ${gradient} group-hover:text-white transform group-hover:translate-x-1 transition-all duration-300`}
-          >
-            <ArrowRight className="w-4 h-4" />
+          <div className="p-6 flex flex-col flex-grow">
+            <h3 className="text-xl font-bold mb-2 text-foreground">{name}</h3>
+            <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">
+              {description}
+            </p>
+            <Button
+              asChild
+              className="w-full mt-auto bg-gradient-to-r from-primary to-brand-green-dark text-white font-semibold transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:shadow-primary/40 group-hover:scale-105"
+            >
+              <Link
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <MessageSquare className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:rotate-12" />
+                Chat on WhatsApp
+              </Link>
+            </Button>
           </div>
-        </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
 
@@ -349,44 +313,46 @@ function ImageCard({
   onMailto: () => void;
   onView: () => void;
 }) {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError) {
+    return (
+      <div className="relative group overflow-hidden rounded-2xl shadow-lg w-full h-full bg-secondary flex items-center justify-center">
+        <ImageIcon className="w-12 h-12 text-muted-foreground" />
+      </div>
+    );
+  }
+
   return (
-    <div
-      className="relative w-full h-full rounded-2xl overflow-hidden group cursor-pointer"
-      onClick={onView}
-    >
+    <div className="relative group overflow-hidden rounded-2xl shadow-lg w-full h-full">
       <Image
         src={image}
         alt={`${categoryName} Mukhwas`}
         fill
-        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+        className="object-cover transition-all duration-500 ease-in-out transform group-hover:scale-110"
+        onError={() => setImageError(true)}
       />
       <div
-        className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+        className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
       />
-      <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <h3 className="text-lg md:text-xl font-bold text-white mb-2 leading-tight">
+      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <h3 className="text-xl font-bold mb-2 drop-shadow-lg">
           {categoryName}
         </h3>
-        <div className="flex space-x-2">
+        <div className="flex space-x-4">
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onMailto();
-            }}
-            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
-            title="Inquire about this product"
+            onClick={onView}
+            className="p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
+            aria-label="View Image"
           >
-            <Mail className="w-4 h-4" />
+            <Eye className="w-5 h-5" />
           </button>
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onView();
-            }}
-            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
-            title="View larger image"
+            onClick={onMailto}
+            className="p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
+            aria-label="Send Email"
           >
-            <Eye className="w-4 h-4" />
+            <Mail className="w-5 h-5" />
           </button>
         </div>
       </div>

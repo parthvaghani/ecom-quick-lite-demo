@@ -1,108 +1,34 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { default as categoriesData } from "@/utils/categories.json";
-import {
-  Zap,
-  Crown,
-  Star,
-  Diamond,
-  Sparkles,
-  Gem,
-  Layers,
-  Waves,
-  Wand2,
-  Heart,
-  ArrowRight,
-  Leaf,
-  Package,
-} from "lucide-react";
+import { Sparkles, ImageIcon, MessageSquare } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { useState } from "react";
 
-// Icon mapping for different category types
-const categoryIcons = {
-  dyeable: <Leaf className="w-5 h-5" />,
-  grieg: <Zap className="w-5 h-5" />,
-  pure: <Crown className="w-5 h-5" />,
-  chanderi: <Star className="w-5 h-5" />,
-  digital: <Diamond className="w-5 h-5" />,
-  double: <Layers className="w-5 h-5" />,
-  beam: <Waves className="w-5 h-5" />,
-  jenny: <Heart className="w-5 h-5" />,
-  extra: <Sparkles className="w-5 h-5" />,
-  jacquard: <Wand2 className="w-5 h-5" />,
-  suit: <Package className="w-5 h-5" />,
-  muslin: <Gem className="w-5 h-5" />,
-  default: <Leaf className="w-5 h-5" />,
-};
-
-// Gradient color schemes for different categories
-const categoryGradients = [
-  "from-brand-green to-primary",
-  "from-primary to-brand-green-dark",
-  "from-brand-green-dark to-brand-green",
-  "from-primary to-brand-green",
-  "from-brand-green to-primary",
-  "from-primary to-brand-green-dark",
-  "from-brand-green-dark to-brand-green",
-  "from-primary to-brand-green",
-];
-
-const categoryBackgrounds = [
-  "from-brand-green/20 to-primary/20 dark:from-brand-green/30 dark:to-primary/30",
-  "from-primary/20 to-brand-green-dark/20 dark:from-primary/30 dark:to-brand-green-dark/30",
-  "from-brand-green-dark/20 to-brand-green/20 dark:from-brand-green-dark/30 dark:to-brand-green/30",
-  "from-primary/20 to-brand-green/20 dark:from-primary/30 dark:to-brand-green/30",
-  "from-brand-green/20 to-primary/20 dark:from-brand-green/30 dark:to-primary/30",
-  "from-primary/20 to-brand-green-dark/20 dark:from-primary/30 dark:to-brand-green-dark/30",
-  "from-brand-green-dark/20 to-brand-green/20 dark:from-brand-green-dark/30 dark:to-brand-green/30",
-  "from-primary/20 to-brand-green/20 dark:from-primary/30 dark:to-brand-green/30",
-];
-
-function getIconForCategory(category: string) {
-  const categoryLower = category.toLowerCase();
-
-  // Primary category checks (most specific first)
-  if (categoryLower.includes("jacquard")) return categoryIcons.jacquard;
-  if (categoryLower.includes("double-beam-jenny")) return categoryIcons.beam;
-  if (categoryLower.includes("muslin")) return categoryIcons.muslin;
-  if (categoryLower.includes("suit")) return categoryIcons.suit;
-  if (categoryLower.includes("jenny")) return categoryIcons.jenny;
-  if (categoryLower.includes("double")) return categoryIcons.double;
-  if (categoryLower.includes("extra")) return categoryIcons.extra;
-
-  // Original category checks
-  if (categoryLower.includes("dyeable")) return categoryIcons.dyeable;
-  if (categoryLower.includes("grieg")) return categoryIcons.grieg;
-  if (categoryLower.includes("pure")) return categoryIcons.pure;
-  if (categoryLower.includes("chanderi")) return categoryIcons.chanderi;
-  if (categoryLower.includes("digital")) return categoryIcons.digital;
-
-  return categoryIcons.default;
-}
+const WHATSAPP_NUMBER = "918128826764";
 
 export function Category() {
   const { categories } = categoriesData;
   return (
-    <section className="relative pb-20 pt-32 overflow-hidden">
-      {/* Enhanced Background decoration */}
+    <section className="relative pb-20 pt-16 overflow-hidden">
       <div className="absolute inset-0 bg-secondary/50 dark:bg-secondary/20">
         <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Enhanced Section Header */}
         <div className="relative text-center mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">
-              Categories
+              Our Collections
             </span>
           </div>
 
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Explore Our{" "}
             <span className="bg-gradient-to-r from-brand-green to-primary bg-clip-text text-transparent">
-              Mukhwas Collections
+              Mukhwas Varieties
             </span>
           </h3>
 
@@ -113,8 +39,7 @@ export function Category() {
           </p>
         </div>
 
-        {/* Enhanced Category Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((catEl, index) => (
             <div
               key={catEl.name}
@@ -128,13 +53,12 @@ export function Category() {
                 title={catEl.name}
                 description={catEl.description}
                 category={catEl.category}
-                index={index}
+                image={catEl.heroImage}
               />
             </div>
           ))}
         </div>
       </div>
-
       <style jsx>{`
         @keyframes fade-in-up {
           from {
@@ -159,62 +83,73 @@ function CategoryCard({
   title,
   description,
   category,
-  index,
+  image,
 }: {
   title: string;
   description: string;
   category: string;
-  index: number;
+  image?: string;
 }) {
   const router = useRouter();
-  const gradient = categoryGradients[index % categoryGradients.length];
-  const bgPattern = categoryBackgrounds[index % categoryBackgrounds.length];
-  const icon = getIconForCategory(category);
+  const [imageError, setImageError] = useState(false);
+  const whatsappInquiryText = `Hi, I'm interested in the ${title} collection. Could you please provide more details?`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    whatsappInquiryText
+  )}`;
+
+  const handleNavigation = () => {
+    router.push(`/${category}`);
+  };
 
   return (
-    <Card
-      className={`group relative overflow-hidden border-0 transition-all duration-500 hover:shadow-2xl hover:shadow-black/10 dark:hover:shadow-black/30 hover:-translate-y-2 cursor-pointer transform-gpu bg-gradient-to-br ${bgPattern} backdrop-blur-sm hover:rotate-1`}
-      onClick={() => router.push(`/${category}`)}
-    >
-      {/* Gradient overlay on hover */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl`}
-      />
-
-      {/* Animated border glow */}
-      <div
-        className={`absolute inset-0 rounded-xl bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10`}
-      />
-
-      <CardContent className="relative h-full flex flex-col justify-between min-h-[240px] p-6">
-        <div className="flex-grow">
-          {/* Icon with gradient background */}
-          <div
-            className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${gradient} text-white mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300`}
+    <Card className="group relative overflow-hidden rounded-2xl border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
+      <CardContent className="p-0 flex flex-col flex-grow">
+        <div
+          className="relative h-60 w-full overflow-hidden cursor-pointer"
+          onClick={handleNavigation}
+        >
+          {image && !imageError ? (
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <div className="w-full h-full bg-secondary flex items-center justify-center">
+              <ImageIcon className="w-12 h-12 text-muted-foreground" />
+            </div>
+          )}
+          <div className="absolute inset-0" />
+        </div>
+        <div className="p-6 bg-background/30 backdrop-blur-sm flex flex-col flex-grow">
+          <h3
+            className="text-2xl font-bold mb-2 text-foreground relative z-10 cursor-pointer"
+            onClick={handleNavigation}
           >
-            {icon}
-          </div>
-
-          {/* Title */}
-          <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100 leading-tight uppercase group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-gray-900 group-hover:to-gray-700 dark:group-hover:from-gray-100 dark:group-hover:to-gray-300 transition-all duration-300">
             {title}
           </h3>
-
-          {/* Description */}
-          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-3">
+          <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow relative z-10">
             {description}
           </p>
-        </div>
-
-        {/* Enhanced Call to action */}
-        <div className="flex items-center justify-between pt-4 border-t border-primary/10">
-          <span className="text-sm font-semibold text-primary">
-            Explore Our Range
-          </span>
-          <div
-            className={`p-2 rounded-full bg-primary/10 text-primary group-hover:bg-gradient-to-r ${gradient} group-hover:text-white transform group-hover:translate-x-1 transition-all duration-300`}
-          >
-            <ArrowRight className="w-4 h-4" />
+          <div className="mt-auto pt-4 border-t border-primary/20 relative z-10 flex items-center justify-between">
+            <button
+              onClick={() => router.push(`/${category}`)}
+              className="text-primary flex items-center"
+            >
+              <MessageSquare className="w-4 h-4 mr-2" />
+              View Collection
+            </button>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary flex items-center"
+            >
+              <MessageSquare className="w-4 h-4 mr-2" />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </CardContent>

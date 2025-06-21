@@ -1,14 +1,289 @@
 {
   "categories": [
     {
-      "category": "traditional-mukhwas",
-      "description": "Traditional Mukhwas with authentic ingredients and health benefits",
-      "images": [],
-      "name": "Traditional Mukhwas",
+      "category": "paan-varieties",
+      "description": "A delightful range of Paan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
+      "heroImage": "/fresheners/paan-varieties.jpg",
+      "name": "Paan Varieties",
       "subCategories": [
         {
+          "benefits": [
+            "Acts as a natural mouth freshener",
+            "Aids in digestion",
+            "Provides a cooling effect"
+          ],
+          "category": "simple-wet-green-paan",
+          "description": "A refreshing and classic wet paan mukhwas made with fresh betel leaves and a blend of aromatic spices.",
+          "images": ["/fresheners/green-paan-mukhwas.jpg"],
+          "ingredients": [
+            "Fresh Betel Leaves",
+            "Fennel Seeds",
+            "Cardamom",
+            "Gulkand (Rose Petal Jam)"
+          ],
+          "name": "Simple Wet Green Paan Mukhwas"
+        },
+        {
+          "benefits": [
+            "Rich in antioxidants",
+            "Unique and fruity flavor profile"
+          ],
+          "category": "wet-cherry-paan",
+          "description": "A sweet and tangy twist on the classic, infused with the delightful flavor of cherries.",
+          "images": ["/fresheners/paan-cherry.jpg"],
+          "ingredients": [
+            "Betel Leaves",
+            "Candied Cherries",
+            "Sweetened Fennel",
+            "Coconut Flakes"
+          ],
+          "name": "Wet Cherry Paan Mukhwas"
+        },
+        {
+          "benefits": [
+            "Known for its medicinal properties",
+            "Aids in treating cough and cold",
+            "Unique herbal taste"
+          ],
+          "category": "wet-chanothi-paan",
+          "description": "An exotic blend featuring Chanothi (Jequirity) leaves, offering a unique taste and numerous health benefits.",
+          "images": ["/fresheners/chnothi-paan.jpg"],
+          "ingredients": [
+            "Betel Leaves",
+            "Chanothi (Jequirity) Leaves",
+            "Mixed Seeds",
+            "Natural Spices"
+          ],
+          "name": "Wet Chanothi Paan Mukhwas"
+        },
+        {
+          "benefits": [
+            "A delightful sweet treat",
+            "Combines the benefits of paan and coconut"
+          ],
+          "category": "paan-coconut-laddu",
+          "description": "Deliciously moist laddus combining the flavors of paan and coconut for a delightful treat.",
+          "images": ["/fresheners/paan-coconut-laddu.jpg"],
+          "ingredients": [
+            "Betel Leaves",
+            "Desiccated Coconut",
+            "Condensed Milk",
+            "Gulkand"
+          ],
+          "name": "Paan Coconut Laddu"
+        },
+        {
+          "benefits": [
+            "Rich in energy and nutrients",
+            "Luxurious and satisfying taste"
+          ],
+          "category": "shahi-khajur-paan",
+          "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend.",
+          "images": ["/fresheners/shahi-khajur-paan.jpg"],
+          "ingredients": [
+            "Premium Dates (Khajur)",
+            "Betel Leaves",
+            "Mixed Nuts",
+            "Gulkand"
+          ],
+          "name": "Shahi Khajur Paan Mukhwas"
+        }
+      ]
+    },
+    {
+      "category": "regular-mukhwas",
+      "description": "A classic collection of everyday mukhwas featuring sesame, coconut, and traditional seeds.",
+      "heroImage": "/fresheners/regular-mukhwas-hero.jpg",
+      "name": "Regular Mukhwas",
+      "subCategories": [
+        {
+          "benefits": [
+            "Rich in calcium and healthy fats",
+            "Provides a crunchy texture",
+            "Natural source of energy"
+          ],
+          "category": "crunchy-til-coconut",
+          "description": "A delicious and crunchy mix of sesame seeds (til) and coconut flakes.",
+          "images": ["/fresheners/crunchy-til-coconut.jpg"],
+          "ingredients": [
+            "Sesame Seeds",
+            "Coconut Flakes",
+            "Jaggery",
+            "Fennel Seeds"
+          ],
+          "name": "Crunchy Til Coconut"
+        },
+        {
+          "benefits": [
+            "Aids in digestion",
+            "Acts as a mouth freshener",
+            "Visually appealing"
+          ],
+          "category": "coated-til-dhanadal",
+          "description": "A colorful and flavorful mix of coated sesame seeds and roasted coriander seeds (dhanadal).",
+          "images": ["/fresheners/coated-til-dhanadal.jpg"],
+          "ingredients": [
+            "Sesame Seeds",
+            "Coriander Seeds (Dhanadal)",
+            "Turmeric",
+            "Salt",
+            "Sugar Coating"
+          ],
+          "name": "Coated Til Dhanadal Mix"
+        },
+        {
+          "benefits": [
+            "Rich in Omega-3 fatty acids",
+            "High in fiber",
+            "Boosts immunity"
+          ],
+          "category": "seed-til-alsi",
+          "description": "A healthy blend of various seeds including sesame (til) and flax seeds (alsi).",
+          "images": ["/fresheners/seed-til-alsi.jpg"],
+          "ingredients": [
+            "Sesame Seeds",
+            "Flax Seeds",
+            "Pumpkin Seeds",
+            "Sunflower Seeds"
+          ],
+          "name": "Seed Til Alsi"
+        },
+        {
+          "benefits": [
+            "Improves digestion",
+            "Classic mouth freshener",
+            "Aromatic and flavorful"
+          ],
+          "category": "regular-mukhwas-mix",
+          "description": "A classic and traditional mukhwas blend for everyday refreshment.",
+          "images": ["/fresheners/regular-mukhwas.jpg"],
+          "ingredients": [
+            "Fennel Seeds",
+            "Coriander Seeds",
+            "Sesame Seeds",
+            "Salt"
+          ],
+          "name": "Regular Mukhwas"
+        },
+        {
+          "benefits": [
+            "Sweet and satisfying",
+            "Popular with all ages",
+            "Colorful and fun"
+          ],
+          "category": "sweet-tinimini-dhanadal",
+          "description": "A sweet and colorful mix of tiny sugar-coated fennel seeds (tinimini), sesame, and dhanadal.",
+          "images": ["/fresheners/sweet-tinimini-dhanadal.jpg"],
+          "ingredients": [
+            "Sugar-coated Fennel Seeds (Tinimini)",
+            "Sesame Seeds",
+            "Coriander Seeds (Dhanadal)"
+          ],
+          "name": "Sweet Tinimini Til Dhanadal"
+        }
+      ]
+    },
+    {
+      "category": "healthy-blends",
+      "description": "A collection of nutritious and wholesome blends featuring nuts, seeds, and berries.",
+      "heroImage": "/fresheners/healthy-blends.jpg",
+      "name": "Healthy Blends",
+      "subCategories": [
+        {
+          "benefits": [
+            "Rich in healthy fats",
+            "Good source of protein",
+            "Provides sustained energy"
+          ],
+          "category": "roasted-nuts-coconut",
+          "description": "A crunchy and savory mix of roasted nuts and toasted coconut.",
+          "images": ["/fresheners/roasted-nuts-coconut.jpg"],
+          "ingredients": ["Almonds", "Cashews", "Pistachios", "Coconut Flakes"],
+          "name": "Roasted Nuts Coconut"
+        },
+        {
+          "benefits": [
+            "High in fiber",
+            "Boosts immunity",
+            "Rich in vitamins and minerals"
+          ],
+          "category": "roasted-seeds-dryfruits",
+          "description": "A wholesome blend of roasted seeds and assorted dry fruits.",
+          "images": ["/fresheners/roasted-seeds-dryfruits.jpg"],
+          "ingredients": [
+            "Pumpkin Seeds",
+            "Sunflower Seeds",
+            "Almonds",
+            "Raisins",
+            "Apricots"
+          ],
+          "name": "Roasted Seeds & Dryfruits"
+        },
+        {
+          "benefits": [
+            "Excellent source of Omega-3",
+            "Complete protein from quinoa",
+            "High in antioxidants"
+          ],
+          "category": "chia-quinoa-berries",
+          "description": "A superfood mix of chia seeds, quinoa, and antioxidant-rich berries.",
+          "images": ["/fresheners/chia-quinoa-berries.jpg"],
+          "ingredients": ["Chia Seeds", "Quinoa", "Cranberries", "Blueberries"],
+          "name": "Chia Quinoa Berries Mix"
+        },
+        {
+          "benefits": [
+            "Perfect for snacking",
+            "Improves heart health",
+            "Boosts brain function"
+          ],
+          "category": "healthy-nuts-berries-mix",
+          "description": "A delicious and energizing trail mix with a variety of nuts and berries.",
+          "images": ["/fresheners/healthy-nuts-berries-mix.jpg"],
+          "ingredients": [
+            "Almonds",
+            "Walnuts",
+            "Cashews",
+            "Cranberries",
+            "Blueberries",
+            "Pumpkin Seeds"
+          ],
+          "name": "Healthy Nuts and Berries Mix"
+        },
+        {
+          "benefits": [
+            "Rich in magnesium and zinc",
+            "Supports healthy digestion",
+            "Promotes healthy skin"
+          ],
+          "category": "multi-seeds-mix",
+          "description": "A simple yet powerful mix of various seeds, packed with nutrients.",
+          "images": ["/fresheners/multi-seeds.jpg"],
+          "ingredients": [
+            "Pumpkin Seeds",
+            "Sunflower Seeds",
+            "Watermelon Seeds",
+            "Flax Seeds"
+          ],
+          "name": "Multi Seeds"
+        }
+      ]
+    },
+    {
+      "category": "seasonal-varieties",
+      "description": "Special and delicious mukhwas varieties available during specific seasons.",
+      "heroImage": "/fresheners/seasonal-varieties.jpg",
+      "name": "Seasonal Varieties",
+      "subCategories": [
+        {
+          "benefits": [
+            "Helps to improve blood quality",
+            "One of the richest sources of Vitamin-C",
+            "Helps to improve skin tone & removes toxins from blood"
+          ],
           "category": "beet-root-amla",
-          "description": "Beet Root Amla Mukhwas - Rich in Vitamin-C, improves blood quality and skin tone",
+          "description": "A seasonal delight rich in Vitamin-C, perfect for improving blood quality and skin tone.",
+          "images": ["/fresheners/beet-root-amla.jpg"],
           "ingredients": [
             "Beet Root",
             "Amla",
@@ -19,286 +294,91 @@
             "Sunflower Seeds",
             "White Til",
             "Flax Seeds",
-            "Turmeric - Salt",
-            "Rock Salt",
             "Turmeric",
             "Lemon Juice"
-          ],
-          "benefits": [
-            "Helps to improve blood quality",
-            "One of richest source of Vitamin-C",
-            "Helps to improve skin tone & removes toxins from blood"
-          ],
-          "images": [
-            "/images/beet-root-amla-1.jpg",
-            "/images/beet-root-amla-2.jpg",
-            "/images/beet-root-amla-3.jpg"
           ],
           "name": "Beet Root Amla Mukhwas"
         },
         {
-          "category": "multi-seeds",
-          "description": "Multi Seeds Mukhwas - Immunity booster with Omega 3 and natural fibers",
+          "benefits": [
+            "Rich in energy and nutrients",
+            "Luxurious and satisfying taste"
+          ],
+          "category": "shahi-khajur-paan",
+          "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend, perfect for festive seasons.",
+          "images": ["/fresheners/shahi-khajur-paan.jpg"],
           "ingredients": [
-            "Melon Seeds",
+            "Premium Dates (Khajur)",
+            "Betel Leaves",
+            "Mixed Nuts",
+            "Gulkand"
+          ],
+          "name": "Shahi Khajur Paan Mukhwas"
+        }
+      ]
+    },
+    {
+      "category": "healthy-powders",
+      "description": "A range of homemade healthy powders, packed with natural protein, vitamins, and minerals.",
+      "heroImage": "/fresheners/healthy-powders.jpg",
+      "name": "Healthy Powders",
+      "subCategories": [
+        {
+          "benefits": [
+            "Excellent energy and immunity booster",
+            "Beneficial for children, pregnant women, and the elderly",
+            "Ideal for gym-goers and people with active lifestyles",
+            "Rich in natural protein and antioxidants"
+          ],
+          "category": "homemade-healthy-powder",
+          "description": "A wholesome and natural protein powder rich in vitamins, minerals, and antioxidants.",
+          "images": ["/fresheners/homemade-healthy-powder.jpg"],
+          "ingredients": [
+            "Walnuts",
+            "Almonds",
+            "Fox Nuts (Makhana)",
+            "Pistachios",
+            "Cashews",
+            "Split Chickpeas (Chana Dal)",
             "Pumpkin Seeds",
-            "Musk Melon Seeds",
-            "Sunflower Seeds",
-            "Black Salt"
-          ],
-          "benefits": [
-            "Immunity Booster",
-            "Reduced Bad Cholesterol",
-            "Full Of Omega 3 Fatty Acid",
-            "Natural Source Of Fibers",
-            "Rich Source Of Vitamin-C, B Complex, And Vitamin-E"
-          ],
-          "images": [
-            "/images/multi-seeds-1.jpg",
-            "/images/multi-seeds-2.jpg",
-            "/images/multi-seeds-3.jpg"
-          ],
-          "name": "Multi Seeds Mukhwas"
-        },
-        {
-          "category": "seed-tal-alsi",
-          "description": "Seed Tal Alsi Mukhwas - Rich in Omega 3, improves heart health and sleep",
-          "ingredients": [
-            "Pumpkin Seeds",
             "Melon Seeds",
             "Sunflower Seeds",
-            "White Til",
-            "Flax Seeds",
-            "Turmeric - Salt"
+            "Rock Sugar (Mishri)"
           ],
-          "benefits": [
-            "Rich source of omega 3 fatty acid",
-            "Improves heart health",
-            "Helps in providing good sleep",
-            "Improves Immunity"
-          ],
-          "images": [
-            "/images/seed-tal-alsi-1.jpg",
-            "/images/seed-tal-alsi-2.jpg",
-            "/images/seed-tal-alsi-3.jpg"
-          ],
-          "name": "Seed Tal Alsi Mukhwas"
+          "name": "Homemade Healthy Powder"
         }
       ]
+    }
+  ],
+  "promotionalProducts": [
+    {
+      "badge": "Most Popular",
+      "description": "A delightful and aromatic blend of premium fennel seeds and sweet spices.",
+      "image": "/fresheners/dilbahar-mix.jpg",
+      "isPopular": true,
+      "name": "Dilbahar Mix"
     },
     {
-      "category": "sweet-supari",
-      "description": "Sweet Supari with natural sweetness and health benefits",
-      "name": "Sweet Supari",
-      "subCategories": [
-        {
-          "category": "jaipuri-mukhwas",
-          "description": "Special Jaipuri Mukhwas - Removes bad odour, rich in antioxidants",
-          "ingredients": [
-            "Tini Mini (Sweet Saunf)",
-            "Coriander Seeds",
-            "Coconut Flakes",
-            "Dry Betel Stick"
-          ],
-          "benefits": [
-            "Removes bad odour of mouth",
-            "Rich in antioxidants & natural fibers",
-            "Helps to Enhance Gut & Skin Health",
-            "Helps to Regulates menstrual cycle"
-          ],
-          "images": [
-            "/images/jaipuri-mukhwas-1.jpg",
-            "/images/jaipuri-mukhwas-2.jpg",
-            "/images/jaipuri-mukhwas-3.jpg"
-          ],
-          "name": "Special Jaipuri Mukhwas"
-        },
-        {
-          "category": "roasted-alsi",
-          "description": "Roasted Alsi Mukhwas - Richest source of Omega 3, fights cancer",
-          "ingredients": ["Green Wheat", "Black Salt", "Turmeric", "Rock Salt"],
-          "benefits": [
-            "Helps to Lower Cholesterol & Relieves hyperlipidemia & Obesity",
-            "Protects Against Heart Diseases",
-            "Richest Source Omega 3 Fatty Acid",
-            "Fights Cancer",
-            "Rich In Dietary Fibers"
-          ],
-          "images": [
-            "/images/roasted-alsi-1.jpg",
-            "/images/roasted-alsi-2.jpg",
-            "/images/roasted-alsi-3.jpg"
-          ],
-          "name": "Roasted Alsi Mukhwas"
-        },
-        {
-          "category": "makhana-nuts-oats",
-          "description": "Makhana Nuts Oats Mix - Maintains kidney health, rich in iron & calcium",
-          "ingredients": [
-            "Oats",
-            "Makhana",
-            "Dry Dates (Kharek)",
-            "Apricot",
-            "Dry Coconut",
-            "Dry Raisin",
-            "Mix Nuts"
-          ],
-          "benefits": [
-            "Maintains Kidney Health",
-            "Helpful In Weight Loss",
-            "Rich Source of Iron, Calcium & Minerals",
-            "Helps To Maintain Gut Health & Heart Health",
-            "Relieves Stress & Improves Good Sleep"
-          ],
-          "images": [
-            "/images/makhana-nuts-oats-1.jpg",
-            "/images/makhana-nuts-oats-2.jpg",
-            "/images/makhana-nuts-oats-3.jpg"
-          ],
-          "name": "Makhana Nuts Oats Mix"
-        }
-      ]
+      "badge": "Most Popular & Premium",
+      "description": "Tangy and sweet tamarind balls, a traditional treat for all ages.",
+      "image": "/fresheners/imli-laddu.jpg",
+      "isPopular": true,
+      "isPremium": true,
+      "name": "Imli Laddu"
     },
     {
-      "category": "mouth-freshener",
-      "description": "Mouth Freshener with natural ingredients and health benefits",
-      "name": "Mouth Freshener",
-      "subCategories": [
-        {
-          "category": "roasted-green-wheat",
-          "description": "Roasted Green Wheat Mukhwas - Full of natural fibers, improves metabolism",
-          "ingredients": ["Green Wheat", "Natural Fibers", "Minerals"],
-          "benefits": [
-            "Full of Natural Fibers",
-            "Improves Metabolism",
-            "Maintain Body Weight",
-            "Rich Source Of Minerals"
-          ],
-          "images": [
-            "/images/roasted-green-wheat-1.jpg",
-            "/images/roasted-green-wheat-2.jpg",
-            "/images/roasted-green-wheat-3.jpg"
-          ],
-          "name": "Roasted Green Wheat Mukhwas"
-        },
-        {
-          "category": "traditional-fennel",
-          "description": "Traditional fennel seed mukhwas with digestive benefits",
-          "ingredients": [
-            "Fennel Seeds",
-            "Rock Salt",
-            "Black Salt",
-            "Turmeric"
-          ],
-          "benefits": [
-            "Improves digestion",
-            "Natural mouth freshener",
-            "Rich in antioxidants",
-            "Helps in weight management"
-          ],
-          "images": [
-            "/images/traditional-fennel-1.jpg",
-            "/images/traditional-fennel-2.jpg",
-            "/images/traditional-fennel-3.jpg"
-          ],
-          "name": "Traditional Fennel"
-        },
-        {
-          "category": "traditional-mix",
-          "description": "Traditional mixed mukhwas with multiple health benefits",
-          "ingredients": [
-            "Mixed Seeds",
-            "Dry Fruits",
-            "Natural Spices",
-            "Rock Salt"
-          ],
-          "benefits": [
-            "Complete nutrition",
-            "Boosts immunity",
-            "Natural energy source",
-            "Improves overall health"
-          ],
-          "images": [
-            "/images/traditional-mix-1.jpg",
-            "/images/traditional-mix-2.jpg",
-            "/images/traditional-mix-3.jpg"
-          ],
-          "name": "Traditional Mix"
-        }
-      ]
+      "badge": "Most Popular",
+      "description": "A colorful and crunchy mix of seven mouth-watering ingredients.",
+      "image": "/fresheners/satrangi-mix.jpg",
+      "isPopular": true,
+      "name": "Satrangi Mix"
     },
     {
-      "category": "premium-mukhwas",
-      "description": "Premium Mukhwas for special occasions with premium ingredients",
-      "name": "Premium Mukhwas",
-      "subCategories": [
-        {
-          "category": "premium-supari",
-          "description": "Premium quality betel nut mukhwas with enhanced benefits",
-          "ingredients": [
-            "Premium Betel Nut",
-            "Saffron",
-            "Cardamom",
-            "Premium Spices"
-          ],
-          "benefits": [
-            "Premium quality ingredients",
-            "Enhanced taste and aroma",
-            "Rich in natural compounds",
-            "Perfect for special occasions"
-          ],
-          "images": [
-            "/images/premium-supari-1.jpg",
-            "/images/premium-supari-2.jpg",
-            "/images/premium-supari-3.jpg"
-          ],
-          "name": "Premium Supari"
-        },
-        {
-          "category": "premium-mix",
-          "description": "Premium mixed mukhwas with luxury ingredients",
-          "ingredients": [
-            "Premium Nuts",
-            "Dry Fruits",
-            "Saffron",
-            "Premium Spices"
-          ],
-          "benefits": [
-            "Luxury ingredients",
-            "Premium taste experience",
-            "Rich in nutrients",
-            "Perfect gifting option"
-          ],
-          "images": [
-            "/images/premium-mix-1.jpg",
-            "/images/premium-mix-2.jpg",
-            "/images/premium-mix-3.jpg"
-          ],
-          "name": "Premium Mix"
-        },
-        {
-          "category": "premium-gift",
-          "description": "Premium gift pack mukhwas for special occasions",
-          "ingredients": [
-            "Assorted Premium Mukhwas",
-            "Gift Packaging",
-            "Premium Ingredients",
-            "Special Blends"
-          ],
-          "benefits": [
-            "Perfect gifting solution",
-            "Premium presentation",
-            "Assorted varieties",
-            "Special occasion ready"
-          ],
-          "images": [
-            "/images/premium-gift-1.jpg",
-            "/images/premium-gift-2.jpg",
-            "/images/premium-gift-3.jpg"
-          ],
-          "name": "Premium Gift Pack"
-        }
-      ]
+      "badge": "New Arrival Premium",
+      "description": "A refreshing and healthy mix featuring green fennel seeds and herbs.",
+      "image": "/fresheners/green-mix.jpg",
+      "isPremium": true,
+      "name": "Green Mix"
     }
   ]
 }

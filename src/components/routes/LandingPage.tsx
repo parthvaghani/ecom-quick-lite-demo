@@ -40,7 +40,7 @@ export function LandingPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -107,11 +107,11 @@ export function LandingPage() {
 
       {/* Category Section */}
       <PromotionalProductsBanner />
-      <IngredientsGuide />
       <Category />
-
       {/* Product Details Section */}
       <ProductDetailsSection />
+
+      <IngredientsGuide />
 
       {/* Features Section */}
       <FeaturesSection />

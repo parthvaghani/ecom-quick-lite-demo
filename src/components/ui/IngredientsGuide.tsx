@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/accordion";
 import { Leaf, Droplets } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
 const ingredientsData = [
   {
@@ -250,48 +249,60 @@ export function IngredientsGuide() {
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             {language === "gu"
-              ? "મુખવાસ માં ઉપયોગ માં લેવામાં આવતા વિવિધ પૌષ્ટિક તત્વો અને એના આરોગ્યલક્ષી ફાયદાઓ"
-              : "Discover the various nutrients and health benefits of the ingredients used in our Mukhwas."}
+              ? "અમારા ઉત્પાદનોમાં વપરાતા મુખ્ય ઘટકો અને તેમના સ્વાસ્થ્ય લાભો વિશે જાણો."
+              : "Learn about the key ingredients used in our products and their health benefits."}
           </p>
-        </div>
-
-        <div className="flex justify-center items-center gap-2 mb-8">
-          <Button
-            variant={language === "en" ? "default" : "outline"}
-            onClick={() => setLanguage("en")}
-            className="rounded-full"
-          >
-            English
-          </Button>
-          <Button
-            variant={language === "gu" ? "default" : "outline"}
-            onClick={() => setLanguage("gu")}
-            className="rounded-full"
-          >
-            ગુજરાતી
-          </Button>
+          <div className="mt-8 flex justify-center items-center mb-12 bg-primary/10 p-1 rounded-full max-w-xs mx-auto">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`w-1/2 text-center px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out ${
+                language === "en"
+                  ? "bg-primary text-primary-foreground shadow"
+                  : "text-muted-foreground"
+              }`}
+            >
+              English
+            </button>
+            <button
+              onClick={() => setLanguage("gu")}
+              className={`w-1/2 text-center px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out ${
+                language === "gu"
+                  ? "bg-primary text-primary-foreground shadow"
+                  : "text-muted-foreground"
+              }`}
+            >
+              ગુજરાતી
+            </button>
+          </div>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
           {ingredientsData.map((item, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="border-b border-border/50"
-            >
-              <AccordionTrigger className="text-lg font-semibold hover:no-underline text-left">
-                <span className="flex items-center">
-                  <Leaf className="w-5 h-5 mr-3 text-primary" />
-                  {item[language].name}
-                </span>
-              </AccordionTrigger>
-              <AccordionContent className="pt-2 pb-4 text-base text-muted-foreground">
-                <span className="flex items-start">
-                  <Droplets className="w-4 h-4 mr-3 mt-1 text-primary/70 flex-shrink-0" />
-                  <div className="leading-relaxed">
-                    {renderBenefit(item[language].benefit)}
+            <AccordionItem value={`item-${index}`} key={index}>
+              <AccordionTrigger>
+                <div className="flex items-center gap-4">
+                  <div
+                    className={`p-2 rounded-full ${
+                      index % 2 === 0
+                        ? "bg-green-100 text-green-700"
+                        : "bg-blue-100 text-blue-700"
+                    }`}
+                  >
+                    {index % 2 === 0 ? (
+                      <Leaf className="w-5 h-5" />
+                    ) : (
+                      <Droplets className="w-5 h-5" />
+                    )}
                   </div>
-                </span>
+                  <span className="text-lg font-semibold">
+                    {item[language].name}
+                  </span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {renderBenefit(item[language].benefit)}
+                </p>
               </AccordionContent>
             </AccordionItem>
           ))}

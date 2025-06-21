@@ -4,45 +4,26 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const promotionalProducts = [
-  {
-    name: "Dilbahar Mix",
-    description:
-      "A delightful and aromatic blend of premium fennel seeds and sweet spices.",
-    image: "/fresheners/dilbahar-mix.jpg",
-    badge: "Most Popular",
-  },
-  {
-    name: "Imli Laddu",
-    description:
-      "Tangy and sweet tamarind balls, a traditional treat for all ages.",
-    image: "/fresheners/imli-laddu.jpg",
-    badge: "Best Seller",
-  },
-  {
-    name: "Satrangi Mix",
-    description:
-      "A colorful and crunchy mix of seven mouth-watering ingredients.",
-    image: "/fresheners/satrangi-mix.jpg",
-  },
-  {
-    name: "Green Mix",
-    description:
-      "A refreshing and healthy mix featuring green fennel seeds and herbs.",
-    image: "/fresheners/green-mix.jpg",
-    badge: "New Arrival",
-  },
-];
+import { default as categoriesData } from "@/utils/categories.json";
+import { useState } from "react";
 
 const WHATSAPP_NUMBER = "918128826764";
 
 export function PromotionalProductsBanner() {
+  const [filter, setFilter] = useState<"premium" | "popular">("popular");
+  const { promotionalProducts } = categoriesData;
+
+  const filteredProducts = promotionalProducts.filter((product) => {
+    if (filter === "premium") return product.isPremium;
+    if (filter === "popular") return product.isPopular;
+    return false;
+  });
+
   return (
     <section className="relative pb-20 pt-32 overflow-hidden bg-secondary/50 dark:bg-secondary/20">
       <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative text-center mb-20">
+        <div className="relative text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary">
@@ -62,8 +43,31 @@ export function PromotionalProductsBanner() {
           </p>
         </div>
 
+        <div className="flex justify-center items-center mb-12 bg-primary/10 p-1 rounded-full max-w-xs mx-auto">
+          <button
+            onClick={() => setFilter("popular")}
+            className={`w-1/2 text-center px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out ${
+              filter === "popular"
+                ? "bg-primary text-primary-foreground shadow"
+                : "text-muted-foreground"
+            }`}
+          >
+            Most Popular
+          </button>
+          <button
+            onClick={() => setFilter("premium")}
+            className={`w-1/2 text-center px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ease-in-out ${
+              filter === "premium"
+                ? "bg-primary text-primary-foreground shadow"
+                : "text-muted-foreground"
+            }`}
+          >
+            Premium
+          </button>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {promotionalProducts.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <ProductCard
               key={product.name}
               name={product.name}
