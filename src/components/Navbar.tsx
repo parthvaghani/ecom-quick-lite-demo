@@ -90,7 +90,7 @@ export function Navbar() {
                   className="rounded-full"
                 />
                 <span className="text-lg sm:text-xl text-primary">
-                  {appConfig.title}™
+                  {appConfig.title}®
                 </span>
               </Link>
             </div>
@@ -154,7 +154,7 @@ export function Navbar() {
                       height={32}
                       className="rounded-full"
                     />
-                    <span>{appConfig.title}™</span>
+                    <span>{appConfig.title}®</span>
                   </SheetTitle>
                   <div className="flex flex-col space-y-2 mt-8 bg-background text-primary">
                     <MobileNavLink href="/categories">

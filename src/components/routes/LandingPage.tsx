@@ -23,7 +23,7 @@ import {
 import { Category } from "../ui/Category";
 import { ROUTES } from "@/utils/constants";
 import { TestimonialsSection } from "../TestimonialsSection";
-import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
+// import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
 import Image from "next/image";
 
 export function LandingPage() {
