@@ -25,7 +25,7 @@ export function LandingPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-white/10 bg-grid-pattern dark:bg-grid-slate-800/10" />
         {/* Animated Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-green-light to-brand-green/70 bg-[length:200%_200%] animate-gradient-shift" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-green/70 to-brand-green/70 bg-[length:200%_200%] animate-gradient-shift" />
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <Badge
