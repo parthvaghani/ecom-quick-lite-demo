@@ -23,18 +23,26 @@ import {
 import { Category } from "../ui/Category";
 import { ROUTES } from "@/utils/constants";
 import { TestimonialsSection } from "../TestimonialsSection";
+import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
+import Image from "next/image";
 
 export function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[calc(100vh-4rem)] flex items-center">
-        {" "}
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-grid-white/10 bg-grid-pattern dark:bg-grid-slate-800/10" />
-        {/* Animated Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/70 bg-[length:200%_200%] animate-gradient-shift" />
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="relative overflow-hidden h-[calc(100vh-4rem)] flex items-center justify-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/fresheners/all.jpg"
+            alt="Aavkar Mukhwas promotional background"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/65" />
+        </div>
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <Badge
               variant="outline"
@@ -45,8 +53,11 @@ export function LandingPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white bg-clip-text dark:text-slate-100">
               {appConfig.title}
             </h1>
-            <p className="text-xl md:text-xl mb-10 text-white max-w-3xl mx-auto dark:text-slate-300">
-              {appConfig.description}
+            <p className="text-lg md:text-lg mb-10 text-white/95 max-w-2xl mx-auto [text-shadow:_0_1px_2px_rgb(0_0_0_/_30%)]">
+              Discover premium quality homemade and hygienic mukhwas from
+              Aavkar. Explore our extensive range of traditional mouth
+              fresheners, sweet supari, and natural ingredients with authentic
+              taste and quality.
             </p>
 
             <Button
@@ -56,32 +67,45 @@ export function LandingPage() {
             >
               <Link
                 href={ROUTES.CATEGORIES}
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 font-semibold"
               >
-                Explore our premium collection{" "}
-                <ArrowRight className="w-4 h-4" />
+                Explore our premium mukhwas <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
 
             {/* Trust Badges */}
-            <div className="mt-8 flex justify-center items-center space-x-8 flex-wrap gap-4">
-              <div className="flex items-center text-white text-sm font-mono">
-                <Leaf className="w-5 h-5 mr-2 text-green-400" />
+            <div className="mt-8 flex justify-center items-center space-x-8 flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
+              >
+                {" "}
+                <Leaf className="w-4 h-4 m-1 text-green-400" />
                 <span>100% Veg</span>
-              </div>
-              <div className="flex items-center text-white text-sm font-mono">
-                <ShieldCheck className="w-5 h-5 mr-2 text-blue-300" />
+              </Badge>
+              <Badge
+                variant="outline"
+                className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
+              >
+                {" "}
+                <ShieldCheck className="w-4 h-4 m-1 text-blue-300" />
                 <span>FSSAI Approved</span>
-              </div>
-              <div className="flex items-center text-white text-sm font-mono">
-                <Globe className="w-5 h-5 mr-2 text-yellow-400" />
+              </Badge>
+              <Badge
+                variant="outline"
+                className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
+              >
+                {" "}
+                <Globe className="w-4 h-4 m-1 text-yellow-400" />
                 <span>Export Ready</span>
-              </div>
+              </Badge>
             </div>
           </div>
         </div>
       </section>
+
       {/* Category Section */}
+      {/* <PromotionalProductsBanner /> */}
       <Category />
 
       {/* Product Details Section */}
