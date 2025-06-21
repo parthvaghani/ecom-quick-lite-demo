@@ -209,7 +209,7 @@ function CategoryCard({
         {/* Enhanced Call to action */}
         <div className="flex items-center justify-between pt-4 border-t border-primary/10">
           <span className="text-sm font-semibold text-primary">
-            View Collection
+            Explore Our Range
           </span>
           <div
             className={`p-2 rounded-full bg-primary/10 text-primary group-hover:bg-gradient-to-r ${gradient} group-hover:text-white transform group-hover:translate-x-1 transition-all duration-300`}

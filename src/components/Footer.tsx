@@ -24,10 +24,10 @@ export function Footer() {
                 📍 Plot No 26, Swastik Raw House, Near Shivdhara Circle, D Mart
                 Road, Mota Varachha, Surat 394101 Gujarat
               </p>
-              <p>🎧 +91 81288 26764 (Primary)</p>
-              <p>🎧 +91 96873 73515 (Secondary)</p>
-              <p>🎧 +91 70161 00540 (Tertiary)</p>
-              <p>👥 Pinal C Miyani, Hina A. Kakadiya, Sangeeta D. Vaghani</p>
+              <p> +91 81288 26764 (Primary Whatsapp)</p>
+              <p> +91 96873 73515 (Secondary)</p>
+              <p> +91 70161 00540 (Secondary)</p>
+              <p>👥 Sangeeta D. Vaghani, Pinal C Miyani, Hina A. Kakadiya</p>
               <p>✉️ aavkarmukhwas@gmail.com</p>
             </div>
           </div>

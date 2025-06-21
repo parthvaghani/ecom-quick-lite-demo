@@ -1,7 +1,7 @@
 export const appConfig = {
   cookieName: "aavkar_mukhwas_auth_token",
   sessionId: "session_id",
-  title: "Aavkar Mukhwas - Home Made & Hygienic",
+  title: "Aavkar Mukhwas",
   description:
     "Discover premium quality homemade and hygienic mukhwas from Aavkar. Explore our extensive range of traditional mouth fresheners, sweet supari, and natural ingredients with authentic taste and quality.",
   company: {
@@ -12,7 +12,7 @@ export const appConfig = {
       "Plot No 26, Swastik Raw House, Near Shivdhara Circle, D Mart Road, Mota Varachha, Surat 394101 Gujarat",
     location: "Surat, Gujarat, India",
     phone: "+91 81288 26764",
-    contact: "Pinal C Miyani, Hina A. Kakadiya, Sangeeta D. Vaghani",
+    contact: "Sangeeta D. Vaghani, Pinal C Miyani, Hina A. Kakadiya",
     updatedAt: {
       privacy: "June 1, 2025",
       terms: "June 1, 2025",
@@ -459,7 +459,7 @@ export const appConfig = {
     email: "aavkarmukhwas@gmail.com",
     address:
       "Plot No 26, Swastik Raw House, Near Shivdhara Circle, D Mart Road, Mota Varachha, Surat 394101 Gujarat",
-    contactPerson: "Pinal C Miyani, Hina A. Kakadiya, Sangeeta D. Vaghani",
+    contactPerson: "Sangeeta D. Vaghani, Pinal C Miyani, Hina A. Kakadiya",
     businessHours: "Monday to Saturday: 9:00 AM - 7:00 PM",
     additionalPhones: ["+91 96873 73515", "+91 70161 00540"],
   },

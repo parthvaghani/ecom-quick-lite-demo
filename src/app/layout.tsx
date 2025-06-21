@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Footer, Navbar, ThemeProvider } from "@/components";
 import Script from "next/script";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         <Toaster />
+        <WhatsAppButton />
       </body>
     </html>
   );

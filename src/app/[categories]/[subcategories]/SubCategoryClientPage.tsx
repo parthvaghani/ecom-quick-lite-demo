@@ -1,6 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import { useState } from "react";
 import { Mail, Eye, Sparkles, Grid3X3, X, ImageIcon } from "lucide-react";
@@ -38,12 +37,10 @@ const productLayouts = {
 };
 
 const gradientOverlays = [
-  "from-blue-600/80 to-purple-600/80",
-  "from-emerald-600/80 to-teal-600/80",
-  "from-amber-600/80 to-orange-600/80",
-  "from-pink-600/80 to-rose-600/80",
-  "from-indigo-600/80 to-blue-600/80",
-  "from-violet-600/80 to-purple-600/80",
+  "from-brand-green/80 to-primary/80",
+  "from-primary/80 to-brand-green-dark/80",
+  "from-brand-green-dark/80 to-brand-green/80",
+  "from-primary/80 to-brand-green/80",
 ];
 
 interface SubCategory {
@@ -69,18 +66,18 @@ export default function SubCategoryClientPage({
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 dark:from-slate-950 dark:via-gray-900 dark:to-slate-950">
+    <div className="relative min-h-screen bg-secondary/50 dark:bg-secondary/20">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200/20 dark:border-purple-400/20 mb-6">
-            <Grid3X3 className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
+            <Grid3X3 className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-primary">
               Gallery Collection
             </span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-green to-primary bg-clip-text text-transparent">
               {subCategory.name}
             </span>{" "}
             Collection
@@ -147,15 +144,15 @@ export default function SubCategoryClientPage({
           <div className="flex items-center justify-center min-h-[400px]">
             <div className="text-center max-w-md mx-auto">
               <div className="relative mb-8">
-                <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6 animate-pulse">
+                <div className="w-24 h-24 mx-auto bg-gradient-to-r from-brand-green to-primary rounded-full flex items-center justify-center mb-6 animate-pulse">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
-                <div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-30 animate-pulse" />
+                <div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-r from-brand-green to-primary rounded-full blur-xl opacity-30 animate-pulse" />
               </div>
 
               <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
                 No Images{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-green to-primary bg-clip-text text-transparent">
                   Available
                 </span>
               </h2>
@@ -184,12 +181,28 @@ export default function SubCategoryClientPage({
                 alt="Mukhwas detail"
                 width={300}
                 height={400}
-                className="object-cover rounded-xl max-w-[90vw] max-h-[80vh]"
+                className="object-contain w-full h-full max-w-full max-h-[80vh]"
               />
             </div>
           </div>
         </div>
       )}
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 0.6s ease-out;
+        }
+      `}</style>
     </div>
   );
 }
@@ -208,70 +221,58 @@ function ImageCard({
   onView: () => void;
 }) {
   const [imageError, setImageError] = useState(false);
-
   return (
-    <Card className="group relative overflow-hidden border-0 h-full cursor-pointer transform-gpu transition-all duration-500 hover:shadow-2xl hover:shadow-black/25 hover:-translate-y-1">
-      <div className="relative h-full overflow-hidden">
-        {!imageError ? (
-          <Image
-            src={image}
-            alt={`${categoryName} mukhwas`}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-            <div className="text-center text-gray-400">
-              <ImageIcon className="w-12 h-12 mx-auto mb-2 opacity-50" />
-              <p className="text-sm font-medium">Broken image</p>
-              <p className="text-xs mt-1">{categoryName}</p>
-            </div>
-          </div>
-        )}
-
-        <div
-          className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+    <div
+      className="relative w-full h-full rounded-2xl overflow-hidden group cursor-pointer"
+      onClick={onView}
+    >
+      {!imageError ? (
+        <Image
+          src={image}
+          alt={`${categoryName} Mukhwas`}
+          fill
+          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+          onError={() => setImageError(true)}
         />
-
-        <div className="absolute inset-0 flex flex-col justify-between p-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
-          <div className="flex justify-between items-start"></div>
-
-          <div className="space-y-3">
-            <div className="text-center">
-              <h3 className="text-white font-semibold text-sm mb-1 uppercase">
-                {categoryName}
-              </h3>
-              <p className="text-white/80 text-xs">Premium Quality</p>
-            </div>
-
-            <div className="flex gap-2 flex-wrap">
-              <button
-                onClick={() => {
-                  onView();
-                }}
-                className="flex-1 bg-white/20 backdrop-blur-sm text-white py-2 px-3 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 flex items-center justify-center gap-1 z-50"
-              >
-                <Eye className="w-3 h-3" />
-                View
-              </button>
-
-              <button
-                onClick={() => {
-                  onMailto();
-                }}
-                className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-3 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-1 z-50"
-              >
-                <Mail className="w-3 h-3" />
-                Inquire
-              </button>
-            </div>
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+          <div className="text-center text-gray-400">
+            <ImageIcon className="w-12 h-12 mx-auto mb-2 opacity-50" />
+            <p className="text-sm font-medium">Broken image</p>
+            <p className="text-xs mt-1">{categoryName}</p>
           </div>
         </div>
-
-        <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-xl transition-all duration-500" />
+      )}
+      <div
+        className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+      />
+      <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <h3 className="text-lg md:text-xl font-bold text-white mb-2 leading-tight">
+          {categoryName}
+        </h3>
+        <div className="flex space-x-2">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onMailto();
+            }}
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
+            title="Inquire about this product"
+          >
+            <Mail className="w-4 h-4" />
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onView();
+            }}
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
+            title="View larger image"
+          >
+            <Eye className="w-4 h-4" />
+          </button>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 }

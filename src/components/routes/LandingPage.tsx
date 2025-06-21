@@ -58,7 +58,8 @@ export function LandingPage() {
                 href={ROUTES.CATEGORIES}
                 className="flex items-center gap-2"
               >
-                View our collections <ArrowRight className="w-4 h-4" />
+                Explore our premium collection{" "}
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
 

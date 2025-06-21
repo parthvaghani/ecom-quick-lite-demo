@@ -80,7 +80,7 @@ export function Navbar() {
             <div className="flex items-center">
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-xl font-bold text-gray-900 dark:text-white"
+                className="flex items-center space-x-2 font-bold text-gray-900 dark:text-white"
               >
                 <Image
                   src="/images/logo.png"
@@ -89,9 +89,7 @@ export function Navbar() {
                   height={40}
                   className="rounded-full"
                 />
-                <span className="hidden sm:inline-block">
-                  {appConfig.title}
-                </span>
+                <span className="text-lg sm:text-xl">{appConfig.title}</span>
               </Link>
             </div>
 
@@ -139,7 +137,7 @@ export function Navbar() {
             </div>
 
             {/* Mobile Navigation */}
-            <div className="sm:hidden flex items-center gap-2">
+            <div className="sm:hidden flex items-center">
               {/* <ThemeToggle /> */}
               <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                 <SheetTrigger asChild>
