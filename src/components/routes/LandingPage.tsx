@@ -53,12 +53,12 @@ export function LandingPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white bg-clip-text dark:text-slate-100">
               {appConfig.title}
             </h1>
-            <p className="text-lg md:text-lg mb-10 text-white/95 max-w-2xl mx-auto [text-shadow:_0_1px_2px_rgb(0_0_0_/_30%)]">
+            {/* <p className="text-lg md:text-lg mb-10 text-white/95 max-w-2xl mx-auto [text-shadow:_0_1px_2px_rgb(0_0_0_/_30%)]">
               Discover premium quality homemade and hygienic mukhwas from
               Aavkar. Explore our extensive range of traditional mouth
               fresheners, sweet supari, and natural ingredients with authentic
               taste and quality.
-            </p>
+            </p> */}
 
             <Button
               size="lg"
