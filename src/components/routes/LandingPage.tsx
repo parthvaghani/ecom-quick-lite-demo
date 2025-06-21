@@ -13,19 +13,33 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  FeaturesSection,
-  ReviewsSection,
-  FAQSection,
-  GrowthSection,
-  ProductDetailsSection,
-} from "@/components";
 import { Category } from "../ui/Category";
 import { ROUTES } from "@/utils/constants";
-import { TestimonialsSection } from "../TestimonialsSection";
 import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
 import Image from "next/image";
-import { IngredientsGuide } from "../ui/IngredientsGuide";
+import dynamic from "next/dynamic";
+
+const ProductDetailsSection = dynamic(() =>
+  import("@/components").then((mod) => mod.ProductDetailsSection)
+);
+const IngredientsGuide = dynamic(() =>
+  import("../ui/IngredientsGuide").then((mod) => mod.IngredientsGuide)
+);
+const FeaturesSection = dynamic(() =>
+  import("@/components").then((mod) => mod.FeaturesSection)
+);
+const ReviewsSection = dynamic(() =>
+  import("@/components").then((mod) => mod.ReviewsSection)
+);
+const GrowthSection = dynamic(() =>
+  import("@/components").then((mod) => mod.GrowthSection)
+);
+const TestimonialsSection = dynamic(() =>
+  import("../TestimonialsSection").then((mod) => mod.TestimonialsSection)
+);
+const FAQSection = dynamic(() =>
+  import("@/components").then((mod) => mod.FAQSection)
+);
 
 export function LandingPage() {
   return (
