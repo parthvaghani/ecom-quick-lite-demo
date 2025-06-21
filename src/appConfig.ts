@@ -70,6 +70,8 @@ export const appConfig = {
   products: {
     beetRootAmla: {
       name: "Beet Root Amla Mukhwas",
+      image: "/images/products/beet-root-amla.jpg",
+      tagline: "A healthy and tasty mix of beet root and amla.",
       ingredients: [
         "Beet Root",
         "Amla",
@@ -93,6 +95,8 @@ export const appConfig = {
     },
     multiSeeds: {
       name: "Multi Seeds Mukhwas",
+      image: "/images/products/multi-seeds.jpg",
+      tagline: "A crunchy and nutritious mix of various seeds.",
       ingredients: [
         "Melon Seeds",
         "Pumpkin Seeds",
@@ -110,6 +114,8 @@ export const appConfig = {
     },
     seedTalAlsi: {
       name: "Seed Tal Alsi Mukhwas",
+      image: "/images/products/seed-tal-alsi.jpg",
+      tagline: "A wholesome blend of seeds, tal, and alsi.",
       ingredients: [
         "Pumpkin Seeds",
         "Melon Seeds",
@@ -127,6 +133,8 @@ export const appConfig = {
     },
     jaipuriMukhwas: {
       name: "Special Jaipuri Mukhwas",
+      image: "/images/products/jaipuri-mukhwas.jpg",
+      tagline: "A royal mix of sweet and savory flavors.",
       ingredients: [
         "Tini Mini (Sweet Saunf)",
         "Coriander Seeds",
@@ -142,6 +150,8 @@ export const appConfig = {
     },
     roastedAlsi: {
       name: "Roasted Alsi Mukhwas",
+      image: "/images/products/roasted-alsi.jpg",
+      tagline: "A healthy and flavorful roasted flax seeds mix.",
       ingredients: ["Green Wheat", "Black Salt", "Turmeric", "Rock Salt"],
       benefits: [
         "Helps to Lower Cholesterol & Relieves hyperlipidemia & Obesity",
@@ -153,6 +163,8 @@ export const appConfig = {
     },
     makhanaNutsOats: {
       name: "Makhana Nuts Oats Mix",
+      image: "/images/products/makhana-nuts-oats.jpg",
+      tagline: "A nutritious and crunchy mix of makhana, nuts, and oats.",
       ingredients: [
         "Oats",
         "Makhana",
@@ -172,6 +184,8 @@ export const appConfig = {
     },
     roastedGreenWheat: {
       name: "Roasted Green Wheat Mukhwas",
+      image: "/images/products/roasted-green-wheat.jpg",
+      tagline: "A healthy and delicious roasted green wheat mix.",
       ingredients: ["Green Wheat", "Natural Fibers", "Minerals"],
       benefits: [
         "Full of Natural Fibers",

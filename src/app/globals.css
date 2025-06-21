@@ -2,48 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   :root {
-
     --background: 0 0% 100%;
-
-    --foreground: 0 0% 3.9%;
+    --foreground: 140 23% 15%; /* Dark Grayish Green */
 
     --card: 0 0% 100%;
 
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 140 23% 15%; /* Dark Grayish Green */
 
     --popover: 0 0% 100%;
 
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 140 23% 15%; /* Dark Grayish Green */
 
-    --primary: 0 0% 9%;
+    --primary: 140 45% 27%; /* Dark Green from logo */
 
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 98 100% 97%; /* A very light green for text on primary */
 
-    --secondary: 0 0% 96.1%;
+    --secondary: 98 44% 90%; /* Light muted green for backgrounds */
 
-    --secondary-foreground: 0 0% 9%;
+    --secondary-foreground: 140 45% 27%; /* Dark Green from logo */
 
-    --muted: 0 0% 96.1%;
+    --muted: 98 44% 90%; /* Light muted green for backgrounds */
 
-    --muted-foreground: 0 0% 45.1%;
+    --muted-foreground: 140 23% 35%; /* A slightly lighter grayish green */
 
-    --accent: 0 0% 96.1%;
+    --accent: 98 44% 90%; /* Light muted green for backgrounds */
 
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 140 45% 27%; /* Dark Green from logo */
 
     --destructive: 0 84.2% 60.2%;
 
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
+    --border: 98 34% 80%; /* A border color that fits the green theme */
 
-    --input: 0 0% 89.8%;
+    --input: 98 34% 80%; /* An input color that fits the green theme */
 
-    --ring: 0 0% 3.9%;
+    --ring: 140 45% 27%; /* Dark Green from logo */
 
     --chart-1: 12 76% 61%;
 
@@ -55,47 +51,45 @@
 
     --chart-5: 27 87% 67%;
 
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
+    --background: 140 23% 10%; /* Dark Grayish Green */
+    --foreground: 98 100% 97%; /* A very light green for text */
 
-    --background: 0 0% 3.9%;
+    --card: 140 23% 10%; /* Dark Grayish Green */
 
-    --foreground: 0 0% 98%;
+    --card-foreground: 98 100% 97%; /* A very light green for text */
 
-    --card: 0 0% 3.9%;
+    --popover: 140 23% 10%; /* Dark Grayish Green */
 
-    --card-foreground: 0 0% 98%;
+    --popover-foreground: 98 100% 97%; /* A very light green for text */
 
-    --popover: 0 0% 3.9%;
+    --primary: 98 44% 90%; /* Light muted green for primary actions */
 
-    --popover-foreground: 0 0% 98%;
+    --primary-foreground: 140 45% 27%; /* Dark Green from logo */
 
-    --primary: 0 0% 98%;
+    --secondary: 140 23% 15%; /* Darker Grayish Green */
 
-    --primary-foreground: 0 0% 9%;
+    --secondary-foreground: 98 100% 97%; /* A very light green for text */
 
-    --secondary: 0 0% 14.9%;
+    --muted: 140 23% 15%; /* Darker Grayish Green */
 
-    --secondary-foreground: 0 0% 98%;
+    --muted-foreground: 98 100% 87%; /* A slightly dimmer light green */
 
-    --muted: 0 0% 14.9%;
+    --accent: 140 23% 15%; /* Darker Grayish Green */
 
-    --muted-foreground: 0 0% 63.9%;
-
-    --accent: 0 0% 14.9%;
-
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 98 100% 97%; /* A very light green for text */
 
     --destructive: 0 62.8% 30.6%;
 
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
+    --border: 140 23% 20%; /* A border color that fits the dark green theme */
 
-    --input: 0 0% 14.9%;
+    --input: 140 23% 20%; /* An input color that fits the dark green theme */
 
-    --ring: 0 0% 83.1%;
+    --ring: 98 44% 90%; /* Light muted green for rings */
 
     --chart-1: 220 70% 50%;
 
@@ -105,11 +99,9 @@
 
     --chart-4: 280 65% 60%;
 
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
-
-
 
 @layer base {
   * {

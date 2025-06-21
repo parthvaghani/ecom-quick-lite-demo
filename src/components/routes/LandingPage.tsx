@@ -10,11 +10,11 @@ import {
   ReviewsSection,
   FAQSection,
   GrowthSection,
-  TestimonialsSection,
   ProductDetailsSection,
 } from "@/components";
 import { Category } from "../ui/Category";
 import { ROUTES } from "@/utils/constants";
+import { TestimonialsSection } from "../TestimonialsSection";
 
 export function LandingPage() {
   return (
@@ -25,7 +25,7 @@ export function LandingPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-white/10 bg-grid-pattern dark:bg-grid-slate-800/10" />
         {/* Animated Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-400/90 to-pink-600/90 from-orange-800/90 to-pink-800/90 bg-[length:200%_200%] animate-gradient-shift" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-green-light to-brand-green/70 bg-[length:200%_200%] animate-gradient-shift" />
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <Badge
@@ -44,7 +44,7 @@ export function LandingPage() {
             <Button
               size="lg"
               variant="default"
-              className="bg-white text-blue-600 hover:bg-white/90 dark:bg-white dark:text-blue-600 dark:hover:bg-white/90"
+              className="bg-white text-primary hover:bg-white/90 dark:bg-white dark:text-primary dark:hover:bg-white/90"
             >
               <Link
                 href={ROUTES.CATEGORIES}
@@ -81,23 +81,23 @@ export function LandingPage() {
           <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
         </div>
         {/* Dynamic background with gradient overlay */}
-        <div className="p-8 lg:p-12 bg-gradient-to-r from-amber-600/10 to-orange-600/10 dark:from-amber-900/10 dark:to-orange-900/10 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/20">
+        <div className="p-8 lg:p-12 bg-gradient-to-r from-brand-green-light/50 to-brand-green/20 dark:from-brand-green/10 dark:to-brand-green-dark/20 backdrop-blur-sm border-border">
           <div className="text-center">
-            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-4xl font-bold mb-6 text-foreground">
               Ready to Explore Our Premium Homemade Mukhwas Collection?
             </h2>
 
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Join thousands of customers who trust {appConfig.title} for
               premium quality homemade and hygienic mukhwas with authentic taste
               and competitive pricing.
             </p>
 
             <div className="relative inline-block group">
-              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-emerald-600 to-green-600 opacity-50 group-hover:opacity-70 blur transition duration-200" />
+              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-primary to-brand-green-dark opacity-50 group-hover:opacity-70 blur transition duration-200" />
               <Link
                 href={`https://wa.me/918128826764?text=Hi, I'm interested in your mukhwas collection`}
-                className="relative inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-green-600 rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-200 hover:-translate-y-0.5"
+                className="relative inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-primary to-brand-green-dark rounded-lg hover:from-primary/90 hover:to-brand-green-dark/90 transition-all duration-200 hover:-translate-y-0.5"
               >
                 Contact Us
                 <ArrowRight className="w-5 h-5 animate-bounce-x" />
@@ -105,7 +105,7 @@ export function LandingPage() {
             </div>
 
             {/* Trust indicators */}
-            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-500 dark:text-gray-400">
+            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Award className="w-5 h-5" />
                 Premium Quality Guarantee

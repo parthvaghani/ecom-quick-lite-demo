@@ -11,8 +11,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { ROUTES } from "@/utils/constants";
+import Image from "next/image";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,7 +82,16 @@ export function Navbar() {
                 href="/"
                 className="flex items-center space-x-2 text-xl font-bold text-gray-900 dark:text-white"
               >
-                {appConfig.title}
+                <Image
+                  src="/images/logo.png"
+                  alt="Aavkar Mukhwas Logo"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+                <span className="hidden sm:inline-block">
+                  {appConfig.title}
+                </span>
               </Link>
             </div>
 
@@ -126,12 +135,12 @@ export function Navbar() {
                   </NavLink> */}
               </>
 
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
             </div>
 
             {/* Mobile Navigation */}
             <div className="sm:hidden flex items-center gap-2">
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
               <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" className="h-10 w-10">
@@ -139,7 +148,16 @@ export function Navbar() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-72 bg-background">
-                  <SheetTitle>{appConfig.title}</SheetTitle>
+                  <SheetTitle className="flex items-center gap-2">
+                    <Image
+                      src="/images/logo.png"
+                      alt="Aavkar Mukhwas Logo"
+                      width={32}
+                      height={32}
+                      className="rounded-full"
+                    />
+                    <span>{appConfig.title}</span>
+                  </SheetTitle>
                   <div className="flex flex-col space-y-2 mt-8 bg-background">
                     <MobileNavLink href="/categories">
                       <Sparkles className="h-4 w-4" />

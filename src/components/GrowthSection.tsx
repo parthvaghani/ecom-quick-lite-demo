@@ -11,27 +11,27 @@ export function GrowthSection() {
   ) => {
     if (feature.size !== "lg") {
       return (feature.title.length + feature.description.length) % 2 === 0
-        ? "bg-gradient-to-r from-[#1457db] to-[#002ea6]"
-        : "bg-gradient-to-r from-indigo-600 to-pink-600";
+        ? "bg-gradient-to-r from-brand-green to-brand-green-dark"
+        : "bg-gradient-to-r from-primary to-primary/80";
     } else {
       return index % 2 === 0
-        ? "bg-gradient-to-r from-[#1457db] to-[#002ea6]"
-        : "bg-gradient-to-r from-indigo-600 to-pink-600";
+        ? "bg-gradient-to-r from-brand-green to-brand-green-dark"
+        : "bg-gradient-to-r from-primary to-primary/80";
     }
   };
   return (
     <section className="relative overflow-hidden py-12">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950">
+      <div className="absolute inset-0 bg-secondary/50 dark:bg-secondary/20">
         <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="relative text-center mb-12">
-          <h2 className="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
+          <h2 className="inline-flex items-center text-sm font-semibold text-primary dark:text-primary mb-2">
             PREMIUM HOMEMADE MUKHWAS COLLECTION
-            <span className="ml-2 w-12 h-px bg-emerald-600 dark:bg-emerald-400"></span>
+            <span className="ml-2 w-12 h-px bg-primary dark:bg-primary"></span>
           </h2>
           <h3 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400">
             All the finest homemade and hygienic mukhwas to elevate your taste
@@ -44,7 +44,7 @@ export function GrowthSection() {
             <div
               key={feature.title}
               className={cn(
-                "rounded-2xl p-8 text-white overflow-hidden relative group transition-all duration-300",
+                "rounded-2xl p-8 text-white dark:text-primary-foreground overflow-hidden relative group transition-all duration-300",
                 getGradientClass(feature, index),
                 feature.size === "lg" ? "md:col-span-2" : ""
               )}
