@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KKDupatta",
-  description: "Bring elegance to your wardrobe with premium quality dupattas."
+  title: "Aavkar Mukhwas - Home Made & Hygienic",
+  description:
+    "Discover premium quality homemade and hygienic mukhwas from Aavkar. Explore our extensive range of traditional mouth fresheners, sweet supari, and natural ingredients with authentic taste and quality.",
 };
 
 export default function RootLayout({
@@ -28,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-
         {/* Google Tag Manager */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JV398YZPBX"
@@ -56,6 +56,5 @@ export default function RootLayout({
         <Toaster />
       </body>
     </html>
-
   );
 }

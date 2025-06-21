@@ -2,7 +2,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Category } from "@/components/ui/Category";
 import categoriesJson from "@/utils/categories.json";
-import { ArrowRight, Sparkles, Grid3X3, Mail, Eye, X, ImageIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  Grid3X3,
+  Mail,
+  Eye,
+  X,
+  ImageIcon,
+} from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { use, useState } from "react";
@@ -34,7 +42,8 @@ const subcategoryBackgrounds = [
   "from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20",
 ];
 
-const clothLayouts = {
+// Product layouts for different image counts
+const productLayouts = {
   1: ["col-span-2 row-span-2"],
   2: ["col-span-1 row-span-2", "col-span-1 row-span-2"],
   3: [
@@ -88,9 +97,9 @@ export default function CategoryPage(props: {
   }
 
   const handleMailto = (categoryName: string, imageSrc: string) => {
-    const subject = encodeURIComponent(`Inquiry about ${categoryName} Dupatta`);
+    const subject = encodeURIComponent(`Inquiry about ${categoryName} Mukhwas`);
     const body = encodeURIComponent(
-      `Hi,\n\nI'm interested in this beautiful dupatta from your ${categoryName} collection.\n\nImage: ${imageSrc}\n\nCould you please provide more details about pricing and availability?\n\nThank you!`
+      `Hi,\n\nI'm interested in this delicious mukhwas from your ${categoryName} collection.\n\nImage: ${imageSrc}\n\nCould you please provide more details about pricing and availability?\n\nThank you!`
     );
     window.open(`mailto:?subject=${subject}&body=${body}`);
   };
@@ -148,19 +157,19 @@ export default function CategoryPage(props: {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
             {category.images.map((image, index) => {
               const layoutClass =
-                clothLayouts[
-                Math.min(
-                  category.images!.length,
-                  6
-                ) as keyof typeof clothLayouts
-                ]?.[
-                index %
-                clothLayouts[
+                productLayouts[
                   Math.min(
                     category.images!.length,
                     6
-                  ) as keyof typeof clothLayouts
-                ].length
+                  ) as keyof typeof productLayouts
+                ]?.[
+                  index %
+                    productLayouts[
+                      Math.min(
+                        category.images!.length,
+                        6
+                      ) as keyof typeof productLayouts
+                    ].length
                 ] || "col-span-1 row-span-1";
               const gradientOverlay =
                 gradientOverlays[index % gradientOverlays.length];
@@ -188,31 +197,32 @@ export default function CategoryPage(props: {
         )}
 
         {!category.images ||
-          category.images.length === 0 &&
-          ((!category.subCategories || category.subCategories.length === 0) && (
-            <div className="flex items-center justify-center min-h-[400px]">
-              <div className="text-center max-w-md mx-auto">
-                <div className="relative mb-8">
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6 animate-pulse">
-                    <Sparkles className="w-12 h-12 text-white" />
+          (category.images.length === 0 &&
+            (!category.subCategories ||
+              category.subCategories.length === 0) && (
+              <div className="flex items-center justify-center min-h-[400px]">
+                <div className="text-center max-w-md mx-auto">
+                  <div className="relative mb-8">
+                    <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6 animate-pulse">
+                      <Sparkles className="w-12 h-12 text-white" />
+                    </div>
+                    <div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-30 animate-pulse" />
                   </div>
-                  <div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-30 animate-pulse" />
+
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    Coming{" "}
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      Soon
+                    </span>
+                  </h2>
+
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    We&apos;re working hard to bring you an amazing collection
+                    in this category. Stay tuned for updates!
+                  </p>
                 </div>
-
-                <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                  Coming{" "}
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Soon
-                  </span>
-                </h2>
-
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  We&apos;re working hard to bring you an amazing collection in
-                  this category. Stay tuned for updates!
-                </p>
               </div>
-            </div>
-          ))}
+            ))}
       </div>
 
       {/* Image Modal */}
@@ -228,7 +238,7 @@ export default function CategoryPage(props: {
             <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-900 shadow-2xl p-4">
               <Image
                 src={selectedImage}
-                alt="Dupatta detail"
+                alt="Mukhwas detail"
                 width={300}
                 height={400}
                 className="object-cover rounded-xl max-w-[90vw] max-h-[80vh]"
@@ -335,7 +345,7 @@ function ImageCard({
         {!imageError ? (
           <Image
             src={image}
-            alt={`${categoryName} dupatta`}
+            alt={`${categoryName} mukhwas`}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
@@ -379,7 +389,7 @@ function ImageCard({
                 e.stopPropagation();
                 if (navigator.share) {
                   navigator.share({
-                    title: `${categoryName} Dupatta`,
+                    title: `${categoryName} Mukhwas`,
                     url: image
                   });
                 }

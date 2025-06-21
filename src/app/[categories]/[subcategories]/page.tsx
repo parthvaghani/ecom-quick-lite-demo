@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Card } from "@/components/ui/card";
 import { Category } from "@/components/ui/Category";
@@ -7,14 +7,36 @@ import Image from "next/image";
 import { use, useState } from "react";
 import { Mail, Eye, Sparkles, Grid3X3, X, ImageIcon } from "lucide-react";
 
-// Cloth-like layouts for different image counts
-const clothLayouts = {
+// Product layouts for different image counts
+const productLayouts = {
   1: ["col-span-2 row-span-2"],
   2: ["col-span-1 row-span-2", "col-span-1 row-span-2"],
-  3: ["col-span-2 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1"],
-  4: ["col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1"],
-  5: ["col-span-2 row-span-2", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-1"],
-  6: ["col-span-1 row-span-2", "col-span-1 row-span-1", "col-span-1 row-span-1", "col-span-1 row-span-2", "col-span-1 row-span-1", "col-span-1 row-span-1"]
+  3: [
+    "col-span-2 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
+  4: [
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
+  5: [
+    "col-span-2 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
+  6: [
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+  ],
 };
 
 const gradientOverlays = [
@@ -23,22 +45,28 @@ const gradientOverlays = [
   "from-amber-600/80 to-orange-600/80",
   "from-pink-600/80 to-rose-600/80",
   "from-indigo-600/80 to-blue-600/80",
-  "from-violet-600/80 to-purple-600/80"
+  "from-violet-600/80 to-purple-600/80",
 ];
 
-export default function SubCategoryCard(props: { params: Promise<{ categories: string }> }) {
-  const { categories } = use(props.params)
+export default function SubCategoryCard(props: {
+  params: Promise<{ categories: string }>;
+}) {
+  const { categories } = use(props.params);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const category = categoriesJson.categories.find((category) => category.category === categories);
+  const category = categoriesJson.categories.find(
+    (category) => category.category === categories
+  );
 
   if (!category) {
-    return <Category />
+    return <Category />;
   }
 
   const handleMailto = (categoryName: string, imageSrc: string) => {
-    const subject = encodeURIComponent(`Inquiry about ${categoryName} Dupatta`);
-    const body = encodeURIComponent(`Hi,\n\nI'm interested in this beautiful dupatta from your ${categoryName} collection.\n\nImage: ${imageSrc}\n\nCould you please provide more details about pricing and availability?\n\nThank you!`);
+    const subject = encodeURIComponent(`Inquiry about ${categoryName} Mukhwas`);
+    const body = encodeURIComponent(
+      `Hi,\n\nI'm interested in this delicious mukhwas from your ${categoryName} collection.\n\nImage: ${imageSrc}\n\nCould you please provide more details about pricing and availability?\n\nThank you!`
+    );
     window.open(`mailto:?subject=${subject}&body=${body}`);
   };
 
@@ -64,8 +92,8 @@ export default function SubCategoryCard(props: { params: Promise<{ categories: s
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               {category.name}
-            </span>
-            {" "}Collection
+            </span>{" "}
+            Collection
           </h1>
 
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -88,8 +116,23 @@ export default function SubCategoryCard(props: { params: Promise<{ categories: s
         {category.images && category.images.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
             {category.images.map((image, index) => {
-              const layoutClass = clothLayouts[Math.min(category.images!.length, 6) as keyof typeof clothLayouts]?.[index % clothLayouts[Math.min(category.images!.length, 6) as keyof typeof clothLayouts].length] || "col-span-1 row-span-1";
-              const gradientOverlay = gradientOverlays[index % gradientOverlays.length];
+              const layoutClass =
+                productLayouts[
+                  Math.min(
+                    category.images!.length,
+                    6
+                  ) as keyof typeof productLayouts
+                ]?.[
+                  index %
+                    productLayouts[
+                      Math.min(
+                        category.images!.length,
+                        6
+                      ) as keyof typeof productLayouts
+                    ].length
+                ] || "col-span-1 row-span-1";
+              const gradientOverlay =
+                gradientOverlays[index % gradientOverlays.length];
 
               return (
                 <div
@@ -97,7 +140,7 @@ export default function SubCategoryCard(props: { params: Promise<{ categories: s
                   className={`animate-fade-in-up ${layoutClass}`}
                   style={{
                     animationDelay: `${index * 100}ms`,
-                    animationFillMode: 'both'
+                    animationFillMode: "both",
                   }}
                 >
                   <ImageCard
@@ -122,11 +165,15 @@ export default function SubCategoryCard(props: { params: Promise<{ categories: s
               </div>
 
               <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                No Images <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Available</span>
+                No Images{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Available
+                </span>
               </h2>
 
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                We&apos;re working on adding beautiful images to this collection. Please check back soon!
+                We&apos;re working on adding beautiful images to this
+                collection. Please check back soon!
               </p>
             </div>
           </div>
@@ -146,7 +193,7 @@ export default function SubCategoryCard(props: { params: Promise<{ categories: s
             <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-900 shadow-2xl p-4">
               <Image
                 src={selectedImage}
-                alt="Dupatta detail"
+                alt="Mukhwas detail"
                 width={300}
                 height={400}
                 className="object-cover rounded-xl max-w-[90vw] max-h-[80vh]"
@@ -156,7 +203,7 @@ export default function SubCategoryCard(props: { params: Promise<{ categories: s
         </div>
       )}
     </div>
-  )
+  );
 }
 
 function ImageCard({
@@ -181,7 +228,7 @@ function ImageCard({
         {!imageError ? (
           <Image
             src={image}
-            alt={`${categoryName} dupatta`}
+            alt={`${categoryName} mukhwas`}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
@@ -191,8 +238,7 @@ function ImageCard({
           // Placeholder for broken images
           <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
             <div className="text-center text-gray-400">
-              <ImageIcon
-                className="w-12 h-12 mx-auto mb-2 opacity-50" />
+              <ImageIcon className="w-12 h-12 mx-auto mb-2 opacity-50" />
               <p className="text-sm font-medium">Broken image</p>
               <p className="text-xs mt-1">{categoryName}</p>
             </div>
@@ -226,7 +272,7 @@ function ImageCard({
                 e.stopPropagation();
                 if (navigator.share) {
                   navigator.share({
-                    title: `${categoryName} Dupatta`,
+                    title: `${categoryName} Mukhwas`,
                     url: image
                   });
                 }

@@ -2,10 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, Sparkles, Instagram, Mail } from "lucide-react";
+import { Menu, Sparkles, Instagram, Mail, Phone } from "lucide-react";
 import { appConfig } from "@/appConfig";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ROUTES } from "@/utils/constants";
 
@@ -64,10 +69,11 @@ export function Navbar() {
       <div className={`h-16 w-full`}></div>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "top-4 left-4 right-4 mx-auto max-w-8xl rounded-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
-          : "bg-white dark:bg-gray-900"
-          }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "top-4 left-4 right-4 mx-auto max-w-8xl rounded-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
+            : "bg-white dark:bg-gray-900"
+        }`}
       >
         <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-8xl">
           <div className="flex justify-between h-16">
@@ -82,7 +88,6 @@ export function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden sm:flex sm:items-center sm:space-x-1">
-
               <>
                 {/* {/* <NavLink href="/feature">
                     <Sparkles className="h-4 w-4" />
@@ -92,14 +97,19 @@ export function Navbar() {
                   <Sparkles className="h-4 w-4" />
                   Our Collection
                 </NavLink>
-                <NavLink href="https://www.instagram.com/kkdupatta2025?igsh=MXowNGdwN2xoaDh6">
+                <NavLink href="https://www.instagram.com/aavkarmukhwas?igsh=MXowNGdwN2xoaDh6">
                   <Instagram className="h-4 w-4" />
                   Instagram
                 </NavLink>
 
-                <NavLink href="mailto:kkdupattahouse5080@gmail.com">
+                <NavLink href="mailto:aavkarmukhwas@gmail.com">
                   <Mail className="h-4 w-4" />
                   Email Support
+                </NavLink>
+
+                <NavLink href="tel:+918128826764">
+                  <Phone className="h-4 w-4" />
+                  Call Us
                 </NavLink>
                 {/* <NavLink href="/profile">
                     {metadata?.photoURL ? (
@@ -129,26 +139,26 @@ export function Navbar() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-72 bg-background">
-                  <SheetTitle>
-                    {appConfig.title}
-                  </SheetTitle>
+                  <SheetTitle>{appConfig.title}</SheetTitle>
                   <div className="flex flex-col space-y-2 mt-8 bg-background">
-
                     <MobileNavLink href="/categories">
                       <Sparkles className="h-4 w-4" />
                       Our Collection
                     </MobileNavLink>
 
-                    <MobileNavLink
-                      href="https://www.instagram.com/kkdupatta2025?igsh=MXowNGdwN2xoaDh6"
-                    >
+                    <MobileNavLink href="https://www.instagram.com/aavkarmukhwas?igsh=MXowNGdwN2xoaDh6">
                       <Instagram className="h-4 w-4" />
                       Instagram
                     </MobileNavLink>
 
-                    <MobileNavLink href="mailto:kkdupattahouse5080@gmail.com">
+                    <MobileNavLink href="mailto:aavkarmukhwas@gmail.com">
                       <Mail className="h-4 w-4" />
                       Email Support
+                    </MobileNavLink>
+
+                    <MobileNavLink href="tel:+918128826764">
+                      <Phone className="h-4 w-4" />
+                      Call Us (+91 81288 26764)
                     </MobileNavLink>
                   </div>
                 </SheetContent>

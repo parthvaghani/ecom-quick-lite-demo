@@ -1,27 +1,26 @@
-"use client"
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { categories } from "@/utils/categories.json";
 import {
-  Palette,
   Zap,
   Crown,
   Star,
   Diamond,
-  Shirt,
   Sparkles,
   Gem,
   Layers,
   Waves,
   Wand2,
   Heart,
-  ShirtIcon,
-  ArrowRight
+  ArrowRight,
+  Leaf,
+  Package,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 // Icon mapping for different category types
 const categoryIcons = {
-  dyeable: <Palette className="w-5 h-5" />,
+  dyeable: <Leaf className="w-5 h-5" />,
   grieg: <Zap className="w-5 h-5" />,
   pure: <Crown className="w-5 h-5" />,
   chanderi: <Star className="w-5 h-5" />,
@@ -31,9 +30,9 @@ const categoryIcons = {
   jenny: <Heart className="w-5 h-5" />,
   extra: <Sparkles className="w-5 h-5" />,
   jacquard: <Wand2 className="w-5 h-5" />,
-  suit: <ShirtIcon className="w-5 h-5" />,
+  suit: <Package className="w-5 h-5" />,
   muslin: <Gem className="w-5 h-5" />,
-  default: <Shirt className="w-5 h-5" />
+  default: <Leaf className="w-5 h-5" />,
 };
 
 // Gradient color schemes for different categories
@@ -45,7 +44,7 @@ const categoryGradients = [
   "from-indigo-500 to-blue-600",
   "from-violet-500 to-purple-600",
   "from-cyan-500 to-blue-600",
-  "from-red-500 to-pink-600"
+  "from-red-500 to-pink-600",
 ];
 
 const categoryBackgrounds = [
@@ -56,37 +55,35 @@ const categoryBackgrounds = [
   "from-indigo-50 to-blue-50 dark:from-indigo-950/20 dark:to-blue-950/20",
   "from-violet-50 to-purple-50 dark:from-violet-950/20 dark:to-purple-950/20",
   "from-cyan-50 to-blue-50 dark:from-cyan-950/20 dark:to-blue-950/20",
-  "from-red-50 to-pink-50 dark:from-red-950/20 dark:to-pink-950/20"
+  "from-red-50 to-pink-50 dark:from-red-950/20 dark:to-pink-950/20",
 ];
 
 function getIconForCategory(category: string) {
   const categoryLower = category.toLowerCase();
 
   // Primary category checks (most specific first)
-  if (categoryLower.includes('jacquard')) return categoryIcons.jacquard;
-  if (categoryLower.includes('double-beam-jenny')) return categoryIcons.beam;
-  if (categoryLower.includes('muslin')) return categoryIcons.muslin;
-  if (categoryLower.includes('suit')) return categoryIcons.suit;
-  if (categoryLower.includes('jenny')) return categoryIcons.jenny;
-  if (categoryLower.includes('double')) return categoryIcons.double;
-  if (categoryLower.includes('extra')) return categoryIcons.extra;
+  if (categoryLower.includes("jacquard")) return categoryIcons.jacquard;
+  if (categoryLower.includes("double-beam-jenny")) return categoryIcons.beam;
+  if (categoryLower.includes("muslin")) return categoryIcons.muslin;
+  if (categoryLower.includes("suit")) return categoryIcons.suit;
+  if (categoryLower.includes("jenny")) return categoryIcons.jenny;
+  if (categoryLower.includes("double")) return categoryIcons.double;
+  if (categoryLower.includes("extra")) return categoryIcons.extra;
 
   // Original category checks
-  if (categoryLower.includes('dyeable')) return categoryIcons.dyeable;
-  if (categoryLower.includes('grieg')) return categoryIcons.grieg;
-  if (categoryLower.includes('pure')) return categoryIcons.pure;
-  if (categoryLower.includes('chanderi')) return categoryIcons.chanderi;
-  if (categoryLower.includes('digital')) return categoryIcons.digital;
+  if (categoryLower.includes("dyeable")) return categoryIcons.dyeable;
+  if (categoryLower.includes("grieg")) return categoryIcons.grieg;
+  if (categoryLower.includes("pure")) return categoryIcons.pure;
+  if (categoryLower.includes("chanderi")) return categoryIcons.chanderi;
+  if (categoryLower.includes("digital")) return categoryIcons.digital;
 
   return categoryIcons.default;
 }
-
 
 export function Category() {
   return (
     <section className="relative pb-20 pt-32 overflow-hidden">
       {/* Enhanced Background decoration */}
-
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Enhanced Section Header */}
@@ -106,7 +103,8 @@ export function Category() {
           </h3>
 
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Discover our premium collection of dupattas crafted with exquisite materials and traditional techniques
+            Discover our premium collection of homemade and hygienic mukhwas
+            crafted with traditional recipes and authentic ingredients
           </p>
         </div>
 
@@ -118,7 +116,7 @@ export function Category() {
               className="animate-fade-in-up"
               style={{
                 animationDelay: `${index * 100}ms`,
-                animationFillMode: 'both'
+                animationFillMode: "both",
               }}
             >
               <CategoryCard
@@ -130,7 +128,6 @@ export function Category() {
             </div>
           ))}
         </div>
-
       </div>
 
       <style jsx>{`
@@ -144,20 +141,20 @@ export function Category() {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fade-in-up {
           animation: fade-in-up 0.6s ease-out;
         }
       `}</style>
     </section>
-  )
+  );
 }
 
 function CategoryCard({
   title,
   description,
   category,
-  index
+  index,
 }: {
   title: string;
   description: string;
@@ -175,15 +172,21 @@ function CategoryCard({
       onClick={() => router.push(`/${category}`)}
     >
       {/* Gradient overlay on hover */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`} />
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`}
+      />
 
       {/* Animated border glow */}
-      <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`} />
+      <div
+        className={`absolute inset-0 rounded-xl bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`}
+      />
 
       <CardContent className="relative h-full flex flex-col justify-between min-h-[200px] p-6">
         <div>
           {/* Icon with gradient background */}
-          <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${gradient} text-white mb-4 transform group-hover:scale-110 transition-transform duration-300`}>
+          <div
+            className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${gradient} text-white mb-4 transform group-hover:scale-110 transition-transform duration-300`}
+          >
             {icon}
           </div>
 
@@ -203,7 +206,9 @@ function CategoryCard({
           <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
             View our collection
           </span>
-          <div className={`p-2 rounded-full bg-gradient-to-r ${gradient} text-white transform translate-x-2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-300`}>
+          <div
+            className={`p-2 rounded-full bg-gradient-to-r ${gradient} text-white transform translate-x-2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-300`}
+          >
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>
