@@ -6,7 +6,7 @@ export const appConfig = {
     "Discover premium quality homemade and hygienic mukhwas from Aavkar. Explore our extensive range of traditional mouth fresheners, sweet supari, and natural ingredients with authentic taste and quality.",
   company: {
     name: "Aavkar Home Made Hygienic Mukhwas",
-    email: "aavkarmukhwas@gmail.com",
+    email: "sales@aavkarmukhwas.com",
     website: "https://aavkarmukhwas.com",
     address:
       "Plot No 26, Swastik Raw House, Near Shivdhara Circle, D Mart Road, Mota Varachha, Surat 394101 Gujarat",
@@ -228,7 +228,7 @@ export const appConfig = {
             question: "How do I place an order?",
             displayInLanding: false,
             answer:
-              "Contact us directly via WhatsApp at +91 81288 26764 or email aavkarmukhwas@gmail.com with your requirements.",
+              "Contact us directly via WhatsApp at +91 81288 26764 or email sales@aavkarmukhwas.com with your requirements.",
           },
           {
             question: "Do you ship across India?",
@@ -251,7 +251,7 @@ export const appConfig = {
             question: "Do you have new arrivals regularly?",
             displayInLanding: true,
             answer:
-              "Yes, we regularly update our collection with latest traditional recipes and new flavors. Follow us for new arrival updates.",
+              "Yes, we regularly update our mukhwas collection with latest traditional recipes and new flavors. Follow us for new arrival updates.",
           },
         ],
       },
@@ -446,7 +446,7 @@ export const appConfig = {
       {
         title: "Regular New Arrivals",
         description:
-          "Stay updated with latest traditional recipes and flavors as we regularly refresh our collection with new varieties and health-focused ingredients.",
+          "Stay updated with latest traditional recipes and flavors as we regularly refresh our mukhwas collection with new varieties and health-focused ingredients.",
         icon: "Sparkles",
         tag: "TRENDS",
         size: "sm",
@@ -456,7 +456,7 @@ export const appConfig = {
   contact: {
     whatsapp: "+918128826764",
     phone: "+918128826764",
-    email: "aavkarmukhwas@gmail.com",
+    email: "sales@aavkarmukhwas.com",
     address:
       "Plot No 26, Swastik Raw House, Near Shivdhara Circle, D Mart Road, Mota Varachha, Surat 394101 Gujarat",
     contactPerson: "Sangeeta D. Vaghani, Pinal C Miyani, Hina A. Kakadiya",

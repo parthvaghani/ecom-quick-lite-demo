@@ -103,14 +103,14 @@ export function Navbar() {
                   </NavLink> */}
               <NavLink href={ROUTES.CATEGORIES}>
                 <Sparkles className="h-4 w-4" />
-                Our Collection
+                Our Mukhwas Collection
               </NavLink>
-              <NavLink href="https://www.instagram.com/aavkarmukhwas?igsh=MXowNGdwN2xoaDh6">
+              <NavLink href="https://www.instagram.com/aavkar_mukhwas">
                 <Instagram className="h-4 w-4" />
                 Instagram
               </NavLink>
 
-              <NavLink href="mailto:aavkarmukhwas@gmail.com">
+              <NavLink href="mailto:sales@aavkarmukhwas.com">
                 <Mail className="h-4 w-4" />
                 Email Support
               </NavLink>
@@ -159,15 +159,15 @@ export function Navbar() {
                   <div className="flex flex-col space-y-2 mt-8 bg-background text-primary">
                     <MobileNavLink href="/categories">
                       <Sparkles className="h-4 w-4" />
-                      Our Collection
+                      Our Mukhwas Collection
                     </MobileNavLink>
 
-                    <MobileNavLink href="https://www.instagram.com/aavkarmukhwas?igsh=MXowNGdwN2xoaDh6">
+                    <MobileNavLink href="https://www.instagram.com/aavkar_mukhwas">
                       <Instagram className="h-4 w-4" />
                       Instagram
                     </MobileNavLink>
 
-                    <MobileNavLink href="mailto:aavkarmukhwas@gmail.com">
+                    <MobileNavLink href="mailto:sales@aavkarmukhwas.com">
                       <Mail className="h-4 w-4" />
                       Email Support
                     </MobileNavLink>

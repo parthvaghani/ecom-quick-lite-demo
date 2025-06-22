@@ -28,7 +28,7 @@ export function Footer() {
               <p> +91 96873 73515 (Secondary)</p>
               <p> +91 70161 00540 (Secondary)</p>
               <p>👥 Sangeeta D. Vaghani, Pinal C Miyani, Hina A. Kakadiya</p>
-              <p>✉️ aavkarmukhwas@gmail.com</p>
+              <p>✉️ sales@aavkarmukhwas.com</p>
             </div>
           </div>
 
