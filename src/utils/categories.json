@@ -15,9 +15,9 @@
           "category": "simple-wet-green-paan",
           "description": "A refreshing and classic wet paan mukhwas made with fresh betel leaves and a blend of aromatic spices.",
           "images": [
-            "/fresheners/green-paan-mukhwas.jpg",
-            "/fresheners/green-paan-mukhwas-2.jpg",
-            "/fresheners/green-paan-mukhwas-3.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Fresh Betel Leaves",
@@ -35,7 +35,7 @@
           "category": "wet-cherry-paan",
           "description": "A sweet and tangy twist on the classic, infused with the delightful flavor of cherries.",
           "images": [
-            "/fresheners/paan-cherry.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Betel Leaves",
@@ -54,7 +54,7 @@
           "category": "wet-chanothi-paan",
           "description": "An exotic blend featuring Chanothi (Jequirity) leaves, offering a unique taste and numerous health benefits.",
           "images": [
-            "/fresheners/chnothi-paan.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Betel Leaves",
@@ -72,7 +72,7 @@
           "category": "paan-coconut-laddu",
           "description": "Deliciously moist laddus combining the flavors of paan and coconut for a delightful treat.",
           "images": [
-            "/fresheners/paan-coconut-laddu.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Betel Leaves",
@@ -90,7 +90,7 @@
           "category": "shahi-khajur-paan",
           "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend.",
           "images": [
-            "/fresheners/shahi-khajur-paan.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Premium Dates (Khajur)",
@@ -105,7 +105,7 @@
     {
       "category": "regular-mukhwas",
       "description": "A classic collection of everyday mukhwas featuring sesame, coconut, and traditional seeds.",
-      "heroImage": "/fresheners/regular-mukhwas-hero.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
       "name": "Regular Mukhwas",
       "subCategories": [
         {
@@ -117,8 +117,8 @@
           "category": "crunchy-til-coconut",
           "description": "A delicious and crunchy mix of sesame seeds (til) and coconut flakes.",
           "images": [
-            "/fresheners/crunchy-til-coconut.jpg",
-            "/fresheners/crunchy-til-coconut-2.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Sesame Seeds",
@@ -137,7 +137,7 @@
           "category": "coated-til-dhanadal",
           "description": "A colorful and flavorful mix of coated sesame seeds and roasted coriander seeds (dhanadal).",
           "images": [
-            "/fresheners/coated-til-dhanadal.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Sesame Seeds",
@@ -157,7 +157,7 @@
           "category": "seed-til-alsi",
           "description": "A healthy blend of various seeds including sesame (til) and flax seeds (alsi).",
           "images": [
-            "/fresheners/seed-til-alsi.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Sesame Seeds",
@@ -176,7 +176,7 @@
           "category": "regular-mukhwas-mix",
           "description": "A classic and traditional mukhwas blend for everyday refreshment.",
           "images": [
-            "/fresheners/regular-mukhwas.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Fennel Seeds",
@@ -195,7 +195,7 @@
           "category": "sweet-tinimini-dhanadal",
           "description": "A sweet and colorful mix of tiny sugar-coated fennel seeds (tinimini), sesame, and dhanadal.",
           "images": [
-            "/fresheners/sweet-tinimini-dhanadal.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Sugar-coated Fennel Seeds (Tinimini)",
@@ -290,7 +290,7 @@
     {
       "category": "healthy-blends",
       "description": "A collection of nutritious and wholesome blends featuring nuts, seeds, and berries.",
-      "heroImage": "/fresheners/healthy-blends.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
       "name": "Healthy Blends",
       "subCategories": [
         {
@@ -302,7 +302,7 @@
           "category": "roasted-nuts-coconut",
           "description": "A crunchy and savory mix of roasted nuts and toasted coconut.",
           "images": [
-            "/fresheners/roasted-nuts-coconut.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Almonds",
@@ -321,7 +321,7 @@
           "category": "roasted-seeds-dryfruits",
           "description": "A wholesome blend of roasted seeds and assorted dry fruits.",
           "images": [
-            "/fresheners/roasted-seeds-dryfruits.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -341,7 +341,7 @@
           "category": "chia-quinoa-berries",
           "description": "A superfood mix of chia seeds, quinoa, and antioxidant-rich berries.",
           "images": [
-            "/fresheners/chia-quinoa-berries.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Chia Seeds",
@@ -360,7 +360,7 @@
           "category": "healthy-nuts-berries-mix",
           "description": "A delicious and energizing trail mix with a variety of nuts and berries.",
           "images": [
-            "/fresheners/healthy-nuts-berries-mix.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Almonds",
@@ -381,7 +381,7 @@
           "category": "multi-seeds-mix",
           "description": "A simple yet powerful mix of various seeds, packed with nutrients.",
           "images": [
-            "/fresheners/multi-seeds.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -396,7 +396,7 @@
     {
       "category": "seasonal-varieties",
       "description": "Special and delicious mukhwas varieties available during specific seasons.",
-      "heroImage": "/fresheners/seasonal-varieties.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
       "name": "Seasonal Varieties",
       "subCategories": [
         {
@@ -408,7 +408,7 @@
           "category": "beet-root-amla",
           "description": "A seasonal delight rich in Vitamin-C, perfect for improving blood quality and skin tone.",
           "images": [
-            "/fresheners/beet-root-amla.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Beet Root",
@@ -433,7 +433,7 @@
           "category": "shahi-khajur-paan",
           "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend, perfect for festive seasons.",
           "images": [
-            "/fresheners/shahi-khajur-paan.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Premium Dates (Khajur)",
@@ -448,7 +448,7 @@
     {
       "category": "healthy-powders",
       "description": "A range of homemade healthy powders, packed with natural protein, vitamins, and minerals.",
-      "heroImage": "/fresheners/healthy-powders.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
       "name": "Healthy Powders",
       "subCategories": [
         {
@@ -461,10 +461,10 @@
           "category": "homemade-healthy-powder",
           "description": "A wholesome and natural protein powder rich in vitamins, minerals, and antioxidants.",
           "images": [
-            "/fresheners/homemade-healthy-powder.jpg",
-            "/fresheners/homemade-healthy-powder-2.jpg",
-            "/fresheners/homemade-healthy-powder-3.jpg",
-            "/fresheners/homemade-healthy-powder-4.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
             "Walnuts",

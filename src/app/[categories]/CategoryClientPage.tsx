@@ -268,7 +268,7 @@ function SubCategoryProductCard({
       <Link href={`/${categorySlug}/${subcategorySlug}`} passHref>
         <Card className="group relative overflow-hidden rounded-2xl border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 h-full flex flex-col cursor-pointer">
           <CardContent className="p-0 flex flex-col flex-grow">
-            <div className="relative h-60 w-full overflow-hidden">
+            <div className="relative h-80 w-full overflow-hidden">
               {image ? (
                 <ImageWithFallback
                   src={image}
