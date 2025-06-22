@@ -71,7 +71,7 @@ export function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "top-4 left-4 right-4 mx-auto max-w-8xl rounded-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
+            ? "mx-auto max-w-8xl rounded-b-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
             : "bg-white dark:bg-gray-900"
         }`}
       >
