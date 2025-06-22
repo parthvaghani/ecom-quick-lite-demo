@@ -53,7 +53,7 @@ export function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[calc(100vh-4rem)] flex items-center justify-center">
+      <section className="relative overflow-hidden h-[96vh] flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
