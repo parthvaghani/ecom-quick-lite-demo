@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Footer, Navbar, ThemeProvider } from "@/components";
 import Script from "next/script";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { BrandingLogger } from "@/components/ui/BrandingLogger";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Toaster />
         <WhatsAppButton />
+        <BrandingLogger />
       </body>
     </html>
   );

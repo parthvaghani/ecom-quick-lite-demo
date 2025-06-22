@@ -15,6 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Loader } from "@/components/ui/Loader";
 
 const WHATSAPP_NUMBER = "918128826764";
 
@@ -39,7 +40,7 @@ export default function SubCategoryPage({ params }: PageProps) {
   }, [params]);
 
   if (!resolvedParams) {
-    return <div>Loading...</div>;
+    return <Loader text="Loading Product..." />;
   }
   const { categories } = categoriesData;
   const currentCategory = categories.find(

@@ -18,27 +18,35 @@ import { ROUTES } from "@/utils/constants";
 import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { Loader } from "../ui/Loader";
 
-const ProductDetailsSection = dynamic(() =>
-  import("@/components").then((mod) => mod.ProductDetailsSection)
+const ProductDetailsSection = dynamic(
+  () => import("@/components").then((mod) => mod.ProductDetailsSection),
+  { loading: () => <Loader text="Loading Details..." /> }
 );
-const IngredientsGuide = dynamic(() =>
-  import("../ui/IngredientsGuide").then((mod) => mod.IngredientsGuide)
+const IngredientsGuide = dynamic(
+  () => import("../ui/IngredientsGuide").then((mod) => mod.IngredientsGuide),
+  { loading: () => <Loader text="Loading Guide..." /> }
 );
-const FeaturesSection = dynamic(() =>
-  import("@/components").then((mod) => mod.FeaturesSection)
+const FeaturesSection = dynamic(
+  () => import("@/components").then((mod) => mod.FeaturesSection),
+  { loading: () => <Loader text="Loading Features..." /> }
 );
-const ReviewsSection = dynamic(() =>
-  import("@/components").then((mod) => mod.ReviewsSection)
+const ReviewsSection = dynamic(
+  () => import("@/components").then((mod) => mod.ReviewsSection),
+  { loading: () => <Loader text="Loading Reviews..." /> }
 );
-const GrowthSection = dynamic(() =>
-  import("@/components").then((mod) => mod.GrowthSection)
+const GrowthSection = dynamic(
+  () => import("@/components").then((mod) => mod.GrowthSection),
+  { loading: () => <Loader text="Loading Growth..." /> }
 );
-const TestimonialsSection = dynamic(() =>
-  import("../TestimonialsSection").then((mod) => mod.TestimonialsSection)
+const TestimonialsSection = dynamic(
+  () => import("../TestimonialsSection").then((mod) => mod.TestimonialsSection),
+  { loading: () => <Loader text="Loading Testimonials..." /> }
 );
-const FAQSection = dynamic(() =>
-  import("@/components").then((mod) => mod.FAQSection)
+const FAQSection = dynamic(
+  () => import("@/components").then((mod) => mod.FAQSection),
+  { loading: () => <Loader text="Loading FAQs..." /> }
 );
 
 export function LandingPage() {
