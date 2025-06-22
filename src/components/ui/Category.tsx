@@ -1,7 +1,7 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { default as categoriesData } from "@/utils/categories.json";
-import { Sparkles, ImageIcon, MessageSquare } from "lucide-react";
+import { Sparkles, ImageIcon, MessageSquare, Eye } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 
@@ -135,7 +135,7 @@ function CategoryCard({
               onClick={() => router.push(`/${category}`)}
               className="text-primary flex items-center"
             >
-              <MessageSquare className="w-4 h-4 mr-2" />
+              <Eye className="w-4 h-4 mr-2" />
               View Collection
             </button>
             <a
