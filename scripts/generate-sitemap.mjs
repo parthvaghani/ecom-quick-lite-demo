@@ -10,7 +10,7 @@ const sitemapData = JSON.parse(
 );
 const { categories } = sitemapData;
 
-const SITE_URL = "https://aavkarmukhwas.netlify.app";
+const SITE_URL = "https://aavkarmukhwas.com";
 
 function generateSitemap() {
     const staticPages = fs
