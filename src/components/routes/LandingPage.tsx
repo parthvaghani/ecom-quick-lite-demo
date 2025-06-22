@@ -53,9 +53,9 @@ export function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[96vh] flex items-center justify-center">
+      <section className="relative overflow-hidden h-[603px] md:h-[calc(100vh-4rem)] flex items-center justify-center">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 ">
           <Image
             src="https://aavkarmukhwas.github.io/images/temp/all.jpg"
             alt="Aavkar Mukhwas promotional background"
@@ -92,7 +92,7 @@ export function LandingPage() {
                 href={ROUTES.CATEGORIES}
                 className="flex items-center gap-2 font-semibold"
               >
-                Explore our premium mukhwas <ArrowRight className="w-4 h-4" />
+                Explore premium mukhwas <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
 

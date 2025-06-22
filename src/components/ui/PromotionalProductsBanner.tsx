@@ -29,7 +29,7 @@ export function PromotionalProductsBanner() {
   });
 
   return (
-    <section className="relative pb-20 pt-32 overflow-hidden bg-secondary/50 dark:bg-secondary/20">
+    <section className="relative pb-20 pt-16 overflow-hidden bg-secondary/50 dark:bg-secondary/20">
       <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative text-center mb-12">
