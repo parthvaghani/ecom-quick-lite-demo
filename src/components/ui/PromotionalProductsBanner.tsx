@@ -7,6 +7,19 @@ import { Button } from "@/components/ui/button";
 import { default as categoriesData } from "@/utils/categories.json";
 import { useState } from "react";
 
+// Add this interface to solve the type errors
+interface SubCategory {
+  name: string;
+  description: string;
+  category: string;
+  images?: string[];
+  ingredients?: string[];
+  benefits?: string[];
+  isPopular?: boolean;
+  isPremium?: boolean;
+  badge?: string;
+}
+
 const WHATSAPP_NUMBER = "918128826764";
 
 export function PromotionalProductsBanner() {
@@ -14,7 +27,7 @@ export function PromotionalProductsBanner() {
 
   const allPromotionalProducts = categoriesData.categories.flatMap(
     (category) =>
-      category.subCategories
+      (category.subCategories as SubCategory[])
         ?.filter((sub) => sub.isPopular || sub.isPremium)
         .map((sub) => ({
           ...sub,

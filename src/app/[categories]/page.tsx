@@ -38,9 +38,13 @@ export default async function CategoryPage({
     (category) => category.category === categories
   );
 
+  const shippingConfig = categoriesJson.shippingConfig;
+
   if (!category) {
     return <Category />;
   }
 
-  return <CategoryClientPage category={category} />;
+  return (
+    <CategoryClientPage category={category} shippingConfig={shippingConfig} />
+  );
 }

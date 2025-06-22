@@ -12,8 +12,16 @@ import {
 import Image from "next/image";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
 
 // Product layouts for different image counts
 const productLayouts = {
@@ -56,6 +64,21 @@ const gradientOverlays = [
   "from-violet-600/80 to-purple-600/80",
 ];
 
+interface PriceInfo {
+  price: number;
+  discount?: number;
+}
+
+interface VariantType {
+  [key: string]: PriceInfo | undefined;
+}
+
+interface Variants {
+  gm?: VariantType;
+  kg?: VariantType;
+  sachet?: VariantType;
+}
+
 interface SubCategory {
   name: string;
   description: string;
@@ -63,6 +86,11 @@ interface SubCategory {
   images?: string[];
   ingredients?: string[];
   benefits?: string[];
+  variants?: Variants;
+  badge?: string;
+  isPopular?: boolean;
+  isPremium?: boolean;
+  [key: string]: unknown;
 }
 
 interface Category {
@@ -71,12 +99,22 @@ interface Category {
   category: string;
   images?: string[];
   subCategories?: SubCategory[];
+  pricingEnabled?: boolean;
+  heroImage?: string;
+}
+
+interface ShippingConfig {
+  inGujarat: number;
+  outsideGujarat: number;
+  abroad: number | string;
 }
 
 export default function CategoryClientPage({
   category,
+  shippingConfig,
 }: {
   category: Category;
+  shippingConfig: ShippingConfig;
 }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -132,6 +170,9 @@ export default function CategoryClientPage({
                   index={index}
                   categorySlug={category.category}
                   subcategorySlug={subCategory.category}
+                  variants={subCategory.variants}
+                  pricingEnabled={category.pricingEnabled}
+                  shippingConfig={shippingConfig}
                 />
               </div>
             ))}
@@ -244,6 +285,9 @@ function SubCategoryProductCard({
   index,
   categorySlug,
   subcategorySlug,
+  variants,
+  pricingEnabled,
+  shippingConfig,
 }: {
   name: string;
   description: string;
@@ -251,8 +295,126 @@ function SubCategoryProductCard({
   index: number;
   categorySlug: string;
   subcategorySlug: string;
+  variants?: Variants;
+  pricingEnabled?: boolean;
+  shippingConfig: ShippingConfig;
 }) {
-  const whatsappInquiryText = `Hi, I'm interested in the ${name}. Could you please provide more details?`;
+  const [selectedVariant, setSelectedVariant] = useState<{
+    group: string;
+    value: string;
+    details: PriceInfo;
+  } | null>(null);
+
+  const shippingOptions = useMemo(
+    () => [
+      {
+        label: "In Gujarat",
+        value: "inGujarat",
+        price: shippingConfig.inGujarat,
+      },
+      {
+        label: "In India",
+        value: "outsideGujarat",
+        price: shippingConfig.outsideGujarat,
+      },
+      { label: "Worldwide", value: "abroad", price: shippingConfig.abroad },
+    ],
+    [shippingConfig]
+  );
+  const [selectedShipping, setSelectedShipping] = useState(
+    shippingOptions[0].value
+  );
+
+  useEffect(() => {
+    if (variants) {
+      const firstGroup = Object.keys(variants)[0] as keyof Variants;
+      if (firstGroup && variants[firstGroup]) {
+        const firstValue = Object.keys(variants[firstGroup]!)[0];
+        if (firstValue && variants[firstGroup]![firstValue]) {
+          setSelectedVariant({
+            group: firstGroup,
+            value: firstValue,
+            details: variants[firstGroup]![firstValue],
+          });
+        }
+      }
+    }
+  }, [variants]);
+
+  const allVariants: { group: string; value: string; details: PriceInfo }[] =
+    [];
+  if (variants) {
+    for (const group in variants) {
+      const variantGroup = variants[group as keyof Variants];
+      if (variantGroup) {
+        for (const value in variantGroup) {
+          if (variantGroup[value])
+            allVariants.push({
+              group,
+              value,
+              details: variantGroup[value],
+            });
+        }
+      }
+    }
+  }
+
+  const handleVariantChange = (variantString: string) => {
+    const [group, value] = variantString.split(":");
+    const variantGroup = variants?.[group as keyof Variants];
+    if (variantGroup?.[value]) {
+      setSelectedVariant({
+        group,
+        value,
+        details: variantGroup[value],
+      });
+    }
+  };
+
+  const selectedShippingOption = useMemo(
+    () => shippingOptions.find((opt) => opt.value === selectedShipping),
+    [shippingOptions, selectedShipping]
+  );
+
+  const whatsappInquiryText = useMemo(() => {
+    if (pricingEnabled && selectedVariant && selectedShippingOption) {
+      const originalPrice = selectedVariant.details.price;
+      const discount = selectedVariant.details.discount || 0;
+      const discountedPrice = originalPrice - discount;
+      const shippingPrice = selectedShippingOption.price;
+      const isShippingPriceNumber = typeof shippingPrice === "number";
+
+      let message = `Hi, I'd like to inquire about the following product:\n\n`;
+      message += `*Product:* ${name}\n`;
+      message += `*Variant:* ${selectedVariant.value}\n`;
+
+      if (discount > 0) {
+        message += `*Original Price:* ₹${originalPrice}\n`;
+        message += `*Discount:* -₹${discount}\n`;
+        message += `*Price after Discount:* ₹${discountedPrice}\n`;
+      } else {
+        message += `*Price:* ₹${originalPrice}\n`;
+      }
+
+      const shippingPriceText = isShippingPriceNumber
+        ? `₹${shippingPrice}`
+        : shippingPrice;
+      message += `*Shipping to:* ${selectedShippingOption.label} (${shippingPriceText})\n`;
+
+      if (isShippingPriceNumber) {
+        const totalPrice = discountedPrice + (shippingPrice as number);
+        message += `*Total Price:* ₹${totalPrice}\n\n`;
+      } else {
+        message += `\n`;
+      }
+
+      message += `Please let me know how to proceed. Thank you!`;
+      return message;
+    }
+
+    return `Hi, I'm interested in the ${name}. Could you please provide more details?`;
+  }, [name, pricingEnabled, selectedVariant, selectedShippingOption]);
+
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappInquiryText
   )}`;
@@ -289,6 +451,88 @@ function SubCategoryProductCard({
               <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
                 {description}
               </p>
+
+              {pricingEnabled && variants && selectedVariant && (
+                <div className="mb-4">
+                  {allVariants.length > 1 && (
+                    <Select
+                      onValueChange={handleVariantChange}
+                      defaultValue={`${selectedVariant.group}:${selectedVariant.value}`}
+                    >
+                      <SelectTrigger className="w-full mb-2">
+                        <SelectValue placeholder="Select variant" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {allVariants.map((v) => (
+                          <SelectItem
+                            key={`${v.group}:${v.value}`}
+                            value={`${v.group}:${v.value}`}
+                          >
+                            {v.value}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  )}
+
+                  <div className="flex items-center flex-wrap gap-x-3 mt-2">
+                    {selectedVariant.details.discount &&
+                    selectedVariant.details.discount > 0 ? (
+                      <>
+                        <span className="text-2xl font-bold text-primary">
+                          ₹
+                          {selectedVariant.details.price -
+                            selectedVariant.details.discount}
+                        </span>
+                        <span className="text-lg text-muted-foreground line-through">
+                          ₹{selectedVariant.details.price}
+                        </span>
+                        <Badge variant="destructive" className="font-semibold">
+                          {Math.round(
+                            (selectedVariant.details.discount /
+                              selectedVariant.details.price) *
+                              100
+                          )}
+                          % OFF
+                        </Badge>
+                      </>
+                    ) : (
+                      <span className="text-2xl font-bold text-primary">
+                        ₹{selectedVariant.details.price}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="mt-4 space-y-1">
+                    <label className="text-sm font-medium text-muted-foreground">
+                      Additional Shipping Charge
+                    </label>
+                    <Select
+                      onValueChange={setSelectedShipping}
+                      value={selectedShipping}
+                    >
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select shipping location" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {shippingOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            <div className="flex justify-between w-full items-center">
+                              <div className="mr-1">{option.label}</div>
+                              <div className="font-semibold">
+                                {typeof option.price === "number"
+                                  ? `₹${option.price}`
+                                  : option.price}
+                              </div>
+                            </div>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              )}
+
               <div className="mt-auto pt-4 border-t border-primary/20">
                 <Button
                   className="w-full bg-gradient-to-r from-primary to-brand-green-dark text-white font-semibold transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:shadow-primary/40 group-hover:scale-105"
