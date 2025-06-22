@@ -3,7 +3,7 @@
     {
       "category": "paan-varieties",
       "description": "A delightful range of Paan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
-      "heroImage": "/fresheners/all.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
       "name": "Paan Varieties",
       "subCategories": [
         {
@@ -214,11 +214,8 @@
           "category": "dilbahar-mix",
           "description": "A delightful and aromatic blend of premium fennel seeds and sweet spices.",
           "images": [
-            "/fresheners/dilbahar-mix.jpg",
-            "/fresheners/imli-laddu.jpg",
-            "/fresheners/imli-laddu.jpg",
-            "/fresheners/imli-laddu.jpg",
-            "/fresheners/imli-laddu.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/dilbahar-mix.jpg",
+            "https://aavkarmukhwas.github.io/images/temp/imli-laddu.jpg"
           ],
           "ingredients": [
             "Fennel Seeds",
@@ -236,7 +233,7 @@
           "category": "imli-laddu",
           "description": "Tangy and sweet tamarind balls, a traditional treat for all ages.",
           "images": [
-            "/fresheners/imli-laddu.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/mli-laddu.jpg"
           ],
           "ingredients": [
             "Tamarind",
@@ -255,7 +252,7 @@
           "category": "satrangi-mix",
           "description": "A colorful and crunchy mix of seven mouth-watering ingredients.",
           "images": [
-            "/fresheners/satrangi-mix.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/satrangi-mix.jpg"
           ],
           "ingredients": [
             "Red Chilli",
@@ -279,7 +276,7 @@
           "category": "green-mix",
           "description": "A refreshing and healthy mix featuring green fennel seeds and herbs.",
           "images": [
-            "/fresheners/green-mix.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/green-mix.jpg"
           ],
           "ingredients": [
             "Green Fennel Seeds",

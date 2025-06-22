@@ -57,7 +57,7 @@ export function LandingPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/fresheners/all.jpg"
+            src="https://aavkarmukhwas.github.io/images/temp/all.jpg"
             alt="Aavkar Mukhwas promotional background"
             fill
             className="object-cover"
