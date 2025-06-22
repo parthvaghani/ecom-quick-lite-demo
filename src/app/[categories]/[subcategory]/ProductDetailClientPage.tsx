@@ -286,6 +286,14 @@ export default function ProductDetailClientPage({
 
           {/* Product Info */}
           <div className="flex flex-col">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                🌍 We Ship Worldwide
+              </span>
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                🏆 Expo Participant
+              </span>
+            </div>
             <h1 className="text-3xl md:text-3xl font-bold mb-4">{name}</h1>
             <p className="text-base text-muted-foreground mb-6">
               {description}
@@ -426,6 +434,52 @@ export default function ProductDetailClientPage({
                 </div>
               </Button>
             </div>
+
+            {/* Reviews Section */}
+            {/* <div className="mt-10">
+              <h2 className="text-lg font-bold mb-4 flex items-center">
+                <span className="mr-2">⭐</span> Customer Reviews
+              </h2>
+              <div className="space-y-4 mb-6">
+                <div className="bg-secondary/50 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="font-semibold">Priya S.</span>
+                    <span className="text-yellow-500">★★★★★</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    “Absolutely delicious and fresh! Will order again.”
+                  </div>
+                </div>
+                <div className="bg-secondary/50 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="font-semibold">Rahul M.</span>
+                    <span className="text-yellow-500">★★★★☆</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    “Loved the taste and fast shipping. Highly recommend.”
+                  </div>
+                </div>
+              </div>
+              <form className="bg-secondary/30 p-4 rounded-xl flex flex-col gap-3">
+                <label className="font-medium text-sm">Leave a Review</label>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="rounded px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <textarea
+                  placeholder="Your Review"
+                  className="rounded px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                  rows={3}
+                />
+                <button
+                  type="submit"
+                  className="bg-primary text-white rounded px-4 py-2 font-semibold hover:bg-primary/90 transition"
+                >
+                  Submit
+                </button>
+              </form>
+            </div> */}
           </div>
         </div>
       </div>

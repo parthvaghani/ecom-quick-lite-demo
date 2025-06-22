@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { ROUTES } from "@/utils/constants";
 import Image from "next/image";
+import { SearchIconButton } from "@/components/ui/GlobalSearchBar";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -134,6 +135,9 @@ export function Navbar() {
                   </NavLink> */}
 
               {/* <ThemeToggle /> */}
+              <div className="flex items-center ml-4">
+                <SearchIconButton />
+              </div>
             </div>
 
             {/* Mobile Navigation */}
@@ -179,6 +183,7 @@ export function Navbar() {
                   </div>
                 </SheetContent>
               </Sheet>
+              <SearchIconButton />
             </div>
           </div>
         </div>
