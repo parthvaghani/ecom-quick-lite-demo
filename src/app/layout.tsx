@@ -18,11 +18,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aavkarmukhwas.com"),
   title: "Aavkar Mukhwas | Premium Homemade & Hygienic Indian Mouth Fresheners",
   description:
     "Discover Aavkar Mukhwas, your source for premium homemade and hygienic mukhwas. Explore our wide range of traditional Indian mouth fresheners, sweet supari, and natural seed mixes, all crafted in Surat with authentic taste and quality.",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    type: "website",
+    title:
+      "Aavkar Mukhwas | Premium Homemade & Hygienic Indian Mouth Fresheners",
+    description:
+      "Discover Aavkar Mukhwas, your source for premium homemade and hygienic mukhwas. Explore our wide range of traditional Indian mouth fresheners, sweet supari, and natural seed mixes, all crafted in Surat with authentic taste and quality.",
+    images: [
+      {
+        url: "/landing.png",
+        alt: "Aavkar Mukhwas",
+      },
+    ],
   },
 };
 
