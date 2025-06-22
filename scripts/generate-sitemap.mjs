@@ -41,14 +41,26 @@ function generateSitemap() {
             })
             .join("")}
   ${categories
-            .map(({ category }) => {
-                return `
+            .flatMap(({ category, subCategories }) => {
+                const parentUrl = `
     <url>
       <loc>${`${SITE_URL}/${category}`}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>`;
+
+                const childUrls = subCategories.map((sub) => {
+                    return `
+    <url>
+      <loc>${`${SITE_URL}/${category}/${sub.category}`}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+    </url>`;
+                });
+
+                return [parentUrl, ...childUrls];
             })
             .join("")}
 </urlset>`;

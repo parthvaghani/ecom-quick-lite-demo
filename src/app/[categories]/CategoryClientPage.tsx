@@ -10,6 +10,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import Image from "next/image";
+import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -55,19 +56,21 @@ const gradientOverlays = [
   "from-violet-600/80 to-purple-600/80",
 ];
 
+interface SubCategory {
+  name: string;
+  description: string;
+  category: string;
+  images?: string[];
+  ingredients?: string[];
+  benefits?: string[];
+}
+
 interface Category {
   name: string;
   description: string;
   category: string;
   images?: string[];
   subCategories?: SubCategory[];
-}
-
-interface SubCategory {
-  name: string;
-  description: string;
-  category: string;
-  images?: string[];
 }
 
 export default function CategoryClientPage({
@@ -127,6 +130,8 @@ export default function CategoryClientPage({
                   description={subCategory.description}
                   image={subCategory.images ? subCategory.images[0] : ""}
                   index={index}
+                  categorySlug={category.category}
+                  subcategorySlug={subCategory.category}
                 />
               </div>
             ))}
@@ -237,13 +242,16 @@ function SubCategoryProductCard({
   description,
   image,
   index,
+  categorySlug,
+  subcategorySlug,
 }: {
   name: string;
   description: string;
-  image: string;
+  image?: string;
   index: number;
+  categorySlug: string;
+  subcategorySlug: string;
 }) {
-  const [imageError, setImageError] = useState(false);
   const whatsappInquiryText = `Hi, I'm interested in the ${name}. Could you please provide more details?`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappInquiryText
@@ -251,51 +259,55 @@ function SubCategoryProductCard({
 
   return (
     <div
-      className="animate-fade-in-up h-full"
+      className="animate-fade-in-up"
       style={{
         animationDelay: `${index * 100}ms`,
         animationFillMode: "both",
       }}
     >
-      <Card className="group relative overflow-hidden rounded-2xl border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
-        <CardContent className="p-0 flex flex-col flex-grow">
-          <div className="relative h-60 w-full overflow-hidden">
-            {image && !imageError ? (
-              <Image
-                src={image}
-                alt={name}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                onError={() => setImageError(true)}
-              />
-            ) : (
-              <div className="w-full h-full bg-secondary flex items-center justify-center">
-                <ImageIcon className="w-12 h-12 text-muted-foreground" />
+      <Link href={`/${categorySlug}/${subcategorySlug}`} passHref>
+        <Card className="group relative overflow-hidden rounded-2xl border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 h-full flex flex-col cursor-pointer">
+          <CardContent className="p-0 flex flex-col flex-grow">
+            <div className="relative h-60 w-full overflow-hidden">
+              {image ? (
+                <ImageWithFallback
+                  src={image}
+                  alt={name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              ) : (
+                <div className="w-full h-full bg-secondary flex items-center justify-center">
+                  <ImageIcon className="w-12 h-12 text-muted-foreground" />
+                </div>
+              )}
+            </div>
+            <div className="p-6 bg-background/30 backdrop-blur-sm flex flex-col flex-grow">
+              <h3 className="text-2xl font-bold mb-2 text-foreground">
+                {name}
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
+                {description}
+              </p>
+              <div className="mt-auto pt-4 border-t border-primary/20">
+                <Button
+                  className="w-full bg-gradient-to-r from-primary to-brand-green-dark text-white font-semibold transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:shadow-primary/40 group-hover:scale-105"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open(whatsappUrl, "_blank");
+                  }}
+                >
+                  <div className="flex items-center justify-center">
+                    <MessageSquare className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:rotate-12" />
+                    Chat on WhatsApp
+                  </div>
+                </Button>
               </div>
-            )}
-          </div>
-          <div className="p-6 flex flex-col flex-grow">
-            <h3 className="text-xl font-bold mb-2 text-foreground">{name}</h3>
-            <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">
-              {description}
-            </p>
-            <Button
-              asChild
-              className="w-full mt-auto bg-gradient-to-r from-primary to-brand-green-dark text-white font-semibold transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:shadow-primary/40 group-hover:scale-105"
-            >
-              <Link
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center"
-              >
-                <MessageSquare className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:rotate-12" />
-                Chat on WhatsApp
-              </Link>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+            </div>
+          </CardContent>
+        </Card>
+      </Link>
     </div>
   );
 }
@@ -313,24 +325,13 @@ function ImageCard({
   onMailto: () => void;
   onView: () => void;
 }) {
-  const [imageError, setImageError] = useState(false);
-
-  if (imageError) {
-    return (
-      <div className="relative group overflow-hidden rounded-2xl shadow-lg w-full h-full bg-secondary flex items-center justify-center">
-        <ImageIcon className="w-12 h-12 text-muted-foreground" />
-      </div>
-    );
-  }
-
   return (
     <div className="relative group overflow-hidden rounded-2xl shadow-lg w-full h-full">
-      <Image
+      <ImageWithFallback
         src={image}
         alt={`${categoryName} Mukhwas`}
         fill
         className="object-cover transition-all duration-500 ease-in-out transform group-hover:scale-110"
-        onError={() => setImageError(true)}
       />
       <div
         className={`absolute inset-0 bg-gradient-to-t ${gradientOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}

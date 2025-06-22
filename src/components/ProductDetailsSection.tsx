@@ -90,7 +90,7 @@ export function ProductDetailsSection() {
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <Card className="group relative overflow-hidden border-0 transition-all duration-500 hover:shadow-2xl hover:shadow-black/10 dark:hover:shadow-black/30 hover:-translate-y-2 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 backdrop-blur-sm">
+    <Card className="group relative overflow-hidden border-0 transition-all duration-500 hover:shadow-2xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 backdrop-blur-sm">
       <CardHeader className="pb-4">
         <CardTitle className="text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-emerald-600 group-hover:to-teal-600 transition-all duration-300">
           {product.name}

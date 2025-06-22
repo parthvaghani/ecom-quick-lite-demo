@@ -3,8 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { default as categoriesData } from "@/utils/categories.json";
 import { Sparkles, ImageIcon, MessageSquare } from "lucide-react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import { useState } from "react";
+import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 
 const WHATSAPP_NUMBER = "918128826764";
 
@@ -91,7 +90,6 @@ function CategoryCard({
   image?: string;
 }) {
   const router = useRouter();
-  const [imageError, setImageError] = useState(false);
   const whatsappInquiryText = `Hi, I'm interested in the ${title} collection. Could you please provide more details?`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappInquiryText
@@ -102,19 +100,18 @@ function CategoryCard({
   };
 
   return (
-    <Card className="group relative overflow-hidden rounded-2xl border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
+    <Card className="group relative overflow-hidden rounded-2xl border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 h-full flex flex-col">
       <CardContent className="p-0 flex flex-col flex-grow">
         <div
           className="relative h-60 w-full overflow-hidden cursor-pointer"
           onClick={handleNavigation}
         >
-          {image && !imageError ? (
-            <Image
+          {image ? (
+            <ImageWithFallback
               src={image}
               alt={title}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-              onError={() => setImageError(true)}
+              className="object-cover transition-transform duration-500 "
             />
           ) : (
             <div className="w-full h-full bg-secondary flex items-center justify-center">

@@ -14,7 +14,11 @@
           ],
           "category": "simple-wet-green-paan",
           "description": "A refreshing and classic wet paan mukhwas made with fresh betel leaves and a blend of aromatic spices.",
-          "images": ["/fresheners/green-paan-mukhwas.jpg"],
+          "images": [
+            "/fresheners/green-paan-mukhwas.jpg",
+            "/fresheners/green-paan-mukhwas-2.jpg",
+            "/fresheners/green-paan-mukhwas-3.jpg"
+          ],
           "ingredients": [
             "Fresh Betel Leaves",
             "Fennel Seeds",
@@ -30,7 +34,9 @@
           ],
           "category": "wet-cherry-paan",
           "description": "A sweet and tangy twist on the classic, infused with the delightful flavor of cherries.",
-          "images": ["/fresheners/paan-cherry.jpg"],
+          "images": [
+            "/fresheners/paan-cherry.jpg"
+          ],
           "ingredients": [
             "Betel Leaves",
             "Candied Cherries",
@@ -47,7 +53,9 @@
           ],
           "category": "wet-chanothi-paan",
           "description": "An exotic blend featuring Chanothi (Jequirity) leaves, offering a unique taste and numerous health benefits.",
-          "images": ["/fresheners/chnothi-paan.jpg"],
+          "images": [
+            "/fresheners/chnothi-paan.jpg"
+          ],
           "ingredients": [
             "Betel Leaves",
             "Chanothi (Jequirity) Leaves",
@@ -63,7 +71,9 @@
           ],
           "category": "paan-coconut-laddu",
           "description": "Deliciously moist laddus combining the flavors of paan and coconut for a delightful treat.",
-          "images": ["/fresheners/paan-coconut-laddu.jpg"],
+          "images": [
+            "/fresheners/paan-coconut-laddu.jpg"
+          ],
           "ingredients": [
             "Betel Leaves",
             "Desiccated Coconut",
@@ -79,7 +89,9 @@
           ],
           "category": "shahi-khajur-paan",
           "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend.",
-          "images": ["/fresheners/shahi-khajur-paan.jpg"],
+          "images": [
+            "/fresheners/shahi-khajur-paan.jpg"
+          ],
           "ingredients": [
             "Premium Dates (Khajur)",
             "Betel Leaves",
@@ -104,7 +116,10 @@
           ],
           "category": "crunchy-til-coconut",
           "description": "A delicious and crunchy mix of sesame seeds (til) and coconut flakes.",
-          "images": ["/fresheners/crunchy-til-coconut.jpg"],
+          "images": [
+            "/fresheners/crunchy-til-coconut.jpg",
+            "/fresheners/crunchy-til-coconut-2.jpg"
+          ],
           "ingredients": [
             "Sesame Seeds",
             "Coconut Flakes",
@@ -121,7 +136,9 @@
           ],
           "category": "coated-til-dhanadal",
           "description": "A colorful and flavorful mix of coated sesame seeds and roasted coriander seeds (dhanadal).",
-          "images": ["/fresheners/coated-til-dhanadal.jpg"],
+          "images": [
+            "/fresheners/coated-til-dhanadal.jpg"
+          ],
           "ingredients": [
             "Sesame Seeds",
             "Coriander Seeds (Dhanadal)",
@@ -139,7 +156,9 @@
           ],
           "category": "seed-til-alsi",
           "description": "A healthy blend of various seeds including sesame (til) and flax seeds (alsi).",
-          "images": ["/fresheners/seed-til-alsi.jpg"],
+          "images": [
+            "/fresheners/seed-til-alsi.jpg"
+          ],
           "ingredients": [
             "Sesame Seeds",
             "Flax Seeds",
@@ -156,7 +175,9 @@
           ],
           "category": "regular-mukhwas-mix",
           "description": "A classic and traditional mukhwas blend for everyday refreshment.",
-          "images": ["/fresheners/regular-mukhwas.jpg"],
+          "images": [
+            "/fresheners/regular-mukhwas.jpg"
+          ],
           "ingredients": [
             "Fennel Seeds",
             "Coriander Seeds",
@@ -173,13 +194,99 @@
           ],
           "category": "sweet-tinimini-dhanadal",
           "description": "A sweet and colorful mix of tiny sugar-coated fennel seeds (tinimini), sesame, and dhanadal.",
-          "images": ["/fresheners/sweet-tinimini-dhanadal.jpg"],
+          "images": [
+            "/fresheners/sweet-tinimini-dhanadal.jpg"
+          ],
           "ingredients": [
             "Sugar-coated Fennel Seeds (Tinimini)",
             "Sesame Seeds",
             "Coriander Seeds (Dhanadal)"
           ],
           "name": "Sweet Tinimini Til Dhanadal"
+        },
+        {
+          "badge": "Most Popular",
+          "benefits": [
+            "Delightful and aromatic blend",
+            "Premium fennel seeds",
+            "Sweet spices"
+          ],
+          "category": "dilbahar-mix",
+          "description": "A delightful and aromatic blend of premium fennel seeds and sweet spices.",
+          "images": [
+            "/fresheners/dilbahar-mix.jpg",
+            "/fresheners/imli-laddu.jpg",
+            "/fresheners/imli-laddu.jpg",
+            "/fresheners/imli-laddu.jpg",
+            "/fresheners/imli-laddu.jpg"
+          ],
+          "ingredients": [
+            "Fennel Seeds",
+            "Sweet Spices"
+          ],
+          "isPopular": true,
+          "name": "Dilbahar Mix"
+        },
+        {
+          "badge": "Most Popular & Premium",
+          "benefits": [
+            "Tangy and sweet tamarind balls",
+            "Traditional treat for all ages"
+          ],
+          "category": "imli-laddu",
+          "description": "Tangy and sweet tamarind balls, a traditional treat for all ages.",
+          "images": [
+            "/fresheners/imli-laddu.jpg"
+          ],
+          "ingredients": [
+            "Tamarind",
+            "Sugar"
+          ],
+          "isPopular": true,
+          "isPremium": true,
+          "name": "Imli Laddu"
+        },
+        {
+          "badge": "Most Popular",
+          "benefits": [
+            "Colorful and crunchy mix",
+            "Seven mouth-watering ingredients"
+          ],
+          "category": "satrangi-mix",
+          "description": "A colorful and crunchy mix of seven mouth-watering ingredients.",
+          "images": [
+            "/fresheners/satrangi-mix.jpg"
+          ],
+          "ingredients": [
+            "Red Chilli",
+            "Green Chilli",
+            "Yellow Chilli",
+            "White Chilli",
+            "Black Chilli",
+            "Brown Chilli",
+            "Orange Chilli"
+          ],
+          "isPopular": true,
+          "name": "Satrangi Mix"
+        },
+        {
+          "badge": "New Arrival Premium",
+          "benefits": [
+            "Refreshing and healthy mix",
+            "Green fennel seeds",
+            "Herbs"
+          ],
+          "category": "green-mix",
+          "description": "A refreshing and healthy mix featuring green fennel seeds and herbs.",
+          "images": [
+            "/fresheners/green-mix.jpg"
+          ],
+          "ingredients": [
+            "Green Fennel Seeds",
+            "Herbs"
+          ],
+          "isPremium": true,
+          "name": "Green Mix"
         }
       ]
     },
@@ -197,8 +304,15 @@
           ],
           "category": "roasted-nuts-coconut",
           "description": "A crunchy and savory mix of roasted nuts and toasted coconut.",
-          "images": ["/fresheners/roasted-nuts-coconut.jpg"],
-          "ingredients": ["Almonds", "Cashews", "Pistachios", "Coconut Flakes"],
+          "images": [
+            "/fresheners/roasted-nuts-coconut.jpg"
+          ],
+          "ingredients": [
+            "Almonds",
+            "Cashews",
+            "Pistachios",
+            "Coconut Flakes"
+          ],
           "name": "Roasted Nuts Coconut"
         },
         {
@@ -209,7 +323,9 @@
           ],
           "category": "roasted-seeds-dryfruits",
           "description": "A wholesome blend of roasted seeds and assorted dry fruits.",
-          "images": ["/fresheners/roasted-seeds-dryfruits.jpg"],
+          "images": [
+            "/fresheners/roasted-seeds-dryfruits.jpg"
+          ],
           "ingredients": [
             "Pumpkin Seeds",
             "Sunflower Seeds",
@@ -227,8 +343,15 @@
           ],
           "category": "chia-quinoa-berries",
           "description": "A superfood mix of chia seeds, quinoa, and antioxidant-rich berries.",
-          "images": ["/fresheners/chia-quinoa-berries.jpg"],
-          "ingredients": ["Chia Seeds", "Quinoa", "Cranberries", "Blueberries"],
+          "images": [
+            "/fresheners/chia-quinoa-berries.jpg"
+          ],
+          "ingredients": [
+            "Chia Seeds",
+            "Quinoa",
+            "Cranberries",
+            "Blueberries"
+          ],
           "name": "Chia Quinoa Berries Mix"
         },
         {
@@ -239,7 +362,9 @@
           ],
           "category": "healthy-nuts-berries-mix",
           "description": "A delicious and energizing trail mix with a variety of nuts and berries.",
-          "images": ["/fresheners/healthy-nuts-berries-mix.jpg"],
+          "images": [
+            "/fresheners/healthy-nuts-berries-mix.jpg"
+          ],
           "ingredients": [
             "Almonds",
             "Walnuts",
@@ -258,7 +383,9 @@
           ],
           "category": "multi-seeds-mix",
           "description": "A simple yet powerful mix of various seeds, packed with nutrients.",
-          "images": ["/fresheners/multi-seeds.jpg"],
+          "images": [
+            "/fresheners/multi-seeds.jpg"
+          ],
           "ingredients": [
             "Pumpkin Seeds",
             "Sunflower Seeds",
@@ -283,7 +410,9 @@
           ],
           "category": "beet-root-amla",
           "description": "A seasonal delight rich in Vitamin-C, perfect for improving blood quality and skin tone.",
-          "images": ["/fresheners/beet-root-amla.jpg"],
+          "images": [
+            "/fresheners/beet-root-amla.jpg"
+          ],
           "ingredients": [
             "Beet Root",
             "Amla",
@@ -306,7 +435,9 @@
           ],
           "category": "shahi-khajur-paan",
           "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend, perfect for festive seasons.",
-          "images": ["/fresheners/shahi-khajur-paan.jpg"],
+          "images": [
+            "/fresheners/shahi-khajur-paan.jpg"
+          ],
           "ingredients": [
             "Premium Dates (Khajur)",
             "Betel Leaves",
@@ -332,7 +463,12 @@
           ],
           "category": "homemade-healthy-powder",
           "description": "A wholesome and natural protein powder rich in vitamins, minerals, and antioxidants.",
-          "images": ["/fresheners/homemade-healthy-powder.jpg"],
+          "images": [
+            "/fresheners/homemade-healthy-powder.jpg",
+            "/fresheners/homemade-healthy-powder-2.jpg",
+            "/fresheners/homemade-healthy-powder-3.jpg",
+            "/fresheners/homemade-healthy-powder-4.jpg"
+          ],
           "ingredients": [
             "Walnuts",
             "Almonds",
@@ -350,35 +486,5 @@
       ]
     }
   ],
-  "promotionalProducts": [
-    {
-      "badge": "Most Popular",
-      "description": "A delightful and aromatic blend of premium fennel seeds and sweet spices.",
-      "image": "/fresheners/dilbahar-mix.jpg",
-      "isPopular": true,
-      "name": "Dilbahar Mix"
-    },
-    {
-      "badge": "Most Popular & Premium",
-      "description": "Tangy and sweet tamarind balls, a traditional treat for all ages.",
-      "image": "/fresheners/imli-laddu.jpg",
-      "isPopular": true,
-      "isPremium": true,
-      "name": "Imli Laddu"
-    },
-    {
-      "badge": "Most Popular",
-      "description": "A colorful and crunchy mix of seven mouth-watering ingredients.",
-      "image": "/fresheners/satrangi-mix.jpg",
-      "isPopular": true,
-      "name": "Satrangi Mix"
-    },
-    {
-      "badge": "New Arrival Premium",
-      "description": "A refreshing and healthy mix featuring green fennel seeds and herbs.",
-      "image": "/fresheners/green-mix.jpg",
-      "isPremium": true,
-      "name": "Green Mix"
-    }
-  ]
+  "promotionalProducts": []
 }
