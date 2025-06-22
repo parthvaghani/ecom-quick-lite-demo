@@ -14,24 +14,40 @@ import {
   ChevronRight,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const WHATSAPP_NUMBER = "918128826764";
 
-export default function SubCategoryPage({
-  params,
-}: {
-  params: { categories: string; subcategory: string };
-}) {
-  const { categories } = categoriesData;
-  const currentCategory = categories.find(
-    (cat) => cat.category === params.categories
-  );
-  const currentSubCategory = currentCategory?.subCategories.find(
-    (sub) => sub.category === params.subcategory
-  );
+// Define the proper types for Next.js App Router (15+)
+interface PageProps {
+  params: Promise<{
+    categories: string;
+    subcategory: string;
+  }>;
+}
+
+export default function SubCategoryPage({ params }: PageProps) {
+  const [resolvedParams, setResolvedParams] = useState<{
+    categories: string;
+    subcategory: string;
+  } | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [showImageModal, setShowImageModal] = useState(false);
+
+  useEffect(() => {
+    params.then(setResolvedParams);
+  }, [params]);
+
+  if (!resolvedParams) {
+    return <div>Loading...</div>;
+  }
+  const { categories } = categoriesData;
+  const currentCategory = categories.find(
+    (cat) => cat.category === resolvedParams.categories
+  );
+  const currentSubCategory = currentCategory?.subCategories.find(
+    (sub) => sub.category === resolvedParams.subcategory
+  );
 
   if (!currentSubCategory) {
     notFound();
