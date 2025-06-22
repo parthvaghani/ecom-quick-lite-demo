@@ -18,49 +18,57 @@ import { ROUTES } from "@/utils/constants";
 import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { Loader } from "../ui/Loader";
+import { useState } from "react";
+import FullScreenLoader from "../FullScreenLoader";
 
 const ProductDetailsSection = dynamic(
   () => import("@/components").then((mod) => mod.ProductDetailsSection),
-  { loading: () => <Loader text="Loading Details..." /> }
+  { loading: () => <FullScreenLoader /> }
 );
 const IngredientsGuide = dynamic(
   () => import("../ui/IngredientsGuide").then((mod) => mod.IngredientsGuide),
-  { loading: () => <Loader text="Loading Guide..." /> }
+  { loading: () => <FullScreenLoader /> }
 );
 const FeaturesSection = dynamic(
   () => import("@/components").then((mod) => mod.FeaturesSection),
-  { loading: () => <Loader text="Loading Features..." /> }
+  { loading: () => <FullScreenLoader /> }
 );
 const ReviewsSection = dynamic(
   () => import("@/components").then((mod) => mod.ReviewsSection),
-  { loading: () => <Loader text="Loading Reviews..." /> }
+  { loading: () => <FullScreenLoader /> }
 );
 const GrowthSection = dynamic(
   () => import("@/components").then((mod) => mod.GrowthSection),
-  { loading: () => <Loader text="Loading Growth..." /> }
+  { loading: () => <FullScreenLoader /> }
 );
 const TestimonialsSection = dynamic(
   () => import("../TestimonialsSection").then((mod) => mod.TestimonialsSection),
-  { loading: () => <Loader text="Loading Testimonials..." /> }
+  { loading: () => <FullScreenLoader /> }
 );
 const FAQSection = dynamic(
   () => import("@/components").then((mod) => mod.FAQSection),
-  { loading: () => <Loader text="Loading FAQs..." /> }
+  { loading: () => <FullScreenLoader /> }
 );
 
 export function LandingPage() {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden h-[603px] md:h-[calc(100vh-4rem)] flex items-center justify-center">
+        {/* Loader Overlay */}
+        {!heroLoaded && <FullScreenLoader />}
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 ">
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]">
           <Image
             src="https://aavkarmukhwas.github.io/images/temp/all.jpg"
             alt="Aavkar Mukhwas promotional background"
             fill
             className="object-cover"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,..." // your blur image
+            onLoad={() => setHeroLoaded(true)}
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
