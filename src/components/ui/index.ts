@@ -14,7 +14,6 @@ export * from "./sonner";
 export * from "./avatar";
 export * from "./accordion";
 export * from "./IngredientsGuide";
-export * from "./Loader";
 export * from "./Category";
 export * from "./PromotionalProductsBanner";
 export * from "./select";
