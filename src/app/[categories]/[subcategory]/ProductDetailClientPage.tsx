@@ -20,6 +20,10 @@ import {
   X,
 } from "lucide-react";
 import { useState, useMemo, useEffect } from "react";
+import {
+  trackProductView,
+  trackProductCardWhatsAppClick,
+} from "@/utils/analytics";
 
 const WHATSAPP_NUMBER = "918128826764";
 
@@ -74,6 +78,28 @@ export default function ProductDetailClientPage({
     value: string;
     details: PriceInfo;
   } | null>(null);
+
+  // Track product view when component mounts
+  useEffect(() => {
+    trackProductView(
+      {
+        name: product.name,
+        category: product.category,
+        variants: product.variants as
+          | Record<string, Record<string, { price: number; discount?: number }>>
+          | undefined,
+      },
+      getCurrentCategory() || undefined
+    );
+  }, [product]);
+
+  // Helper function to get current category from URL
+  const getCurrentCategory = () => {
+    if (typeof window === "undefined") return null;
+    const path = window.location.pathname;
+    const match = path.match(/\/category\/([^\/]+)/);
+    return match ? match[1] : null;
+  };
 
   const shippingOptions = useMemo(
     () => [
@@ -426,7 +452,25 @@ export default function ProductDetailClientPage({
             <div className="mt-12">
               <Button
                 className="w-full bg-gradient-to-r from-primary to-brand-green-dark text-white font-semibold transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:shadow-primary/40 group-hover:scale-105 py-6"
-                onClick={() => window.open(whatsappUrl, "_blank")}
+                onClick={() => {
+                  window.open(whatsappUrl, "_blank");
+                  const currentCategory = getCurrentCategory();
+                  trackProductCardWhatsAppClick(
+                    {
+                      name: product.name,
+                      category: product.category,
+                      variants: product.variants as
+                        | Record<
+                            string,
+                            Record<string, { price: number; discount?: number }>
+                          >
+                        | undefined,
+                    },
+                    currentCategory
+                      ? { name: currentCategory, category: currentCategory }
+                      : undefined
+                  );
+                }}
               >
                 <div className="flex items-center justify-center">
                   <MessageSquare className="w-6 h-6 mr-3 transition-transform duration-300 group-hover:rotate-12" />
@@ -447,7 +491,7 @@ export default function ProductDetailClientPage({
                     <span className="text-yellow-500">★★★★★</span>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    “Absolutely delicious and fresh! Will order again.”
+                    "Absolutely delicious and fresh! Will order again."
                   </div>
                 </div>
                 <div className="bg-secondary/50 p-4 rounded-xl">
@@ -456,7 +500,7 @@ export default function ProductDetailClientPage({
                     <span className="text-yellow-500">★★★★☆</span>
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    “Loved the taste and fast shipping. Highly recommend.”
+                    "Loved the taste and fast shipping. Highly recommend."
                   </div>
                 </div>
               </div>

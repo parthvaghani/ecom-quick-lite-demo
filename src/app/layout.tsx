@@ -61,6 +61,23 @@ export default function RootLayout({
             gtag('config', 'G-SWFHK3JPQK');
           `}
         </Script>
+        <Script id="analytics-init" strategy="afterInteractive">
+          {`
+            // Initialize analytics tracking
+            if (typeof window !== 'undefined') {
+              // Track initial page view
+              gtag('event', 'page_view', {
+                page_title: document.title,
+                page_location: window.location.href,
+                page_category: window.location.pathname.includes('/product/') ? 'product' : 
+                              window.location.pathname.includes('/category/') ? 'category' : 
+                              window.location.pathname === '/' ? 'home' : 'other',
+                collection_name: window.location.pathname.match(/\/category\/([^\/]+)/)?.[1] || null,
+                product_name: window.location.pathname.match(/\/product\/([^\/]+)/)?.[1] || null,
+              });
+            }
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}

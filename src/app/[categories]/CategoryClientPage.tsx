@@ -22,6 +22,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
+import {
+  trackCategoryView,
+  trackProductCardWhatsAppClick,
+} from "@/utils/analytics";
 
 // Product layouts for different image counts
 const productLayouts = {
@@ -117,6 +121,11 @@ export default function CategoryClientPage({
   shippingConfig: ShippingConfig;
 }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Track category view when component mounts
+  useEffect(() => {
+    trackCategoryView(category.name, category.category);
+  }, [category.name, category.category]);
 
   const handleMailto = (categoryName: string, imageSrc: string) => {
     const subject = encodeURIComponent(`Inquiry about ${categoryName} Mukhwas`);
@@ -419,6 +428,26 @@ function SubCategoryProductCard({
     whatsappInquiryText
   )}`;
 
+  const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Track the WhatsApp click
+    trackProductCardWhatsAppClick(
+      {
+        name,
+        category: subcategorySlug,
+        variants: variants as
+          | Record<string, Record<string, { price: number; discount?: number }>>
+          | undefined,
+      },
+      { name: categorySlug, category: categorySlug }
+    );
+
+    // Open WhatsApp
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div
       className="animate-fade-in-up"
@@ -536,11 +565,7 @@ function SubCategoryProductCard({
               <div className="mt-auto pt-4 border-t border-primary/20">
                 <Button
                   className="w-full bg-gradient-to-r from-primary to-brand-green-dark text-white font-semibold transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:shadow-primary/40 group-hover:scale-105"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    window.open(whatsappUrl, "_blank");
-                  }}
+                  onClick={handleWhatsAppClick}
                 >
                   <div className="flex items-center justify-center">
                     <MessageSquare className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:rotate-12" />
