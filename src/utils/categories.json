@@ -3,7 +3,7 @@
     {
       "category": "paan-varieties",
       "description": "A delightful range of Paan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
       "name": "Paan Varieties",
       "pricingEnabled": true,
       "subCategories": [
@@ -19,9 +19,9 @@
           "category": "shahi-khajur-paan",
           "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Dates (Khajur)",
@@ -68,7 +68,7 @@
           "category": "paan-coconut-ladoo",
           "description": "Deliciously moist laddus combining the flavors of paan and coconut for a delightful treat.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Menthol",
@@ -103,7 +103,7 @@
           "category": "chanothi-paan",
           "description": "A nutritious and crunchy mix of chanothi.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Tutti Frutti",
@@ -142,7 +142,7 @@
           "category": "green-paan-mukhwas",
           "description": "A nutritious and crunchy mix of green paan.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Betel Sticks",
@@ -189,7 +189,7 @@
           "category": "paan-cherry-mix",
           "description": "A nutritious and crunchy mix of paan cherry.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Betel Sticks",
@@ -234,7 +234,7 @@
     {
       "category": "regular-mukhwas",
       "description": "A classic collection of everyday mukhwas featuring sesame, coconut, and traditional seeds.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
       "name": "Regular Mukhwas",
       "pricingEnabled": true,
       "subCategories": [
@@ -247,8 +247,8 @@
           "category": "crunchy-til-coconut",
           "description": "A delicious and crunchy mix of sesame seeds (til) and coconut flakes.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Coated White Til",
@@ -284,7 +284,7 @@
           "category": "coated-til-dhanadal",
           "description": "A colorful and flavorful mix of coated sesame seeds and roasted coriander seeds (dhanadal).",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Sesame Seeds",
@@ -321,7 +321,7 @@
           "category": "seed-til-alsi",
           "description": "A healthy blend of various seeds including sesame (til) and flax seeds (alsi).",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -360,7 +360,7 @@
           "category": "regular-mukhwas-mix",
           "description": "A classic and traditional mukhwas blend for everyday refreshment.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Fennel Seeds",
@@ -393,7 +393,7 @@
           "category": "sweet-tinimini-dhanadal",
           "description": "A sweet and colorful mix of tiny sugar-coated fennel seeds (tinimini), sesame, and dhanadal.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Sugar-coated Fennel Seeds (Tinimini)",
@@ -423,7 +423,7 @@
           "category": "special-jaipuri-mukhwas",
           "description": "A royal mix of sweet and savory flavors.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Tini Mini (Sweet Saunf)",
@@ -439,7 +439,7 @@
     {
       "category": "healthy-blends",
       "description": "A collection of nutritious and wholesome blends featuring nuts, seeds, and berries.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
       "name": "Healthy Blends",
       "pricingEnabled": true,
       "subCategories": [
@@ -452,7 +452,7 @@
           "category": "roasted-nuts-coconut",
           "description": "A crunchy and savory mix of roasted nuts and toasted coconut.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": ["Almonds", "Cashews", "Pistachios", "Coconut Flakes"],
           "name": "Roasted Nuts Coconut",
@@ -479,7 +479,7 @@
           "category": "roasted-seeds-dryfruits",
           "description": "A wholesome blend of roasted seeds and assorted dry fruits.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -513,7 +513,7 @@
           "category": "chia-quinoa-berries",
           "description": "A superfood mix of chia seeds, quinoa, and antioxidant-rich berries.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Chia Seeds",
@@ -548,7 +548,7 @@
           "category": "healthy-nuts-berries-mix",
           "description": "A delicious and energizing trail mix with a variety of nuts and berries.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Hazelnuts",
@@ -594,7 +594,7 @@
           "category": "multi-seeds-mix",
           "description": "A simple yet powerful mix of various seeds, packed with nutrients.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Melon Seeds",
@@ -626,7 +626,7 @@
           "category": "seeds-dry-fruits",
           "description": "A nutritious and crunchy mix of seeds and dry fruits.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -650,7 +650,7 @@
           "category": "roasted-alsi",
           "description": "A healthy and flavorful roasted flax seeds mix.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": ["Flax Seeds", "Rock Salt", "Turmeric", "Lemon Juice"],
           "name": "Roasted Alsi Mukhwas",
@@ -666,7 +666,7 @@
           "category": "roasted-green-wheat",
           "description": "A healthy and delicious roasted green wheat mix.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": ["Green Wheat", "Black Salt", "Turmeric", "Rock Salt"],
           "name": "Roasted Green Wheat Mukhwas",
@@ -683,7 +683,7 @@
           "category": "healthy-nuts-barries-mix",
           "description": "A nutritious and crunchy mix of healthy nuts and barries.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Hazelnuts",
@@ -714,7 +714,7 @@
     {
       "category": "seasonal-varieties",
       "description": "Special and delicious mukhwas varieties available during specific seasons.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
       "name": "Seasonal Varieties",
       "pricingEnabled": true,
       "subCategories": [
@@ -727,7 +727,7 @@
           "category": "beet-root-amla",
           "description": "A seasonal delight rich in Vitamin-C, perfect for improving blood quality and skin tone.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": ["Beet Root", "Amla", "Jaggery Powder", "Black Salt"],
           "name": "Beet Root Amla Mukhwas",
@@ -749,7 +749,7 @@
     {
       "category": "healthy-powders",
       "description": "A range of homemade healthy powders, packed with natural protein, vitamins, and minerals.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
       "name": "Healthy Powders",
       "pricingEnabled": true,
       "subCategories": [
@@ -764,10 +764,10 @@
           "category": "homemade-healthy-powder",
           "description": "A nutritious and crunchy mix of home made natural multivitamin protien powder.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Almonds",
@@ -810,7 +810,7 @@
           "category": "home-made-natural-multivitamin-protien-powder",
           "description": "A nutritious and crunchy mix of home made natural multivitamin protien powder.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
             "Almonds",

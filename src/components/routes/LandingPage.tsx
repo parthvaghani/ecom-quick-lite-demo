@@ -62,7 +62,7 @@ export function LandingPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]">
           <Image
-            src="https://aavkarmukhwas.github.io/images/temp/all.jpg"
+            src="https://aavkarmukhwas.github.io/images/temp/all.png"
             alt="Aavkar Mukhwas promotional background"
             fill
             className="object-cover"
@@ -70,7 +70,7 @@ export function LandingPage() {
             blurDataURL="data:image/jpeg;base64,..." // your blur image
             onLoad={() => setHeroLoaded(true)}
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
