@@ -36,19 +36,19 @@ export function FAQSection() {
               {faqItems.map((item, index) => (
                 <div
                   key={index}
-                  className="border border-gray-950/[.1] dark:border-gray-50/[.1] rounded-lg overflow-hidden bg-gray-950/[.01] dark:bg-gray-50/[.10]"
+                  className="border border-gray-950/[.1] dark:border-gray-50/[.1] rounded-lg overflow-hidden bg-emerald-950/[.01] dark:bg-emerald-50/[.10]"
                 >
                   <button
-                    className="w-full px-6 py-4 flex justify-between items-center hover:bg-gray-950/[.05] dark:hover:bg-gray-50/[.15] transition-colors duration-200"
+                    className="w-full px-6 py-4 flex justify-between items-center hover:bg-emerald-950/[.05] dark:hover:bg-emerald-50/[.15] transition-colors duration-200"
                     onClick={() =>
                       setOpenItem(openItem === index ? null : index)
                     }
                   >
-                    <span className="text-left font-medium text-gray-900 dark:text-gray-100">
+                    <span className="text-left font-medium text-emerald-900 dark:text-emerald-100">
                       {item.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-emerald-500 dark:text-emerald-400 transition-transform duration-200 ${
                         openItem === index ? "rotate-180" : ""
                       }`}
                     />
