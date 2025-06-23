@@ -64,8 +64,8 @@ export function ProductDetailsSection() {
         {/* Section Header */}
         <div className="relative text-center mb-16">
           <h2 className="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
-            OUR PREMIUM PRODUCTS
-            <span className="ml-2 w-12 h-px bg-emerald-600 dark:bg-emerald-400"></span>
+            OUR HEALTHY MUKHWAS COLLECTION
+            {/* <span className="ml-2 w-12 h-px bg-emerald-600 dark:bg-emerald-400"></span> */}
           </h2>
           <h3 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400">
             Discover Our Health-Focused Mukhwas Collection

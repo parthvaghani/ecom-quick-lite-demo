@@ -2,7 +2,7 @@
   "shippingConfig": {
     "inGujarat": 40,
     "outsideGujarat": 80,
-    "abroad": 200
+    "abroad": 20034534
   },
   "categories": [
     {
@@ -34,11 +34,20 @@
           "name": "Simple Wet Green Paan Mukhwas",
           "variants": {
             "gm": {
-              "250g": { "price": 120, "discount": 10 },
-              "500g": { "price": 220, "discount": 25 }
+              "250g": {
+                "price": 120,
+                "discount": 10
+              },
+              "500g": {
+                "price": 220,
+                "discount": 25
+              }
             },
             "kg": {
-              "1kg": { "price": 400, "discount": 60 }
+              "1kg": {
+                "price": 400,
+                "discount": 60
+              }
             }
           }
         },
@@ -61,11 +70,20 @@
           "name": "Wet Cherry Paan Mukhwas",
           "variants": {
             "gm": {
-              "250g": { "price": 130, "discount": 15 },
-              "500g": { "price": 240, "discount": 30 }
+              "250g": {
+                "price": 130,
+                "discount": 15
+              },
+              "500g": {
+                "price": 240,
+                "discount": 30
+              }
             },
             "kg": {
-              "1kg": { "price": 450, "discount": 70 }
+              "1kg": {
+                "price": 450,
+                "discount": 70
+              }
             }
           }
         },
@@ -89,11 +107,19 @@
           "name": "Wet Chanothi Paan Mukhwas",
           "variants": {
             "gm": {
-              "250g": { "price": 140 },
-              "500g": { "price": 260, "discount": 20 }
+              "250g": {
+                "price": 140
+              },
+              "500g": {
+                "price": 260,
+                "discount": 20
+              }
             },
             "kg": {
-              "1kg": { "price": 500, "discount": 50 }
+              "1kg": {
+                "price": 500,
+                "discount": 50
+              }
             }
           }
         },
@@ -116,8 +142,14 @@
           "name": "Paan Coconut Laddu",
           "variants": {
             "sachet": {
-              "10 pieces": { "price": 150, "discount": 10 },
-              "20 pieces": { "price": 280, "discount": 25 }
+              "10 pieces": {
+                "price": 150,
+                "discount": 10
+              },
+              "20 pieces": {
+                "price": 280,
+                "discount": 25
+              }
             }
           }
         },
@@ -140,8 +172,14 @@
           "name": "Shahi Khajur Paan Mukhwas",
           "variants": {
             "gm": {
-              "250g": { "price": 200, "discount": 15 },
-              "500g": { "price": 380, "discount": 40 }
+              "250g": {
+                "price": 200,
+                "discount": 15
+              },
+              "500g": {
+                "price": 380,
+                "discount": 40
+              }
             }
           }
         }
@@ -175,11 +213,19 @@
           "name": "Crunchy Til Coconut",
           "variants": {
             "gm": {
-              "250g": { "price": 90 },
-              "500g": { "price": 170, "discount": 10 }
+              "250g": {
+                "price": 90
+              },
+              "500g": {
+                "price": 170,
+                "discount": 10
+              }
             },
             "kg": {
-              "1kg": { "price": 320, "discount": 30 }
+              "1kg": {
+                "price": 320,
+                "discount": 30
+              }
             }
           }
         },
@@ -204,11 +250,18 @@
           "name": "Coated Til Dhanadal Mix",
           "variants": {
             "gm": {
-              "250g": { "price": 80 },
-              "500g": { "price": 150 }
+              "250g": {
+                "price": 80
+              },
+              "500g": {
+                "price": 150
+              }
             },
             "kg": {
-              "1kg": { "price": 280, "discount": 20 }
+              "1kg": {
+                "price": 280,
+                "discount": 20
+              }
             }
           }
         },
@@ -232,11 +285,20 @@
           "name": "Seed Til Alsi",
           "variants": {
             "gm": {
-              "250g": { "price": 110, "discount": 10 },
-              "500g": { "price": 200, "discount": 20 }
+              "250g": {
+                "price": 110,
+                "discount": 10
+              },
+              "500g": {
+                "price": 200,
+                "discount": 20
+              }
             },
             "kg": {
-              "1kg": { "price": 380, "discount": 40 }
+              "1kg": {
+                "price": 380,
+                "discount": 40
+              }
             }
           }
         },
@@ -260,9 +322,16 @@
           "name": "Regular Mukhwas",
           "variants": {
             "gm": {
-              "250g": { "price": 70 },
-              "500g": { "price": 130 },
-              "1kg": { "price": 250, "discount": 20 }
+              "250g": {
+                "price": 70
+              },
+              "500g": {
+                "price": 130
+              },
+              "1kg": {
+                "price": 250,
+                "discount": 20
+              }
             }
           }
         },
@@ -285,8 +354,13 @@
           "name": "Sweet Tinimini Til Dhanadal",
           "variants": {
             "gm": {
-              "250g": { "price": 95 },
-              "500g": { "price": 180, "discount": 10 }
+              "250g": {
+                "price": 95
+              },
+              "500g": {
+                "price": 180,
+                "discount": 10
+              }
             }
           }
         },
@@ -303,13 +377,22 @@
             "https://aavkarmukhwas.github.io/images/temp/dilbahar-mix.jpg",
             "https://aavkarmukhwas.github.io/images/temp/imli-laddu.jpg"
           ],
-          "ingredients": ["Fennel Seeds", "Sweet Spices"],
+          "ingredients": [
+            "Fennel Seeds",
+            "Sweet Spices"
+          ],
           "isPopular": true,
           "name": "Dilbahar Mix",
           "variants": {
             "gm": {
-              "250g": { "price": 150, "discount": 10 },
-              "500g": { "price": 280, "discount": 25 }
+              "250g": {
+                "price": 150,
+                "discount": 10
+              },
+              "500g": {
+                "price": 280,
+                "discount": 25
+              }
             }
           }
         },
@@ -324,14 +407,22 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/imli-laddu.jpg"
           ],
-          "ingredients": ["Tamarind", "Sugar"],
+          "ingredients": [
+            "Tamarind",
+            "Sugar"
+          ],
           "isPopular": true,
           "isPremium": true,
           "name": "Imli Laddu",
           "variants": {
             "sachet": {
-              "20 pieces": { "price": 100 },
-              "40 pieces": { "price": 190, "discount": 10 }
+              "20 pieces": {
+                "price": 100
+              },
+              "40 pieces": {
+                "price": 190,
+                "discount": 10
+              }
             }
           }
         },
@@ -359,8 +450,13 @@
           "name": "Satrangi Mix",
           "variants": {
             "gm": {
-              "250g": { "price": 130 },
-              "500g": { "price": 250, "discount": 20 }
+              "250g": {
+                "price": 130
+              },
+              "500g": {
+                "price": 250,
+                "discount": 20
+              }
             }
           }
         },
@@ -376,13 +472,22 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/green-mix.jpg"
           ],
-          "ingredients": ["Green Fennel Seeds", "Herbs"],
+          "ingredients": [
+            "Green Fennel Seeds",
+            "Herbs"
+          ],
           "isPremium": true,
           "name": "Green Mix",
           "variants": {
             "gm": {
-              "250g": { "price": 160, "discount": 15 },
-              "500g": { "price": 300, "discount": 30 }
+              "250g": {
+                "price": 160,
+                "discount": 15
+              },
+              "500g": {
+                "price": 300,
+                "discount": 30
+              }
             }
           }
         }
@@ -406,12 +511,23 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
-          "ingredients": ["Almonds", "Cashews", "Pistachios", "Coconut Flakes"],
+          "ingredients": [
+            "Almonds",
+            "Cashews",
+            "Pistachios",
+            "Coconut Flakes"
+          ],
           "name": "Roasted Nuts Coconut",
           "variants": {
             "gm": {
-              "200g": { "price": 250, "discount": 20 },
-              "400g": { "price": 480, "discount": 50 }
+              "200g": {
+                "price": 250,
+                "discount": 20
+              },
+              "400g": {
+                "price": 480,
+                "discount": 50
+              }
             }
           }
         },
@@ -436,8 +552,13 @@
           "name": "Roasted Seeds & Dryfruits",
           "variants": {
             "gm": {
-              "200g": { "price": 220 },
-              "400g": { "price": 420, "discount": 40 }
+              "200g": {
+                "price": 220
+              },
+              "400g": {
+                "price": 420,
+                "discount": 40
+              }
             }
           }
         },
@@ -452,12 +573,23 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
-          "ingredients": ["Chia Seeds", "Quinoa", "Cranberries", "Blueberries"],
+          "ingredients": [
+            "Chia Seeds",
+            "Quinoa",
+            "Cranberries",
+            "Blueberries"
+          ],
           "name": "Chia Quinoa Berries Mix",
           "variants": {
             "gm": {
-              "150g": { "price": 300, "discount": 25 },
-              "300g": { "price": 580, "discount": 60 }
+              "150g": {
+                "price": 300,
+                "discount": 25
+              },
+              "300g": {
+                "price": 580,
+                "discount": 60
+              }
             }
           }
         },
@@ -483,8 +615,14 @@
           "name": "Healthy Nuts and Berries Mix",
           "variants": {
             "gm": {
-              "200g": { "price": 280, "discount": 30 },
-              "400g": { "price": 540, "discount": 60 }
+              "200g": {
+                "price": 280,
+                "discount": 30
+              },
+              "400g": {
+                "price": 540,
+                "discount": 60
+              }
             }
           }
         },
@@ -508,8 +646,13 @@
           "name": "Multi Seeds",
           "variants": {
             "gm": {
-              "250g": { "price": 180 },
-              "500g": { "price": 340, "discount": 30 }
+              "250g": {
+                "price": 180
+              },
+              "500g": {
+                "price": 340,
+                "discount": 30
+              }
             }
           }
         }
@@ -549,8 +692,14 @@
           "name": "Beet Root Amla Mukhwas",
           "variants": {
             "gm": {
-              "250g": { "price": 190, "discount": 20 },
-              "500g": { "price": 360, "discount": 40 }
+              "250g": {
+                "price": 190,
+                "discount": 20
+              },
+              "500g": {
+                "price": 360,
+                "discount": 40
+              }
             }
           }
         },
@@ -573,8 +722,14 @@
           "name": "Shahi Khajur Paan Mukhwas",
           "variants": {
             "gm": {
-              "250g": { "price": 200, "discount": 15 },
-              "500g": { "price": 380, "discount": 40 }
+              "250g": {
+                "price": 200,
+                "discount": 15
+              },
+              "500g": {
+                "price": 380,
+                "discount": 40
+              }
             }
           }
         }
@@ -617,16 +772,24 @@
           "name": "Homemade Healthy Powder",
           "variants": {
             "gm": {
-              "250g": { "price": 350, "discount": 30 },
-              "500g": { "price": 650, "discount": 70 }
+              "250g": {
+                "price": 350,
+                "discount": 30
+              },
+              "500g": {
+                "price": 650,
+                "discount": 70
+              }
             },
             "kg": {
-              "1kg": { "price": 1200, "discount": 150 }
+              "1kg": {
+                "price": 1200,
+                "discount": 150
+              }
             }
           }
         }
       ]
     }
-  ],
-  "promotionalProducts": []
+  ]
 }
