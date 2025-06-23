@@ -9,24 +9,36 @@
       "subCategories": [
         {
           "benefits": [
-            "Acts as a natural mouth freshener",
-            "Aids in digestion",
-            "Provides a cooling effect"
+            "Rich Source Of Fibers",
+            "Rich Source Of Iron & Calcium",
+            "Great Energy Booster",
+            "Improves Brain Health",
+            "Anti-ageing",
+            "Maintain Skin & Bowel Health"
           ],
-          "category": "simple-wet-green-paan",
-          "description": "A refreshing and classic wet paan mukhwas made with fresh betel leaves and a blend of aromatic spices.",
+          "category": "shahi-khajur-paan",
+          "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend.",
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Fresh Betel Leaves",
+            "Dates (Khajur)",
+            "Betel Leaves",
+            "Tutti Frutti",
             "Fennel Seeds",
-            "Cardamom",
-            "Gulkand (Rose Petal Jam)"
+            "Gulkand",
+            "Coriender Seeds",
+            "Dry",
+            "Betel Sticks",
+            "Coconut",
+            "Powder",
+            "Khajur Tukda"
           ],
-          "name": "Simple Wet Green Paan Mukhwas",
+          "isPopular": true,
+          "isPremium": true,
+          "name": "Shahi Khajur Paan Mukhwas",
           "variants": {
             "gm": {
               "250g": {
@@ -48,58 +60,60 @@
         },
         {
           "benefits": [
-            "Rich in antioxidants",
-            "Unique and fruity flavor profile"
+            "Improves Digestion",
+            "Good For Oral Health",
+            "Good For Heart & Bone Health",
+            "Promotes Skin Health"
           ],
-          "category": "wet-cherry-paan",
-          "description": "A sweet and tangy twist on the classic, infused with the delightful flavor of cherries.",
+          "category": "paan-coconut-ladoo",
+          "description": "Deliciously moist laddus combining the flavors of paan and coconut for a delightful treat.",
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
+            "Menthol",
             "Betel Leaves",
-            "Candied Cherries",
-            "Sweetened Fennel",
-            "Coconut Flakes"
+            "Tutti Frutti",
+            "Fennel Seeds",
+            "Gulkand",
+            "Coriander Seeds",
+            "Dry Coconuts"
           ],
-          "name": "Wet Cherry Paan Mukhwas",
+          "name": "Paan Coconut Ladoo",
           "variants": {
-            "gm": {
-              "250g": {
-                "discount": 15,
-                "price": 130
+            "sachet": {
+              "10 pieces": {
+                "discount": 10,
+                "price": 150
               },
-              "500g": {
-                "discount": 30,
-                "price": 240
-              }
-            },
-            "kg": {
-              "1kg": {
-                "discount": 70,
-                "price": 450
+              "20 pieces": {
+                "discount": 25,
+                "price": 280
               }
             }
           }
         },
         {
           "benefits": [
-            "Known for its medicinal properties",
-            "Aids in treating cough and cold",
-            "Unique herbal taste"
+            "Relieves oral ulcer",
+            "Natural laxative property",
+            "Helpful in relieving cough",
+            "Good For skin & healthy hair"
           ],
-          "category": "wet-chanothi-paan",
-          "description": "An exotic blend featuring Chanothi (Jequirity) leaves, offering a unique taste and numerous health benefits.",
+          "category": "chanothi-paan",
+          "description": "A nutritious and crunchy mix of chanothi.",
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Betel Leaves",
-            "Chanothi (Jequirity) Leaves",
-            "Mixed Seeds",
-            "Natural Spices"
+            "Tutti Frutti",
+            "Fennel Seeds",
+            "Gulkand",
+            "Coriander Seeds",
+            "Dry Coconut Flacks",
+            "Chanothi Leaves"
           ],
-          "name": "Wet Chanothi Paan Mukhwas",
+          "name": "Chanothi Paan Mukhwas",
           "variants": {
             "gm": {
               "250g": {
@@ -120,60 +134,97 @@
         },
         {
           "benefits": [
-            "A delightful sweet treat",
-            "Combines the benefits of paan and coconut"
+            "Improves Digestion",
+            "Good for Oral health",
+            "Good for heart & Bone health",
+            "Promotes Skin health"
           ],
-          "category": "paan-coconut-laddu",
-          "description": "Deliciously moist laddus combining the flavors of paan and coconut for a delightful treat.",
+          "category": "green-paan-mukhwas",
+          "description": "A nutritious and crunchy mix of green paan.",
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
+            "Betel Sticks",
+            "Navrang",
+            "Supari Menthol",
+            "Banaras",
             "Betel Leaves",
-            "Desiccated Coconut",
-            "Condensed Milk",
-            "Gulkand"
+            "Tutti Frutti",
+            "Calcutta Betel Leaves",
+            "Fennel Seeds",
+            "Gulkand",
+            "Katha Powder",
+            "Khajur",
+            "Tukda",
+            "Coriander Seeds"
           ],
-          "name": "Paan Coconut Laddu",
+          "name": "Green Paan Mukhwas",
           "variants": {
-            "sachet": {
-              "10 pieces": {
-                "discount": 10,
-                "price": 150
+            "gm": {
+              "250g": {
+                "price": 140
               },
-              "20 pieces": {
-                "discount": 25,
-                "price": 280
+              "500g": {
+                "discount": 20,
+                "price": 260
+              }
+            },
+            "kg": {
+              "1kg": {
+                "discount": 50,
+                "price": 500
               }
             }
           }
         },
         {
           "benefits": [
-            "Rich in energy and nutrients",
-            "Luxurious and satisfying taste"
+            "Improves Digestions",
+            "Good for Oral health",
+            "Good for heart & Bone health",
+            "Promotes Skin health",
+            "Cherry is Rich source of vitamin- C"
           ],
-          "category": "shahi-khajur-paan",
-          "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend.",
+          "category": "paan-cherry-mix",
+          "description": "A nutritious and crunchy mix of paan cherry.",
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Premium Dates (Khajur)",
-            "Betel Leaves",
-            "Mixed Nuts",
-            "Gulkand"
+            "Betel Sticks",
+            "Navrang",
+            "Supari",
+            "Menthol",
+            "Banaras",
+            "Leaves",
+            "Tutti Frutti",
+            "Calcutta",
+            "Leaves",
+            "Fennel Seeds",
+            "Gulkand",
+            "Katha Powder",
+            "Khajur",
+            "Tukda",
+            "Coriander",
+            "Seeds",
+            "Cherry"
           ],
-          "name": "Shahi Khajur Paan Mukhwas",
+          "name": "Paan Cherry Mix",
           "variants": {
             "gm": {
               "250g": {
-                "discount": 15,
-                "price": 200
+                "price": 140
               },
               "500g": {
-                "discount": 40,
-                "price": 380
+                "discount": 20,
+                "price": 260
+              }
+            },
+            "kg": {
+              "1kg": {
+                "discount": 50,
+                "price": 500
               }
             }
           }
@@ -189,9 +240,9 @@
       "subCategories": [
         {
           "benefits": [
-            "Rich in calcium and healthy fats",
-            "Provides a crunchy texture",
-            "Natural source of energy"
+            "Full of Antioxidants",
+            "Source of Vitamin-E, Vitamin-K",
+            "Better for Oral Health"
           ],
           "category": "crunchy-til-coconut",
           "description": "A delicious and crunchy mix of sesame seeds (til) and coconut flakes.",
@@ -200,11 +251,11 @@
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Sesame Seeds",
-            "Coconut Flakes",
-            "Jaggery",
-            "Fennel Seeds"
+            "Coated White Til",
+            "Coconuts Flakes",
+            "Coriander Seeds"
           ],
+          "isPopular": true,
           "name": "Crunchy Til Coconut",
           "variants": {
             "gm": {
@@ -237,7 +288,7 @@
           ],
           "ingredients": [
             "Sesame Seeds",
-            "Coriander Seeds (Dhanadal)",
+            "Coriander Seeds",
             "Turmeric",
             "Salt",
             "Sugar Coating"
@@ -262,9 +313,10 @@
         },
         {
           "benefits": [
-            "Rich in Omega-3 fatty acids",
-            "High in fiber",
-            "Boosts immunity"
+            "Rich source of omega 3 fatty acid",
+            "Improves heart health",
+            "Helps in providing good sleep",
+            "Improves Immunity"
           ],
           "category": "seed-til-alsi",
           "description": "A healthy blend of various seeds including sesame (til) and flax seeds (alsi).",
@@ -272,10 +324,12 @@
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Sesame Seeds",
-            "Flax Seeds",
             "Pumpkin Seeds",
-            "Sunflower Seeds"
+            "Melon Seeds",
+            "Sunflower Seeds",
+            "White Til",
+            "Flax Seeds",
+            "Turmeric - Salt"
           ],
           "name": "Seed Til Alsi",
           "variants": {
@@ -360,122 +414,25 @@
           }
         },
         {
-          "badge": "Most Popular",
           "benefits": [
-            "Delightful and aromatic blend",
-            "Premium fennel seeds",
-            "Sweet spices"
+            "Removes bad odour of mouth",
+            "Rich in antioxidants & natural fibers",
+            "Helps to Enhance Gut & Skin Health",
+            "Helps to Regulates menstrual cycle"
           ],
-          "category": "dilbahar-mix",
-          "description": "A delightful and aromatic blend of premium fennel seeds and sweet spices.",
+          "category": "special-jaipuri-mukhwas",
+          "description": "A royal mix of sweet and savory flavors.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/dilbahar-mix.jpg",
-            "https://aavkarmukhwas.github.io/images/temp/imli-laddu.jpg"
-          ],
-          "ingredients": ["Fennel Seeds", "Sweet Spices"],
-          "isPopular": true,
-          "name": "Dilbahar Mix",
-          "variants": {
-            "gm": {
-              "250g": {
-                "discount": 10,
-                "price": 150
-              },
-              "500g": {
-                "discount": 25,
-                "price": 280
-              }
-            }
-          }
-        },
-        {
-          "badge": "Most Popular & Premium",
-          "benefits": [
-            "Tangy and sweet tamarind balls",
-            "Traditional treat for all ages"
-          ],
-          "category": "imli-laddu",
-          "description": "Tangy and sweet tamarind balls, a traditional treat for all ages.",
-          "images": [
-            "https://aavkarmukhwas.github.io/images/temp/imli-laddu.jpg"
-          ],
-          "ingredients": ["Tamarind", "Sugar"],
-          "isPopular": true,
-          "isPremium": true,
-          "name": "Imli Laddu",
-          "variants": {
-            "sachet": {
-              "20 pieces": {
-                "price": 100
-              },
-              "40 pieces": {
-                "discount": 10,
-                "price": 190
-              }
-            }
-          }
-        },
-        {
-          "badge": "Most Popular",
-          "benefits": [
-            "Colorful and crunchy mix",
-            "Seven mouth-watering ingredients"
-          ],
-          "category": "satrangi-mix",
-          "description": "A colorful and crunchy mix of seven mouth-watering ingredients.",
-          "images": [
-            "https://aavkarmukhwas.github.io/images/temp/satrangi-mix.jpg"
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Red Chilli",
-            "Green Chilli",
-            "Yellow Chilli",
-            "White Chilli",
-            "Black Chilli",
-            "Brown Chilli",
-            "Orange Chilli"
+            "Tini Mini (Sweet Saunf)",
+            "Coriander Seeds",
+            "Coconut Flakes",
+            "Dry Betel Stick"
           ],
-          "isPopular": true,
-          "name": "Satrangi Mix",
-          "variants": {
-            "gm": {
-              "250g": {
-                "price": 130
-              },
-              "500g": {
-                "discount": 20,
-                "price": 250
-              }
-            }
-          }
-        },
-        {
-          "badge": "New Arrival Premium",
-          "benefits": [
-            "Refreshing and healthy mix",
-            "Green fennel seeds",
-            "Herbs"
-          ],
-          "category": "green-mix",
-          "description": "A refreshing and healthy mix featuring green fennel seeds and herbs.",
-          "images": [
-            "https://aavkarmukhwas.github.io/images/temp/green-mix.jpg"
-          ],
-          "ingredients": ["Green Fennel Seeds", "Herbs"],
-          "isPremium": true,
-          "name": "Green Mix",
-          "variants": {
-            "gm": {
-              "250g": {
-                "discount": 15,
-                "price": 160
-              },
-              "500g": {
-                "discount": 30,
-                "price": 300
-              }
-            }
-          }
+          "name": "Special Jaipuri Mukhwas",
+          "variants": {}
         }
       ]
     },
@@ -514,9 +471,10 @@
         },
         {
           "benefits": [
-            "High in fiber",
-            "Boosts immunity",
-            "Rich in vitamins and minerals"
+            "Rich source of omega 3 fatty acid",
+            "Improves heart health",
+            "Helps in providing good sleep",
+            "Improves Immunity"
           ],
           "category": "roasted-seeds-dryfruits",
           "description": "A wholesome blend of roasted seeds and assorted dry fruits.",
@@ -525,10 +483,11 @@
           ],
           "ingredients": [
             "Pumpkin Seeds",
+            "Melon Seeds",
             "Sunflower Seeds",
-            "Almonds",
-            "Raisins",
-            "Apricots"
+            "White Til",
+            "Flax Seeds",
+            "Turmeric - Salt"
           ],
           "name": "Roasted Seeds & Dryfruits",
           "variants": {
@@ -545,16 +504,25 @@
         },
         {
           "benefits": [
-            "Excellent source of Omega-3",
-            "Complete protein from quinoa",
-            "High in antioxidants"
+            "Natural Laxative - full of Fibers",
+            "Helpfull In Weight Reduction",
+            "Helpful In Arthritis Pain",
+            "Great Substitute of Milk In Nutrients",
+            "Loaded With Antioxidants"
           ],
           "category": "chia-quinoa-berries",
           "description": "A superfood mix of chia seeds, quinoa, and antioxidant-rich berries.",
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
-          "ingredients": ["Chia Seeds", "Quinoa", "Cranberries", "Blueberries"],
+          "ingredients": [
+            "Chia Seeds",
+            "Quinoa Seeds",
+            "Black Til",
+            "Blueberry",
+            "Cranberry",
+            "Black Raisins"
+          ],
           "name": "Chia Quinoa Berries Mix",
           "variants": {
             "gm": {
@@ -571,9 +539,11 @@
         },
         {
           "benefits": [
-            "Perfect for snacking",
-            "Improves heart health",
-            "Boosts brain function"
+            "Great Immunity Booster",
+            "Excellent For Weight Loss",
+            "Improves Good Cholestrol & Reduces Bad Cholesterol",
+            "Improves Heamoglobin",
+            "Best For Skin,bones And Hair Health"
           ],
           "category": "healthy-nuts-berries-mix",
           "description": "A delicious and energizing trail mix with a variety of nuts and berries.",
@@ -581,12 +551,23 @@
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Almonds",
+            "Hazelnuts",
+            "Anjeer (Dried Fig)",
+            "Black Raisin",
+            "Sunflower seeds",
             "Walnuts",
-            "Cashews",
-            "Cranberries",
-            "Blueberries",
-            "Pumpkin Seeds"
+            "Melon Seeds",
+            "Green Raisin",
+            "Flax Seeds",
+            "Chia Seeds",
+            "Pumpkin Seeds",
+            "White Til",
+            "Pistachio",
+            "Blueberry",
+            "Quinoa Seeds",
+            "Cranberry",
+            "Black Til",
+            "Saffron"
           ],
           "name": "Healthy Nuts and Berries Mix",
           "variants": {
@@ -604,9 +585,11 @@
         },
         {
           "benefits": [
-            "Rich in magnesium and zinc",
-            "Supports healthy digestion",
-            "Promotes healthy skin"
+            "Immunity Booster",
+            "Reduced Bad Cholesterol",
+            "Full Of Omega 3 Fatty Acid",
+            "Natural Source Of Fibers",
+            "Rich Source Of Vitamin-C, B Complex, And Vitamin-E"
           ],
           "category": "multi-seeds-mix",
           "description": "A simple yet powerful mix of various seeds, packed with nutrients.",
@@ -614,10 +597,11 @@
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
+            "Melon Seeds",
             "Pumpkin Seeds",
+            "Musk Melon Seeds",
             "Sunflower Seeds",
-            "Watermelon Seeds",
-            "Flax Seeds"
+            "Black Salt"
           ],
           "name": "Multi Seeds Mukhwas",
           "variants": {
@@ -631,6 +615,99 @@
               }
             }
           }
+        },
+        {
+          "benefits": [
+            "Rich source of omega 3 fatty acid",
+            "Improves heart health",
+            "Helps in providing good sleep",
+            "Improves Immunity"
+          ],
+          "category": "seeds-dry-fruits",
+          "description": "A nutritious and crunchy mix of seeds and dry fruits.",
+          "images": [
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+          ],
+          "ingredients": [
+            "Pumpkin Seeds",
+            "Melon Seeds",
+            "Sunflower Seeds",
+            "White Til",
+            "Flax Seeds",
+            "Turmeric - Salt"
+          ],
+          "name": "Seeds Dry Fruits Mukhwas",
+          "variants": {}
+        },
+        {
+          "benefits": [
+            "Helps to Lower Cholesterol & Relieves hyperlipidemia & Obesity",
+            "Protects Against Heart Diseases",
+            "Richest Source of Omega 3 Fatty Acid",
+            "Fights Cancer",
+            "Rich In Dietary Fibers"
+          ],
+          "category": "roasted-alsi",
+          "description": "A healthy and flavorful roasted flax seeds mix.",
+          "images": [
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+          ],
+          "ingredients": ["Flax Seeds", "Rock Salt", "Turmeric", "Lemon Juice"],
+          "name": "Roasted Alsi Mukhwas",
+          "variants": {}
+        },
+        {
+          "benefits": [
+            "Full of Natural Fibers",
+            "Improves Metabolism",
+            "Maintain Body Weight",
+            "Rich Source Of Minerals"
+          ],
+          "category": "roasted-green-wheat",
+          "description": "A healthy and delicious roasted green wheat mix.",
+          "images": [
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+          ],
+          "ingredients": ["Green Wheat", "Black Salt", "Turmeric", "Rock Salt"],
+          "name": "Roasted Green Wheat Mukhwas",
+          "variants": {}
+        },
+        {
+          "benefits": [
+            "Great Immunity Booster",
+            "Excellent For Weight Loss",
+            "Improves Good Cholestrol & Reduces Bad Cholesterol",
+            "Improves Heamoglobin",
+            "Best For Skin,bones And Hair Health"
+          ],
+          "category": "healthy-nuts-barries-mix",
+          "description": "A nutritious and crunchy mix of healthy nuts and barries.",
+          "images": [
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+          ],
+          "ingredients": [
+            "Hazelnuts",
+            "Anjeer (Dried Fig)",
+            "Black Raisin",
+            "Sunflower seeds",
+            "Walnuts",
+            "Melon Seeds",
+            "Green Raisin",
+            "Flax Seeds",
+            "Chia Seeds",
+            "Pumpkin Seeds",
+            "White Til",
+            "Pistachio",
+            "Blueberry",
+            "Quinoa Seeds",
+            "Cranberry",
+            "Black Til",
+            "Saffron"
+          ],
+          "isPopular": true,
+          "isPremium": true,
+          "name": "Healthy Nuts & Barries Mix",
+          "variants": {}
         }
       ]
     },
@@ -666,36 +743,6 @@
               }
             }
           }
-        },
-        {
-          "benefits": [
-            "Rich in energy and nutrients",
-            "Luxurious and satisfying taste"
-          ],
-          "category": "shahi-khajur-paan",
-          "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend, perfect for festive seasons.",
-          "images": [
-            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
-          ],
-          "ingredients": [
-            "Premium Dates (Khajur)",
-            "Betel Leaves",
-            "Mixed Nuts",
-            "Gulkand"
-          ],
-          "name": "Shahi Khajur Paan Mukhwas",
-          "variants": {
-            "gm": {
-              "250g": {
-                "discount": 15,
-                "price": 200
-              },
-              "500g": {
-                "discount": 40,
-                "price": 380
-              }
-            }
-          }
         }
       ]
     },
@@ -708,13 +755,14 @@
       "subCategories": [
         {
           "benefits": [
-            "Excellent energy and immunity booster",
-            "Beneficial for children, pregnant women, and the elderly",
-            "Ideal for gym-goers and people with active lifestyles",
-            "Rich in natural protein and antioxidants"
+            "Full of natural proteins, vitamins minerals & antioxidants",
+            "Specially beneficial for children, pregnant women, elders, housewives, gym workers",
+            "Also works as an energy booster & immunity booster",
+            "Helps to maintain weight",
+            "Helps to develop muscles mass"
           ],
           "category": "homemade-healthy-powder",
-          "description": "A wholesome and natural protein powder rich in vitamins, minerals, and antioxidants.",
+          "description": "A nutritious and crunchy mix of home made natural multivitamin protien powder.",
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png",
@@ -722,16 +770,14 @@
             "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
           ],
           "ingredients": [
-            "Walnuts",
             "Almonds",
-            "Fox Nuts (Makhana)",
-            "Pistachios",
-            "Cashews",
-            "Split Chickpeas (Chana Dal)",
-            "Pumpkin Seeds",
-            "Melon Seeds",
-            "Sunflower Seeds",
-            "Rock Sugar (Mishri)"
+            "Makhana",
+            "Pistachio",
+            "Cashew nuts",
+            "Chickpea dal",
+            "Pumpkin seeds",
+            "Melon seeds",
+            "Sunflower seeds"
           ],
           "name": "Homemade Healthy Powder",
           "variants": {
@@ -752,6 +798,32 @@
               }
             }
           }
+        },
+        {
+          "benefits": [
+            "Full of natural proteins, vitamins minerals & antioxidants",
+            "Specially beneficial for children, pregnant women, elders, housewives, gym workers",
+            "Also works as an energy booster & immunity booster",
+            "Helps to maintain weight",
+            "Helps to develop muscles mass"
+          ],
+          "category": "home-made-natural-multivitamin-protien-powder",
+          "description": "A nutritious and crunchy mix of home made natural multivitamin protien powder.",
+          "images": [
+            "https://aavkarmukhwas.github.io/images/temp/madrasi-saunf.png"
+          ],
+          "ingredients": [
+            "Almonds",
+            "Makhana",
+            "Pistachio",
+            "Cashew nuts",
+            "Chickpea dal",
+            "Pumpkin seeds",
+            "Melon seeds",
+            "Sunflower seeds"
+          ],
+          "name": "Home Made Natural Multivitamin Protien Powder",
+          "variants": {}
         }
       ]
     }

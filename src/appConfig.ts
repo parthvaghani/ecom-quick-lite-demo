@@ -98,10 +98,10 @@ export const appConfig = {
         "Rich Source Of Vitamin-C, B Complex, And Vitamin-E",
       ],
     },
-    seedTalAlsi: {
-      name: "Seed Tal Alsi Mukhwas",
-      image: "/images/products/seed-tal-alsi.jpg",
-      tagline: "A wholesome blend of seeds, tal, and alsi.",
+    seedTilAlsi: {
+      name: "Seed Til Alsi Mukhwas",
+      image: "/images/products/seed-til-alsi.jpg",
+      tagline: "A wholesome blend of seeds, til, and alsi.",
       ingredients: [
         "Pumpkin Seeds",
         "Melon Seeds",
@@ -203,9 +203,9 @@ export const appConfig = {
       ],
     },
     shahiKhajurPan: {
-      name: "Shahi Khajur Pan Mukhwas",
-      image: "/images/products/shahi-khajur-pan.jpg",
-      tagline: "A sweet and flavorful khajur pan mix.",
+      image: "/images/products/shahi-khajur-paan.jpg",
+      tagline: "A sweet and flavorful khajur paan mix.",
+      name: "Shahi Khajur Paan Mukhwas",
       ingredients: [
         "Dates (Khajur)",
         "Betel Leaves",
@@ -228,10 +228,10 @@ export const appConfig = {
         "Maintain Skin & Bowel Health",
       ],
     },
-    panCoconutLadoo: {
-      name: "Pan Coconut Ladoo Mukhwas",
-      image: "/images/products/pan-coconut-ladoo.jpg",
-      tagline: "A crunchy and flavorful pan coconut ladoo mix.",
+    paanCoconutLadoo: {
+      name: "Paan Coconut Ladoo Mukhwas",
+      image: "/images/products/paan-coconut-ladoo.jpg",
+      tagline: "A crunchy and flavorful paan coconut ladoo mix.",
       ingredients: [
         "Menthol",
         "Betel Leaves",
@@ -269,8 +269,8 @@ export const appConfig = {
       ],
     },
     chanothiPan: {
-      name: "Chanothi Pan Mukhwas",
-      image: "/images/products/chanothi-pan.jpg",
+      name: "Chanothi Paan Mukhwas",
+      image: "/images/products/chanothi-paan.jpg",
       tagline: "A nutritious and crunchy mix of chanothi.",
       ingredients: [
         "Tutti Frutti",
@@ -319,9 +319,9 @@ export const appConfig = {
       ],
     },
     greenPanMukhwas: {
-      name: "Green Pan Mukhwas",
-      image: "/images/products/green-pan-mukhwas.jpg",
-      tagline: "A nutritious and crunchy mix of green pan.",
+      name: "Green Paan Mukhwas",
+      image: "/images/products/green-paan-mukhwas.jpg",
+      tagline: "A nutritious and crunchy mix of green paan.",
       ingredients: [
         "Betel Sticks",
         "Navrang",
@@ -345,9 +345,9 @@ export const appConfig = {
       ],
     },
     panCherryMix: {
-      name: "Pan Cherry Mix",
-      image: "/images/products/pan-cherry-mix.jpg",
-      tagline: "A nutritious and crunchy mix of pan cherry.",
+      name: "Paan Cherry Mix",
+      image: "/images/products/paan-cherry-mix.jpg",
+      tagline: "A nutritious and crunchy mix of paan cherry.",
       ingredients: [
         "Betel Sticks",
         "Navrang",
