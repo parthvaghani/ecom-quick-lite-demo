@@ -7,19 +7,12 @@ import {
   Award,
   Truck,
   ShoppingCart,
-  Leaf,
-  ShieldCheck,
-  Globe,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Category } from "../ui/Category";
-import { ROUTES } from "@/utils/constants";
-import { PromotionalProductsBanner } from "../ui/PromotionalProductsBanner";
-import Image from "next/image";
+import { Category } from "@/components/ui/Category";
+import { PromotionalProductsBanner } from "@/components/ui/PromotionalProductsBanner";
 import dynamic from "next/dynamic";
-import { useState } from "react";
-import FullScreenLoader from "../FullScreenLoader";
+import FullScreenLoader from "@/components/FullScreenLoader";
+import HeroSlider from "@/components/HeroSlider";
 
 const ProductDetailsSection = dynamic(
   () => import("@/components").then((mod) => mod.ProductDetailsSection),
@@ -51,90 +44,11 @@ const FAQSection = dynamic(
 );
 
 export function LandingPage() {
-  const [heroLoaded, setHeroLoaded] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[603px] md:h-[calc(100vh-4rem)] flex items-center justify-center">
-        {/* Loader Overlay */}
-        {!heroLoaded && <FullScreenLoader />}
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2]">
-          <Image
-            src="https://aavkarmukhwas.github.io/images/temp/all.png"
-            alt="Aavkar Mukhwas promotional background"
-            fill
-            className="object-cover"
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,..." // your blur image
-            onLoad={() => setHeroLoaded(true)}
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <Badge
-              variant="outline"
-              className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
-            >
-              🌿 Discover Natural Ingredients & Health Benefits
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white bg-clip-text dark:text-slate-100">
-              {appConfig.title}
-            </h1>
-            {/* <p className="text-lg md:text-lg mb-10 text-white/95 max-w-2xl mx-auto [text-shadow:_0_1px_2px_rgb(0_0_0_/_30%)]">
-              Discover premium quality homemade and hygienic mukhwas from
-              Aavkar. Explore our extensive range of traditional mouth
-              fresheners, sweet supari, and natural ingredients with authentic
-              taste and quality.
-            </p> */}
-
-            <Button
-              size="lg"
-              variant="default"
-              className="bg-white text-primary hover:bg-white/90 dark:bg-white dark:text-primary dark:hover:bg-white/90"
-            >
-              <Link
-                href={ROUTES.CATEGORIES}
-                className="flex items-center gap-2 font-semibold"
-              >
-                Explore premium mukhwas <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
-
-            {/* Trust Badges */}
-            <div className="mt-8 flex justify-center items-center space-x-8 flex-wrap gap-2">
-              <Badge
-                variant="outline"
-                className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
-              >
-                {" "}
-                <Leaf className="w-4 h-4 m-1 text-green-400" />
-                <span>100% Veg</span>
-              </Badge>
-              <Badge
-                variant="outline"
-                className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
-              >
-                {" "}
-                <ShieldCheck className="w-4 h-4 m-1 text-blue-300" />
-                <span>FSSAI Approved</span>
-              </Badge>
-              <Badge
-                variant="outline"
-                className="bg-white/10 text-white border-white/20 backdrop-blur-sm mb-6 dark:bg-slate-800/20 dark:text-slate-200 dark:border-slate-600 select-none"
-              >
-                {" "}
-                <Globe className="w-4 h-4 m-1 text-yellow-400" />
-                <span>Export Ready</span>
-              </Badge>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <HeroSlider />
       {/* Category Section */}
       <PromotionalProductsBanner />
       <Category />
