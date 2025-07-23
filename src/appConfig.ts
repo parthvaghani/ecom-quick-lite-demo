@@ -114,7 +114,7 @@ export const appConfig = {
         "Rich source of omega 3 fatty acid",
         "Improves heart health",
         "Helps in providing good sleep",
-        "Improves Immunity"
+        "Improves Immunity",
       ],
     },
     specialJaipuriMukhwas: {
@@ -145,7 +145,7 @@ export const appConfig = {
         "Melon Seeds",
         "Sunflower Seeds",
         "Pistachio",
-        "Almonds"
+        "Almonds",
       ],
       benefits: [
         "Immunity Booster",
@@ -153,7 +153,7 @@ export const appConfig = {
         "Helpful For Infertility Patients",
         "Natural Source Of Fibers",
         "Rich Source Of Vitamin -A. Good For Eye, Hair & Skin",
-        "Helpfull In Sugar Level & Weight Management"
+        "Helpfull In Sugar Level & Weight Management",
       ],
     },
     roastedAlsi: {
@@ -206,8 +206,8 @@ export const appConfig = {
       ],
     },
     shahiKhajurPan: {
-      image: "/images/products/shahi-khajur-paan.jpg",
-      tagline: "A sweet and flavorful khajur paan mix.",
+      image: "/images/products/shahi-khajur-pan.jpg",
+      tagline: "A sweet and flavorful khajur pan mix.",
       name: "Shahi Khajur Pan",
       ingredients: [
         "Dates (Khajur)",
@@ -233,8 +233,8 @@ export const appConfig = {
     },
     paanCoconutLadoo: {
       name: "Pan Coconut Ladoo",
-      image: "/images/products/paan-coconut-ladoo.jpg",
-      tagline: "A crunchy and flavorful paan coconut ladoo mix.",
+      image: "/images/products/pan-coconut-ladoo.jpg",
+      tagline: "A crunchy and flavorful pan coconut ladoo mix.",
       ingredients: [
         "Menthol",
         "Betel Leaves",
@@ -273,7 +273,7 @@ export const appConfig = {
     },
     chanothiPan: {
       name: "Chanothi Pan",
-      image: "/images/products/chanothi-paan.jpg",
+      image: "/images/products/chanothi-pan.jpg",
       tagline: "A nutritious and crunchy mix of chanothi.",
       ingredients: [
         "Tutti Frutti",
@@ -323,8 +323,8 @@ export const appConfig = {
     },
     greenPanMukhwas: {
       name: "Green Pan Mukhwas",
-      image: "/images/products/green-paan-mukhwas.jpg",
-      tagline: "A nutritious and crunchy mix of green paan.",
+      image: "/images/products/green-pan-mukhwas.jpg",
+      tagline: "A nutritious and crunchy mix of green pan.",
       ingredients: [
         "Betel Sticks",
         "Navrang",
@@ -349,8 +349,8 @@ export const appConfig = {
     },
     panCherryMix: {
       name: "Pan Cherry Mix",
-      image: "/images/products/paan-cherry-mix.jpg",
-      tagline: "A nutritious and crunchy mix of paan cherry.",
+      image: "/images/products/pan-cherry-mix.jpg",
+      tagline: "A nutritious and crunchy mix of pan cherry.",
       ingredients: [
         "Betel Sticks",
         "Navrang",
@@ -704,7 +704,7 @@ export const publicPaths = [
 ];
 
 // URL redirects
-export const redirects: { [key: string]: string; } = {
+export const redirects: { [key: string]: string } = {
   "/home": "/dashboard",
   "/admin": "/admin/dashboard",
 };

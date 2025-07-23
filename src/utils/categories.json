@@ -1,8 +1,8 @@
 {
   "categories": [
     {
-      "category": "paan-varieties",
-      "description": "A delightful range of Pan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
+      "category": "pan-varieties",
+      "description": "A delightful range of Pan flavored mukhwas, from traditional wet pan to innovative coconut laddus.",
       "heroImage": "https://aavkarmukhwas.github.io/images/categories/pan-varieties.png",
       "name": "Pan Varieties",
       "pricingEnabled": true,
@@ -16,12 +16,12 @@
             "Anti-ageing",
             "Maintain Skin & Bowel Health"
           ],
-          "category": "shahi-khajur-paan",
+          "category": "shahi-khajur-pan",
           "description": "A royal treat made with premium dates (khajur) stuffed with a rich mukhwas blend.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/shahi-khajur-pan/product.png",
+            "https://aavkarmukhwas.github.io/images/shahi-khajur-pan/benefits.png",
+            "https://aavkarmukhwas.github.io/images/shahi-khajur-pan/ingredients.png"
           ],
           "ingredients": [
             "Dates (Khajur)",
@@ -61,10 +61,12 @@
             "Good For Heart & Bone Health",
             "Promotes Skin Health"
           ],
-          "category": "paan-coconut-ladoo",
-          "description": "Deliciously moist laddus combining the flavors of paan and coconut for a delightful treat.",
+          "category": "pan-coconut-ladoo",
+          "description": "Deliciously moist laddus combining the flavors of pan and coconut for a delightful treat.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/pan-coconut-ladoo/product.png",
+            "https://aavkarmukhwas.github.io/images/pan-coconut-ladoo/benefits.png",
+            "https://aavkarmukhwas.github.io/images/pan-coconut-ladoo/ingredients.png"
           ],
           "ingredients": [
             "Menthol",
@@ -100,10 +102,12 @@
             "Helpful in relieving cough",
             "Good For skin & healthy hair"
           ],
-          "category": "chanothi-paan",
+          "category": "chanothi-pan",
           "description": "A nutritious and crunchy mix of chanothi.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/chanothi-pan/product.png",
+            "https://aavkarmukhwas.github.io/images/chanothi-pan/benefits.png",
+            "https://aavkarmukhwas.github.io/images/chanothi-pan/ingredients.png"
           ],
           "ingredients": [
             "Tutti Frutti",
@@ -138,10 +142,12 @@
             "Good for heart & Bone health",
             "Promotes Skin health"
           ],
-          "category": "green-paan-mukhwas",
-          "description": "A nutritious and crunchy mix of green paan.",
+          "category": "green-pan-mukhwas",
+          "description": "A nutritious and crunchy mix of green pan.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/green-pan-mukhwas/product.png",
+            "https://aavkarmukhwas.github.io/images/green-pan-mukhwas/benefits.png",
+            "https://aavkarmukhwas.github.io/images/green-pan-mukhwas/Ingredients.png"
           ],
           "ingredients": [
             "Betel Sticks",
@@ -183,10 +189,10 @@
             "Promotes Skin health",
             "Cherry is Rich source of vitamin- C"
           ],
-          "category": "paan-cherry-mix",
-          "description": "A nutritious and crunchy mix of paan cherry.",
+          "category": "pan-cherry-mix",
+          "description": "A nutritious and crunchy mix of pan cherry.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/pan-cherry/product.png"
           ],
           "ingredients": [
             "Betel Sticks",
@@ -244,14 +250,11 @@
           "category": "premium-til-mukhwas",
           "description": "A premium and flavorful til mix.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/premium-til/product.png",
+            "https://aavkarmukhwas.github.io/images/premium-til/benefits.png",
+            "https://aavkarmukhwas.github.io/images/premium-til/ingredients.png"
           ],
-          "ingredients": [
-            "White Til",
-            "Rock Salt",
-            "Turmeric",
-            "Lemon Juice"
-          ],
+          "ingredients": ["White Til", "Rock Salt", "Turmeric", "Lemon Juice"],
           "name": "Premium Til (Sesame Seed)",
           "variants": {
             "gm": {
@@ -280,7 +283,7 @@
           "category": "suvadana-coconuts-toparu-mukhwas",
           "description": "A crunchy and flavorful mukhwas made from suvadana coconuts (toparu), perfect for refreshing taste after meals.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/suvadana-coconuts-toparu/product.png"
           ],
           "ingredients": [
             "Dry Coconut (Toparu)",
@@ -315,8 +318,9 @@
           "category": "crunchy-til-coconut",
           "description": "A delicious and crunchy mix of sesame seeds (til) and coconut flakes.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/crunchy-til-coconut/product.png",
+            "https://aavkarmukhwas.github.io/images/crunchy-til-coconut/benefits.png",
+            "https://aavkarmukhwas.github.io/images/crunchy-til-coconut/ingredients.png"
           ],
           "ingredients": [
             "Coated White Til",
@@ -350,7 +354,7 @@
           "category": "coated-til-dhanadal",
           "description": "A colorful and flavorful mix of coated sesame seeds and roasted coriander seeds (dhanadal).",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/coated-til-dhanadal-mix/product.png"
           ],
           "ingredients": [
             "Sesame Seeds",
@@ -386,7 +390,9 @@
           "category": "seed-til-alsi",
           "description": "A healthy blend of various seeds including sesame (til) and flax seeds (alsi).",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/seed-tal-alsi/product.png",
+            "https://aavkarmukhwas.github.io/images/seed-tal-alsi/benefits.png",
+            "https://aavkarmukhwas.github.io/images/seed-tal-alsi/ingredients.png"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -425,7 +431,9 @@
           "category": "regular-mukhwas-mix",
           "description": "A classic and traditional mukhwas blend for everyday refreshment.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/regular-mukhwas/product.png",
+            "https://aavkarmukhwas.github.io/images/regular-mukhwas/benefits.png",
+            "https://aavkarmukhwas.github.io/images/regular-mukhwas/ingredients.png"
           ],
           "ingredients": [
             "White Til",
@@ -462,7 +470,7 @@
           "category": "sweet-tinimini-dhanadal",
           "description": "A sweet and colorful mix of tiny sugar-coated fennel seeds (tinimini), sesame, and dhanadal.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/sweet-tinimini-til-dhanadal/product.png"
           ],
           "ingredients": [
             "Sugar-coated Fennel Seeds (Tinimini)",
@@ -496,7 +504,9 @@
           "category": "special-jaipuri-mukhwas",
           "description": "A royal mix of sweet and savory flavors.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/special-jaipuri-mukhwas/product.png",
+            "https://aavkarmukhwas.github.io/images/special-jaipuri-mukhwas/benefits.png",
+            "https://aavkarmukhwas.github.io/images/special-jaipuri-mukhwas/ingredients.png"
           ],
           "ingredients": [
             "Tini Mini (Sweet Saunf)",
@@ -539,14 +549,11 @@
           "category": "roasted-nuts-coconut",
           "description": "A crunchy and savory mix of roasted nuts and toasted coconut.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/roasted-nuts-barries-mix/product.png",
+            "https://aavkarmukhwas.github.io/images/roasted-nuts-barries-mix/benefits.png",
+            "https://aavkarmukhwas.github.io/images/roasted-nuts-barries-mix/ingredients.png"
           ],
-          "ingredients": [
-            "Almonds",
-            "Cashews",
-            "Pistachios",
-            "Coconut Flakes"
-          ],
+          "ingredients": ["Almonds", "Cashews", "Pistachios", "Coconut Flakes"],
           "isPremium": true,
           "name": "Roasted Nuts Coconut",
           "variants": {
@@ -575,7 +582,9 @@
           "category": "roasted-seeds-dryfruits",
           "description": "A wholesome blend of roasted seeds and assorted dry fruits.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/seeds-dry-fruit/product.png",
+            "https://aavkarmukhwas.github.io/images/seeds-dry-fruit/benefits.png",
+            "https://aavkarmukhwas.github.io/images/seeds-dry-fruit/ingredients.png"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -592,7 +601,6 @@
                 "price": 220
               },
               "400g": {
-                "discount": 40,
                 "price": 420
               }
             }
@@ -609,7 +617,9 @@
           "category": "chia-quinoa-berries",
           "description": "A superfood mix of chia seeds, quinoa, and antioxidant-rich berries.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/chia-quinoa-berries/product.png",
+            "https://aavkarmukhwas.github.io/images/chia-quinoa-berries/benefits.png",
+            "https://aavkarmukhwas.github.io/images/chia-quinoa-berries/ingredients.png"
           ],
           "ingredients": [
             "Chia Seeds",
@@ -648,7 +658,9 @@
           "category": "multi-seeds-mix",
           "description": "A simple yet powerful mix of various seeds, packed with nutrients.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/multi-seeds/product.png",
+            "https://aavkarmukhwas.github.io/images/multi-seeds/benefits.png",
+            "https://aavkarmukhwas.github.io/images/multi-seeds/ingredients.png"
           ],
           "ingredients": [
             "Melon Seeds",
@@ -686,7 +698,9 @@
           "category": "seeds-dry-fruits",
           "description": "A nutritious and crunchy mix of seeds and dry fruits.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/seeds-dry-fruit/product.png",
+            "https://aavkarmukhwas.github.io/images/seeds-dry-fruit/benefits.png",
+            "https://aavkarmukhwas.github.io/images/seeds-dry-fruit/ingredients.png"
           ],
           "ingredients": [
             "Pumpkin Seeds",
@@ -726,14 +740,11 @@
           "category": "roasted-alsi",
           "description": "A healthy and flavorful roasted flax seeds mix.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/roasted-alsi/product.png",
+            "https://aavkarmukhwas.github.io/images/roasted-alsi/benefits.png",
+            "https://aavkarmukhwas.github.io/images/roasted-alsi/ingredients.png"
           ],
-          "ingredients": [
-            "Flax Seeds",
-            "Rock Salt",
-            "Turmeric",
-            "Lemon Juice"
-          ],
+          "ingredients": ["Flax Seeds", "Rock Salt", "Turmeric", "Lemon Juice"],
           "isPopular": true,
           "name": "Roasted Alsi",
           "variants": {
@@ -762,14 +773,11 @@
           "category": "roasted-green-wheat",
           "description": "A healthy and delicious roasted green wheat mix.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/roasted-green-wheat/product.png",
+            "https://aavkarmukhwas.github.io/images/roasted-green-wheat/benefits.png",
+            "https://aavkarmukhwas.github.io/images/roasted-green-wheat/ingredients.png"
           ],
-          "ingredients": [
-            "Green Wheat",
-            "Black Salt",
-            "Turmeric",
-            "Rock Salt"
-          ],
+          "ingredients": ["Green Wheat", "Black Salt", "Turmeric", "Rock Salt"],
           "name": "Roasted Green Wheat Mukhwas",
           "variants": {
             "gm": {
@@ -798,7 +806,9 @@
           "category": "healthy-nuts-barries-mix",
           "description": "A nutritious and crunchy mix of healthy nuts and barries.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/healthy-nuts-barries-mix/product.png",
+            "https://aavkarmukhwas.github.io/images/healthy-nuts-barries-mix/benefits.png",
+            "https://aavkarmukhwas.github.io/images/healthy-nuts-barries-mix/ingredients.png"
           ],
           "ingredients": [
             "Hazelnuts",
@@ -855,25 +865,21 @@
           "category": "beet-root-amla",
           "description": "A seasonal delight rich in Vitamin-C, perfect for improving blood quality and skin tone.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/beet-amla/product.png"
           ],
-          "ingredients": [
-            "Beet Root",
-            "Amla",
-            "Jaggery Powder",
-            "Black Salt"
-          ],
+          "ingredients": ["Beet Root", "Amla", "Jaggery Powder", "Black Salt"],
           "isPremium": true,
           "name": "Beet Root Amla Mukhwas",
           "variants": {
             "gm": {
-              "250g": {
-                "discount": 20,
-                "price": 190
+              "1kg": {
+                "price": 2000
               },
-              "500g": {
-                "discount": 40,
-                "price": 360
+              "200g": {
+                "price": 400
+              },
+              "400g": {
+                "price": 800
               }
             }
           }
@@ -898,7 +904,7 @@
           "category": "home-made-natural-multivitamin-protien-powder",
           "description": "A nutritious and crunchy mix of home made natural multivitamin protien powder.",
           "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+            "https://aavkarmukhwas.github.io/images/multi-vitamin-powder/product.png"
           ],
           "ingredients": [
             "Almonds",
