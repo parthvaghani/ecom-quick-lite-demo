@@ -113,7 +113,11 @@ export default function ProductDetailClientPage({
         value: "outsideGujarat",
         price: shippingConfig?.outsideGujarat ?? 0,
       },
-      { label: "Worldwide", value: "abroad", price: shippingConfig?.abroad ?? 0 },
+      {
+        label: "Worldwide",
+        value: "abroad",
+        price: shippingConfig?.abroad ?? 0,
+      },
     ],
     [shippingConfig]
   );
@@ -223,7 +227,13 @@ export default function ProductDetailClientPage({
     }
 
     return `Hi, I'm interested in the ${product.name}. Could you please provide more details?`;
-  }, [product.name, pricingEnabled, selectedVariant, selectedShippingOption, shippingConfig]);
+  }, [
+    product.name,
+    pricingEnabled,
+    selectedVariant,
+    selectedShippingOption,
+    shippingConfig,
+  ]);
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappInquiryText
@@ -262,7 +272,7 @@ export default function ProductDetailClientPage({
                   src={validImages[selectedImageIndex]}
                   alt={`${name} - Image ${selectedImageIndex + 1}`}
                   fill
-                  className="object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+                  className="object-fill cursor-pointer transition-transform duration-300 hover:scale-105"
                   onClick={() => openImageModal(selectedImageIndex)}
                 />
               ) : (
@@ -307,7 +317,7 @@ export default function ProductDetailClientPage({
                       src={image}
                       alt={`${name} thumbnail ${index + 1}`}
                       fill
-                      className="object-cover"
+                      className="object-fill"
                     />
                   </div>
                 ))}
