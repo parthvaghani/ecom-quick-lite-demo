@@ -38,7 +38,9 @@ export default async function CategoryPage({
     (category) => category.category === categories
   );
 
-  const shippingConfig = categoriesJson.shippingConfig;
+  const shippingConfig = categoriesJson.shippingEnabled
+    ? categoriesJson.shippingConfig
+    : null;
 
   if (!category) {
     return <Category />;

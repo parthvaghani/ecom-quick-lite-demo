@@ -80,7 +80,7 @@ export const appConfig = {
       ],
     },
     multiSeeds: {
-      name: "Multi Seeds Mukhwas",
+      name: "Multi Seeds",
       image: "/images/products/multi-seeds.jpg",
       tagline: "A crunchy and nutritious mix of various seeds.",
       ingredients: [
@@ -99,7 +99,7 @@ export const appConfig = {
       ],
     },
     seedTilAlsi: {
-      name: "Seed Til Alsi Mukhwas",
+      name: "Seed Til Alsi",
       image: "/images/products/seed-til-alsi.jpg",
       tagline: "A wholesome blend of seeds, til, and alsi.",
       ingredients: [
@@ -114,7 +114,7 @@ export const appConfig = {
         "Rich source of omega 3 fatty acid",
         "Improves heart health",
         "Helps in providing good sleep",
-        "Improves Immunity",
+        "Improves Immunity"
       ],
     },
     specialJaipuriMukhwas: {
@@ -135,26 +135,29 @@ export const appConfig = {
       ],
     },
     seedsDryFruits: {
-      name: "Seeds Dry Fruits Mukhwas",
+      name: "Seeds Dry Fruits",
       image: "/images/products/seeds-dry-fruits.jpg",
       tagline: "A nutritious and crunchy mix of seeds and dry fruits.",
       ingredients: [
         "Pumpkin Seeds",
+        "Walnuts",
+        "Cashew Nuts",
         "Melon Seeds",
         "Sunflower Seeds",
-        "White Til",
-        "Flax Seeds",
-        "Turmeric - Salt",
+        "Pistachio",
+        "Almonds"
       ],
       benefits: [
-        "Rich source of omega 3 fatty acid",
-        "Improves heart health",
-        "Helps in providing good sleep",
-        "Improves Immunity",
+        "Immunity Booster",
+        "Reduces Bad Cholesterol",
+        "Helpful For Infertility Patients",
+        "Natural Source Of Fibers",
+        "Rich Source Of Vitamin -A. Good For Eye, Hair & Skin",
+        "Helpfull In Sugar Level & Weight Management"
       ],
     },
     roastedAlsi: {
-      name: "Roasted Alsi Mukhwas",
+      name: "Roasted Alsi",
       image: "/images/products/roasted-alsi.jpg",
       tagline: "A healthy and flavorful roasted flax seeds mix.",
       ingredients: ["Flax Seeds", "Rock Salt", "Turmeric", "Lemon Juice"],
@@ -167,7 +170,7 @@ export const appConfig = {
       ],
     },
     premiumTil: {
-      name: "Premium Til Mukhwa (Sesame Seeds)",
+      name: "Premium Til (Sesame Seed)",
       image: "/images/products/premium-til.jpg",
       tagline: "A premium and flavorful til mix.",
       ingredients: ["White Til", "Rock Salt", "Turmeric", "Lemon Juice"],
@@ -192,7 +195,7 @@ export const appConfig = {
       ],
     },
     crunchyTilCoconut: {
-      name: "Crunchy Til Coconut Mukhwas",
+      name: "Crunchy Til Coconut",
       image: "/images/products/crunchy-til-coconut.jpg",
       tagline: "A crunchy and flavorful til coconut mix.",
       ingredients: ["Coated White Til", "Coconuts Flakes", "Coriander Seeds"],
@@ -205,7 +208,7 @@ export const appConfig = {
     shahiKhajurPan: {
       image: "/images/products/shahi-khajur-paan.jpg",
       tagline: "A sweet and flavorful khajur paan mix.",
-      name: "Shahi Khajur Paan Mukhwas",
+      name: "Shahi Khajur Pan",
       ingredients: [
         "Dates (Khajur)",
         "Betel Leaves",
@@ -229,7 +232,7 @@ export const appConfig = {
       ],
     },
     paanCoconutLadoo: {
-      name: "Paan Coconut Ladoo Mukhwas",
+      name: "Pan Coconut Ladoo",
       image: "/images/products/paan-coconut-ladoo.jpg",
       tagline: "A crunchy and flavorful paan coconut ladoo mix.",
       ingredients: [
@@ -249,7 +252,7 @@ export const appConfig = {
       ],
     },
     chiaQuinoaBerries: {
-      name: "Chia Quinoa Berries Mukhwas",
+      name: "Chia Quinoa Berries",
       image: "/images/products/chia-quinoa-berries.jpg",
       tagline: "A nutritious and crunchy mix of chia, quinoa, and berries.",
       ingredients: [
@@ -269,7 +272,7 @@ export const appConfig = {
       ],
     },
     chanothiPan: {
-      name: "Chanothi Paan Mukhwas",
+      name: "Chanothi Pan",
       image: "/images/products/chanothi-paan.jpg",
       tagline: "A nutritious and crunchy mix of chanothi.",
       ingredients: [
@@ -319,7 +322,7 @@ export const appConfig = {
       ],
     },
     greenPanMukhwas: {
-      name: "Green Paan Mukhwas",
+      name: "Green Pan Mukhwas",
       image: "/images/products/green-paan-mukhwas.jpg",
       tagline: "A nutritious and crunchy mix of green paan.",
       ingredients: [
@@ -345,7 +348,7 @@ export const appConfig = {
       ],
     },
     panCherryMix: {
-      name: "Paan Cherry Mix",
+      name: "Pan Cherry Mix",
       image: "/images/products/paan-cherry-mix.jpg",
       tagline: "A nutritious and crunchy mix of paan cherry.",
       ingredients: [
@@ -701,7 +704,7 @@ export const publicPaths = [
 ];
 
 // URL redirects
-export const redirects: { [key: string]: string } = {
+export const redirects: { [key: string]: string; } = {
   "/home": "/dashboard",
   "/admin": "/admin/dashboard",
 };
