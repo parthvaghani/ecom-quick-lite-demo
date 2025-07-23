@@ -180,7 +180,7 @@ export default function CategoryClientPage({
                   categorySlug={category.category}
                   subcategorySlug={subCategory.category}
                   variants={subCategory.variants}
-                  pricingEnabled={category.pricingEnabled}
+                  // pricingEnabled={category.pricingEnabled}
                   shippingConfig={shippingConfig}
                 />
               </div>
@@ -326,7 +326,11 @@ function SubCategoryProductCard({
         value: "outsideGujarat",
         price: shippingConfig?.outsideGujarat ?? 0,
       },
-      { label: "Worldwide", value: "abroad", price: shippingConfig?.abroad ?? 0 },
+      {
+        label: "Worldwide",
+        value: "abroad",
+        price: shippingConfig?.abroad ?? 0,
+      },
     ],
     [shippingConfig]
   );
@@ -427,7 +431,13 @@ function SubCategoryProductCard({
     }
 
     return `Hi, I'm interested in the ${name}. Could you please provide more details?`;
-  }, [name, pricingEnabled, selectedVariant, selectedShippingOption, shippingConfig]);
+  }, [
+    name,
+    pricingEnabled,
+    selectedVariant,
+    selectedShippingOption,
+    shippingConfig,
+  ]);
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappInquiryText
@@ -552,7 +562,10 @@ function SubCategoryProductCard({
                           </SelectTrigger>
                           <SelectContent>
                             {shippingOptions.map((option) => (
-                              <SelectItem key={option.value} value={option.value}>
+                              <SelectItem
+                                key={option.value}
+                                value={option.value}
+                              >
                                 <div className="flex justify-between w-full items-center">
                                   <div className="mr-1">{option.label}</div>
                                   <div className="font-semibold">
