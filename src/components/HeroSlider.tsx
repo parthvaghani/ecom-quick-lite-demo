@@ -14,25 +14,18 @@ const HeroSlider = () => {
     const slides = [
         {
             id: 1,
-            bgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner.jpg?v=1739080287&width=2000",
-            smBgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner_Mobile-view.jpg?v=1739080291&width=1000",
+            bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop.png",
+            smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile.png",
             href: "/paan-varieties",
             alt: "Pan Varieties"
         },
         {
             id: 2,
-            bgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner.jpg?v=1739080287&width=2000",
-            smBgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner_Mobile-view.jpg?v=1739080291&width=1000",
+            bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop.png",
+            smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile.png",
             href: "/paan-varieties",
             alt: "Pan Varieties"
-        },
-        {
-            id: 3,
-            bgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner.jpg?v=1739080287&width=2000",
-            smBgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner_Mobile-view.jpg?v=1739080291&width=1000",
-            href: "/paan-varieties",
-            alt: "Pan Varieties"
-        },
+        }
     ];
 
     const nextSlide = useCallback(() => {

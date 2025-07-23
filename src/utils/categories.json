@@ -3,7 +3,7 @@
     {
       "category": "paan-varieties",
       "description": "A delightful range of Pan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/categories/pan-varieties.png",
       "name": "Pan Varieties",
       "pricingEnabled": true,
       "subCategories": [
@@ -229,7 +229,7 @@
     {
       "category": "regular-mukhwas",
       "description": "A classic collection of everyday mukhwas featuring sesame, coconut, and traditional seeds.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/categories/regular-mukhwas.png",
       "name": "Regular Mukhwas",
       "pricingEnabled": true,
       "subCategories": [
@@ -526,7 +526,7 @@
     {
       "category": "healthy-blends",
       "description": "A collection of nutritious and wholesome blends featuring nuts, seeds, and berries.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/categories/healthy-blends.png",
       "name": "Healthy Blends",
       "pricingEnabled": true,
       "subCategories": [
@@ -842,7 +842,7 @@
     {
       "category": "seasonal-varieties",
       "description": "Special and delicious mukhwas varieties available during specific seasons.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/categories/seasonal-varieties.png",
       "name": "Seasonal Varieties",
       "pricingEnabled": true,
       "subCategories": [
@@ -883,7 +883,7 @@
     {
       "category": "healthy-powders",
       "description": "A range of homemade healthy powders, packed with natural protein, vitamins, and minerals.",
-      "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
+      "heroImage": "https://aavkarmukhwas.github.io/images/categories/healthy-powders.png",
       "name": "Healthy Powders",
       "pricingEnabled": true,
       "subCategories": [
