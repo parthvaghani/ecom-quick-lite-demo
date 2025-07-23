@@ -68,7 +68,7 @@ export default function ProductDetailClientPage({
 }: {
   product: SubCategory;
   pricingEnabled: boolean;
-  shippingConfig: ShippingConfig;
+  shippingConfig: ShippingConfig | null;
 }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [showImageModal, setShowImageModal] = useState(false);
@@ -106,14 +106,14 @@ export default function ProductDetailClientPage({
       {
         label: "In Gujarat",
         value: "inGujarat",
-        price: shippingConfig.inGujarat,
+        price: shippingConfig?.inGujarat ?? 0,
       },
       {
         label: "In India",
         value: "outsideGujarat",
-        price: shippingConfig.outsideGujarat,
+        price: shippingConfig?.outsideGujarat ?? 0,
       },
-      { label: "Worldwide", value: "abroad", price: shippingConfig.abroad },
+      { label: "Worldwide", value: "abroad", price: shippingConfig?.abroad ?? 0 },
     ],
     [shippingConfig]
   );
@@ -182,12 +182,10 @@ export default function ProductDetailClientPage({
   );
 
   const whatsappInquiryText = useMemo(() => {
-    if (pricingEnabled && selectedVariant && selectedShippingOption) {
+    if (pricingEnabled && selectedVariant) {
       const originalPrice = selectedVariant.details.price;
       const discount = selectedVariant.details.discount || 0;
       const discountedPrice = originalPrice - discount;
-      const shippingPrice = selectedShippingOption.price;
-      const isShippingPriceNumber = typeof shippingPrice === "number";
 
       let message = `Hi, I'd like to inquire about the following product:\n\n`;
       message += `*Product:* ${product.name}\n`;
@@ -201,14 +199,21 @@ export default function ProductDetailClientPage({
         message += `*Price:* ₹${originalPrice}\n`;
       }
 
-      const shippingPriceText = isShippingPriceNumber
-        ? `₹${shippingPrice}`
-        : shippingPrice;
-      message += `*Shipping to:* ${selectedShippingOption.label} (${shippingPriceText})\n`;
+      if (shippingConfig && selectedShippingOption) {
+        const shippingPrice = selectedShippingOption.price;
+        const isShippingPriceNumber = typeof shippingPrice === "number";
 
-      if (isShippingPriceNumber) {
-        const totalPrice = discountedPrice + (shippingPrice as number);
-        message += `*Total Price:* ₹${totalPrice}\n\n`;
+        const shippingPriceText = isShippingPriceNumber
+          ? `₹${shippingPrice}`
+          : shippingPrice;
+        message += `*Shipping to:* ${selectedShippingOption.label} (${shippingPriceText})\n`;
+
+        if (isShippingPriceNumber) {
+          const totalPrice = discountedPrice + (shippingPrice as number);
+          message += `*Total Price:* ₹${totalPrice}\n\n`;
+        } else {
+          message += `\n`;
+        }
       } else {
         message += `\n`;
       }
@@ -218,7 +223,7 @@ export default function ProductDetailClientPage({
     }
 
     return `Hi, I'm interested in the ${product.name}. Could you please provide more details?`;
-  }, [product.name, pricingEnabled, selectedVariant, selectedShippingOption]);
+  }, [product.name, pricingEnabled, selectedVariant, selectedShippingOption, shippingConfig]);
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappInquiryText
@@ -384,33 +389,35 @@ export default function ProductDetailClientPage({
                   )}
                 </div>
 
-                <div className="space-y-1">
-                  <label className="text-sm font-medium text-muted-foreground">
-                    Additional Shipping Charge
-                  </label>
-                  <Select
-                    onValueChange={setSelectedShipping}
-                    value={selectedShipping}
-                  >
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select shipping location" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {shippingOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          <div className="flex justify-between w-full items-center">
-                            <div className="mr-1">{option.label}</div>
-                            <div className="font-semibold">
-                              {typeof option.price === "number"
-                                ? `₹${option.price}`
-                                : option.price}
+                {shippingConfig && (
+                  <div className="space-y-1">
+                    <label className="text-sm font-medium text-muted-foreground">
+                      Additional Shipping Charge
+                    </label>
+                    <Select
+                      onValueChange={setSelectedShipping}
+                      value={selectedShipping}
+                    >
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select shipping location" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {shippingOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            <div className="flex justify-between w-full items-center">
+                              <div className="mr-1">{option.label}</div>
+                              <div className="font-semibold">
+                                {typeof option.price === "number"
+                                  ? `₹${option.price}`
+                                  : option.price}
+                              </div>
                             </div>
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                )}
               </div>
             )}
 

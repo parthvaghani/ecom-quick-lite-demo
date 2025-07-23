@@ -2,9 +2,9 @@
   "categories": [
     {
       "category": "paan-varieties",
-      "description": "A delightful range of Paan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
+      "description": "A delightful range of Pan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
       "heroImage": "https://aavkarmukhwas.github.io/images/temp/categories.jpeg",
-      "name": "Paan Varieties",
+      "name": "Pan Varieties",
       "pricingEnabled": true,
       "subCategories": [
         {
@@ -36,24 +36,20 @@
             "Powder",
             "Khajur Tukda"
           ],
-          "isPopular": true,
           "isPremium": true,
-          "name": "Shahi Khajur Paan Mukhwas",
+          "name": "Shahi Khajur Pan",
           "variants": {
             "gm": {
-              "250g": {
-                "discount": 10,
-                "price": 120
+              "200g": {
+                "price": 180
               },
-              "500g": {
-                "discount": 25,
-                "price": 220
+              "400g": {
+                "price": 360
               }
             },
             "kg": {
               "1kg": {
-                "discount": 60,
-                "price": 400
+                "price": 900
               }
             }
           }
@@ -79,16 +75,20 @@
             "Coriander Seeds",
             "Dry Coconuts"
           ],
-          "name": "Paan Coconut Ladoo",
+          "isPremium": true,
+          "name": "Pan Coconut Ladoo",
           "variants": {
-            "sachet": {
-              "10 pieces": {
-                "discount": 10,
-                "price": 150
+            "gm": {
+              "200g": {
+                "price": 160
               },
-              "20 pieces": {
-                "discount": 25,
-                "price": 280
+              "400g": {
+                "price": 320
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 780
               }
             }
           }
@@ -113,21 +113,20 @@
             "Dry Coconut Flacks",
             "Chanothi Leaves"
           ],
-          "name": "Chanothi Paan Mukhwas",
+          "isPopular": true,
+          "name": "Chanothi Pan",
           "variants": {
             "gm": {
-              "250g": {
-                "price": 140
+              "200g": {
+                "price": 150
               },
-              "500g": {
-                "discount": 20,
-                "price": 260
+              "400g": {
+                "price": 300
               }
             },
             "kg": {
               "1kg": {
-                "discount": 50,
-                "price": 500
+                "price": 750
               }
             }
           }
@@ -155,25 +154,23 @@
             "Fennel Seeds",
             "Gulkand",
             "Katha Powder",
-            "Khajur",
-            "Tukda",
+            "Khajur Tukda",
             "Coriander Seeds"
           ],
-          "name": "Green Paan Mukhwas",
+          "isPopular": true,
+          "name": "Green Pan Mukhwas",
           "variants": {
             "gm": {
-              "250g": {
-                "price": 140
+              "200g": {
+                "price": 80
               },
-              "500g": {
-                "discount": 20,
-                "price": 260
+              "400g": {
+                "price": 160
               }
             },
             "kg": {
               "1kg": {
-                "discount": 50,
-                "price": 500
+                "price": 400
               }
             }
           }
@@ -210,21 +207,19 @@
             "Seeds",
             "Cherry"
           ],
-          "name": "Paan Cherry Mix",
+          "name": "Pan Cherry Mix",
           "variants": {
             "gm": {
-              "250g": {
-                "price": 140
+              "200g": {
+                "price": 90
               },
-              "500g": {
-                "discount": 20,
-                "price": 260
+              "400g": {
+                "price": 180
               }
             },
             "kg": {
               "1kg": {
-                "discount": 50,
-                "price": 500
+                "price": 450
               }
             }
           }
@@ -238,6 +233,79 @@
       "name": "Regular Mukhwas",
       "pricingEnabled": true,
       "subCategories": [
+        {
+          "benefits": [
+            "Anti - Ageing Properties",
+            "Boosts Digestion.",
+            "Boosts Skin & Dental Health",
+            "Good Source of Calcium",
+            "Improves Bone Health"
+          ],
+          "category": "premium-til-mukhwas",
+          "description": "A premium and flavorful til mix.",
+          "images": [
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+          ],
+          "ingredients": [
+            "White Til",
+            "Rock Salt",
+            "Turmeric",
+            "Lemon Juice"
+          ],
+          "name": "Premium Til (Sesame Seed)",
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 90
+              },
+              "400g": {
+                "price": 180
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 450
+              }
+            }
+          }
+        },
+        {
+          "benefits": [
+            "Improves Digestion",
+            "Rich in Healthy Fats",
+            "Boosts Energy",
+            "Enhances Skin & Hair Health",
+            "Supports Immunity"
+          ],
+          "category": "suvadana-coconuts-toparu-mukhwas",
+          "description": "A crunchy and flavorful mukhwas made from suvadana coconuts (toparu), perfect for refreshing taste after meals.",
+          "images": [
+            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
+          ],
+          "ingredients": [
+            "Dry Coconut (Toparu)",
+            "Sugar",
+            "Fennel Seeds",
+            "Cardamom",
+            "Rock Salt"
+          ],
+          "name": "Suvadana Coconuts (Toparu) Mukhwas",
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 160
+              },
+              "400g": {
+                "price": 320
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 800
+              }
+            }
+          }
+        },
         {
           "benefits": [
             "Full of Antioxidants",
@@ -259,18 +327,16 @@
           "name": "Crunchy Til Coconut",
           "variants": {
             "gm": {
-              "250g": {
-                "price": 90
+              "200g": {
+                "price": 120
               },
-              "500g": {
-                "discount": 10,
-                "price": 170
+              "400g": {
+                "price": 240
               }
             },
             "kg": {
               "1kg": {
-                "discount": 30,
-                "price": 320
+                "price": 600
               }
             }
           }
@@ -296,17 +362,16 @@
           "name": "Coated Til Dhanadal Mix",
           "variants": {
             "gm": {
-              "250g": {
-                "price": 80
+              "200g": {
+                "price": 110
               },
-              "500g": {
-                "price": 150
+              "400g": {
+                "price": 220
               }
             },
             "kg": {
               "1kg": {
-                "discount": 20,
-                "price": 280
+                "price": 550
               }
             }
           }
@@ -331,31 +396,31 @@
             "Flax Seeds",
             "Turmeric - Salt"
           ],
+          "isPopular": true,
           "name": "Seed Til Alsi",
           "variants": {
             "gm": {
-              "250g": {
-                "discount": 10,
-                "price": 110
+              "200g": {
+                "price": 140
               },
-              "500g": {
-                "discount": 20,
-                "price": 200
+              "400g": {
+                "price": 280
               }
             },
             "kg": {
               "1kg": {
-                "discount": 40,
-                "price": 380
+                "price": 700
               }
             }
           }
         },
         {
           "benefits": [
+            "Detoxification of body",
             "Improves digestion",
-            "Classic mouth freshener",
-            "Aromatic and flavorful"
+            "Rich source of omega 3 fatty acid - good cholesterol",
+            "Source of calcium, fibers and minerals",
+            "Good for hair, skin & heart"
           ],
           "category": "regular-mukhwas-mix",
           "description": "A classic and traditional mukhwas blend for everyday refreshment.",
@@ -363,23 +428,27 @@
             "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
           "ingredients": [
+            "White Til",
             "Fennel Seeds",
+            "Rock Salt",
             "Coriander Seeds",
-            "Sesame Seeds",
-            "Salt"
+            "Flax Seeds",
+            "Carom Seeds",
+            "Dill Seed"
           ],
           "name": "Regular Mukhwas",
           "variants": {
             "gm": {
+              "200g": {
+                "price": 100
+              },
+              "400g": {
+                "price": 200
+              }
+            },
+            "kg": {
               "1kg": {
-                "discount": 20,
-                "price": 250
-              },
-              "250g": {
-                "price": 70
-              },
-              "500g": {
-                "price": 130
+                "price": 500
               }
             }
           }
@@ -403,12 +472,16 @@
           "name": "Sweet Tinimini Til Dhanadal",
           "variants": {
             "gm": {
-              "250g": {
-                "price": 95
+              "200g": {
+                "price": 100
               },
-              "500g": {
-                "discount": 10,
-                "price": 180
+              "400g": {
+                "price": 200
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 500
               }
             }
           }
@@ -432,7 +505,21 @@
             "Dry Betel Stick"
           ],
           "name": "Special Jaipuri Mukhwas",
-          "variants": {}
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 110
+              },
+              "400g": {
+                "price": 220
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 550
+              }
+            }
+          }
         }
       ]
     },
@@ -454,17 +541,26 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
-          "ingredients": ["Almonds", "Cashews", "Pistachios", "Coconut Flakes"],
+          "ingredients": [
+            "Almonds",
+            "Cashews",
+            "Pistachios",
+            "Coconut Flakes"
+          ],
+          "isPremium": true,
           "name": "Roasted Nuts Coconut",
           "variants": {
             "gm": {
               "200g": {
-                "discount": 20,
-                "price": 250
+                "price": 315
               },
               "400g": {
-                "discount": 50,
-                "price": 480
+                "price": 630
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 1560
               }
             }
           }
@@ -523,62 +619,20 @@
             "Cranberry",
             "Black Raisins"
           ],
-          "name": "Chia Quinoa Berries Mix",
-          "variants": {
-            "gm": {
-              "150g": {
-                "discount": 25,
-                "price": 300
-              },
-              "300g": {
-                "discount": 60,
-                "price": 580
-              }
-            }
-          }
-        },
-        {
-          "benefits": [
-            "Great Immunity Booster",
-            "Excellent For Weight Loss",
-            "Improves Good Cholestrol & Reduces Bad Cholesterol",
-            "Improves Heamoglobin",
-            "Best For Skin,bones And Hair Health"
-          ],
-          "category": "healthy-nuts-berries-mix",
-          "description": "A delicious and energizing trail mix with a variety of nuts and berries.",
-          "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
-          ],
-          "ingredients": [
-            "Hazelnuts",
-            "Anjeer (Dried Fig)",
-            "Black Raisin",
-            "Sunflower seeds",
-            "Walnuts",
-            "Melon Seeds",
-            "Green Raisin",
-            "Flax Seeds",
-            "Chia Seeds",
-            "Pumpkin Seeds",
-            "White Til",
-            "Pistachio",
-            "Blueberry",
-            "Quinoa Seeds",
-            "Cranberry",
-            "Black Til",
-            "Saffron"
-          ],
-          "name": "Healthy Nuts and Berries Mix",
+          "isPremium": true,
+          "name": "Chia Quinoa Berries",
           "variants": {
             "gm": {
               "200g": {
-                "discount": 30,
-                "price": 280
+                "price": 300
               },
               "400g": {
-                "discount": 60,
-                "price": 540
+                "price": 600
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 1500
               }
             }
           }
@@ -603,25 +657,31 @@
             "Sunflower Seeds",
             "Black Salt"
           ],
-          "name": "Multi Seeds Mukhwas",
+          "name": "Multi Seeds",
           "variants": {
             "gm": {
-              "250g": {
-                "price": 180
+              "200g": {
+                "price": 200
               },
-              "500g": {
-                "discount": 30,
-                "price": 340
+              "400g": {
+                "price": 400
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 1000
               }
             }
           }
         },
         {
           "benefits": [
-            "Rich source of omega 3 fatty acid",
-            "Improves heart health",
-            "Helps in providing good sleep",
-            "Improves Immunity"
+            "Immunity Booster",
+            "Reduces Bad Cholesterol",
+            "Helpful For Infertility Patients",
+            "Natural Source Of Fibers",
+            "Rich Source Of Vitamin -A. Good For Eye, Hair & Skin",
+            "Helpfull In Sugar Level & Weight Management"
           ],
           "category": "seeds-dry-fruits",
           "description": "A nutritious and crunchy mix of seeds and dry fruits.",
@@ -630,14 +690,30 @@
           ],
           "ingredients": [
             "Pumpkin Seeds",
+            "Walnuts",
+            "Cashew Nuts",
             "Melon Seeds",
             "Sunflower Seeds",
-            "White Til",
-            "Flax Seeds",
-            "Turmeric - Salt"
+            "Pistachio",
+            "Almonds"
           ],
-          "name": "Seeds Dry Fruits Mukhwas",
-          "variants": {}
+          "isPremium": true,
+          "name": "Seeds Dry Fruits",
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 280
+              },
+              "400g": {
+                "price": 560
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 1400
+              }
+            }
+          }
         },
         {
           "benefits": [
@@ -652,9 +728,29 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
-          "ingredients": ["Flax Seeds", "Rock Salt", "Turmeric", "Lemon Juice"],
-          "name": "Roasted Alsi Mukhwas",
-          "variants": {}
+          "ingredients": [
+            "Flax Seeds",
+            "Rock Salt",
+            "Turmeric",
+            "Lemon Juice"
+          ],
+          "isPopular": true,
+          "name": "Roasted Alsi",
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 80
+              },
+              "400g": {
+                "price": 160
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 400
+              }
+            }
+          }
         },
         {
           "benefits": [
@@ -668,9 +764,28 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
-          "ingredients": ["Green Wheat", "Black Salt", "Turmeric", "Rock Salt"],
+          "ingredients": [
+            "Green Wheat",
+            "Black Salt",
+            "Turmeric",
+            "Rock Salt"
+          ],
           "name": "Roasted Green Wheat Mukhwas",
-          "variants": {}
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 110
+              },
+              "400g": {
+                "price": 220
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 540
+              }
+            }
+          }
         },
         {
           "benefits": [
@@ -704,10 +819,23 @@
             "Black Til",
             "Saffron"
           ],
-          "isPopular": true,
           "isPremium": true,
           "name": "Healthy Nuts & Barries Mix",
-          "variants": {}
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 260
+              },
+              "400g": {
+                "price": 520
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 1300
+              }
+            }
+          }
         }
       ]
     },
@@ -729,7 +857,13 @@
           "images": [
             "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
           ],
-          "ingredients": ["Beet Root", "Amla", "Jaggery Powder", "Black Salt"],
+          "ingredients": [
+            "Beet Root",
+            "Amla",
+            "Jaggery Powder",
+            "Black Salt"
+          ],
+          "isPremium": true,
           "name": "Beet Root Amla Mukhwas",
           "variants": {
             "gm": {
@@ -761,52 +895,6 @@
             "Helps to maintain weight",
             "Helps to develop muscles mass"
           ],
-          "category": "homemade-healthy-powder",
-          "description": "A nutritious and crunchy mix of home made natural multivitamin protien powder.",
-          "images": [
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg",
-            "https://aavkarmukhwas.github.io/images/temp/meetha-mukhwas.jpeg"
-          ],
-          "ingredients": [
-            "Almonds",
-            "Makhana",
-            "Pistachio",
-            "Cashew nuts",
-            "Chickpea dal",
-            "Pumpkin seeds",
-            "Melon seeds",
-            "Sunflower seeds"
-          ],
-          "name": "Homemade Healthy Powder",
-          "variants": {
-            "gm": {
-              "250g": {
-                "discount": 30,
-                "price": 350
-              },
-              "500g": {
-                "discount": 70,
-                "price": 650
-              }
-            },
-            "kg": {
-              "1kg": {
-                "discount": 150,
-                "price": 1200
-              }
-            }
-          }
-        },
-        {
-          "benefits": [
-            "Full of natural proteins, vitamins minerals & antioxidants",
-            "Specially beneficial for children, pregnant women, elders, housewives, gym workers",
-            "Also works as an energy booster & immunity booster",
-            "Helps to maintain weight",
-            "Helps to develop muscles mass"
-          ],
           "category": "home-made-natural-multivitamin-protien-powder",
           "description": "A nutritious and crunchy mix of home made natural multivitamin protien powder.",
           "images": [
@@ -823,7 +911,21 @@
             "Sunflower seeds"
           ],
           "name": "Home Made Natural Multivitamin Protien Powder",
-          "variants": {}
+          "variants": {
+            "gm": {
+              "200g": {
+                "price": 300
+              },
+              "400g": {
+                "price": 600
+              }
+            },
+            "kg": {
+              "1kg": {
+                "price": 1500
+              }
+            }
+          }
         }
       ]
     }
@@ -833,5 +935,6 @@
     "abroad": 200,
     "inGujarat": 40,
     "outsideGujarat": 80
-  }
+  },
+  "shippingEnabled": false
 }

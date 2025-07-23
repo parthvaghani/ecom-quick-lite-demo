@@ -17,21 +17,21 @@ const HeroSlider = () => {
             bgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner.jpg?v=1739080287&width=2000",
             smBgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner_Mobile-view.jpg?v=1739080291&width=1000",
             href: "/paan-varieties",
-            alt: "Paan Varieties"
+            alt: "Pan Varieties"
         },
         {
             id: 2,
             bgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner.jpg?v=1739080287&width=2000",
             smBgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner_Mobile-view.jpg?v=1739080291&width=1000",
             href: "/paan-varieties",
-            alt: "Paan Varieties"
+            alt: "Pan Varieties"
         },
         {
             id: 3,
             bgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner.jpg?v=1739080287&width=2000",
             smBgImage: "https://joyspoon.in/cdn/shop/files/website-Shark-tank-front-banner_Mobile-view.jpg?v=1739080291&width=1000",
             href: "/paan-varieties",
-            alt: "Paan Varieties"
+            alt: "Pan Varieties"
         },
     ];
 

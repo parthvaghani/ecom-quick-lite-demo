@@ -30,11 +30,15 @@ export default async function SubCategoryPage({ params }: PageProps) {
     notFound();
   }
 
+  const shippingConfig = categoriesData.shippingEnabled
+    ? categoriesData.shippingConfig
+    : null;
+
   return (
     <ProductDetailClientPage
       product={currentSubCategory}
       pricingEnabled={currentCategory.pricingEnabled || false}
-      shippingConfig={categoriesData.shippingConfig}
+      shippingConfig={shippingConfig}
     />
   );
 }

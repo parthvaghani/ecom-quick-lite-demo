@@ -118,7 +118,7 @@ export default function CategoryClientPage({
   shippingConfig,
 }: {
   category: Category;
-  shippingConfig: ShippingConfig;
+  shippingConfig: ShippingConfig | null;
 }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -306,7 +306,7 @@ function SubCategoryProductCard({
   subcategorySlug: string;
   variants?: Variants;
   pricingEnabled?: boolean;
-  shippingConfig: ShippingConfig;
+  shippingConfig: ShippingConfig | null;
 }) {
   const [selectedVariant, setSelectedVariant] = useState<{
     group: string;
@@ -319,14 +319,14 @@ function SubCategoryProductCard({
       {
         label: "In Gujarat",
         value: "inGujarat",
-        price: shippingConfig.inGujarat,
+        price: shippingConfig?.inGujarat ?? 0,
       },
       {
         label: "In India",
         value: "outsideGujarat",
-        price: shippingConfig.outsideGujarat,
+        price: shippingConfig?.outsideGujarat ?? 0,
       },
-      { label: "Worldwide", value: "abroad", price: shippingConfig.abroad },
+      { label: "Worldwide", value: "abroad", price: shippingConfig?.abroad ?? 0 },
     ],
     [shippingConfig]
   );
@@ -386,12 +386,10 @@ function SubCategoryProductCard({
   );
 
   const whatsappInquiryText = useMemo(() => {
-    if (pricingEnabled && selectedVariant && selectedShippingOption) {
+    if (pricingEnabled && selectedVariant) {
       const originalPrice = selectedVariant.details.price;
       const discount = selectedVariant.details.discount || 0;
       const discountedPrice = originalPrice - discount;
-      const shippingPrice = selectedShippingOption.price;
-      const isShippingPriceNumber = typeof shippingPrice === "number";
 
       let message = `Hi, I'd like to inquire about the following product:\n\n`;
       message += `*Product:* ${name}\n`;
@@ -405,14 +403,21 @@ function SubCategoryProductCard({
         message += `*Price:* ₹${originalPrice}\n`;
       }
 
-      const shippingPriceText = isShippingPriceNumber
-        ? `₹${shippingPrice}`
-        : shippingPrice;
-      message += `*Shipping to:* ${selectedShippingOption.label} (${shippingPriceText})\n`;
+      if (shippingConfig && selectedShippingOption) {
+        const shippingPrice = selectedShippingOption.price;
+        const isShippingPriceNumber = typeof shippingPrice === "number";
 
-      if (isShippingPriceNumber) {
-        const totalPrice = discountedPrice + (shippingPrice as number);
-        message += `*Total Price:* ₹${totalPrice}\n\n`;
+        const shippingPriceText = isShippingPriceNumber
+          ? `₹${shippingPrice}`
+          : shippingPrice;
+        message += `*Shipping to:* ${selectedShippingOption.label} (${shippingPriceText})\n`;
+
+        if (isShippingPriceNumber) {
+          const totalPrice = discountedPrice + (shippingPrice as number);
+          message += `*Total Price:* ₹${totalPrice}\n\n`;
+        } else {
+          message += `\n`;
+        }
       } else {
         message += `\n`;
       }
@@ -422,7 +427,7 @@ function SubCategoryProductCard({
     }
 
     return `Hi, I'm interested in the ${name}. Could you please provide more details?`;
-  }, [name, pricingEnabled, selectedVariant, selectedShippingOption]);
+  }, [name, pricingEnabled, selectedVariant, selectedShippingOption, shippingConfig]);
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     whatsappInquiryText
@@ -533,31 +538,35 @@ function SubCategoryProductCard({
                   </div>
 
                   <div className="mt-4 space-y-1">
-                    <label className="text-sm font-medium text-muted-foreground">
-                      Additional Shipping Charge
-                    </label>
-                    <Select
-                      onValueChange={setSelectedShipping}
-                      value={selectedShipping}
-                    >
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="Select shipping location" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {shippingOptions.map((option) => (
-                          <SelectItem key={option.value} value={option.value}>
-                            <div className="flex justify-between w-full items-center">
-                              <div className="mr-1">{option.label}</div>
-                              <div className="font-semibold">
-                                {typeof option.price === "number"
-                                  ? `₹${option.price}`
-                                  : option.price}
-                              </div>
-                            </div>
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    {shippingConfig && (
+                      <>
+                        <label className="text-sm font-medium text-muted-foreground">
+                          Additional Shipping Charge
+                        </label>
+                        <Select
+                          onValueChange={setSelectedShipping}
+                          value={selectedShipping}
+                        >
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select shipping location" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {shippingOptions.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                <div className="flex justify-between w-full items-center">
+                                  <div className="mr-1">{option.label}</div>
+                                  <div className="font-semibold">
+                                    {typeof option.price === "number"
+                                      ? `₹${option.price}`
+                                      : option.price}
+                                  </div>
+                                </div>
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </>
+                    )}
                   </div>
                 </div>
               )}

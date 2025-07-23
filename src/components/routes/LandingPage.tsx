@@ -12,7 +12,7 @@ import { Category } from "@/components/ui/Category";
 import { PromotionalProductsBanner } from "@/components/ui/PromotionalProductsBanner";
 import dynamic from "next/dynamic";
 import FullScreenLoader from "@/components/FullScreenLoader";
-import HeroSlider from "@/components/HeroSlider";
+// import HeroSlider from "@/components/HeroSlider";
 
 const ProductDetailsSection = dynamic(
   () => import("@/components").then((mod) => mod.ProductDetailsSection),
@@ -48,7 +48,7 @@ export function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <HeroSlider />
+      {/* <HeroSlider /> */}
       {/* Category Section */}
       <PromotionalProductsBanner />
       <Category />

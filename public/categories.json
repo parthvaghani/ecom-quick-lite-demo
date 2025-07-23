@@ -2,9 +2,9 @@
   "categories": [
     {
       "category": "paan-varieties",
-      "description": "A delightful range of Paan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
+      "description": "A delightful range of Pan flavored mukhwas, from traditional wet paan to innovative coconut laddus.",
       "heroImage": "https://aavkarmukhwas.github.io/images/temp/all.jpg",
-      "name": "Paan Varieties",
+      "name": "Pan Varieties",
       "pricingEnabled": true,
       "subCategories": [
         {
@@ -38,7 +38,7 @@
           ],
           "isPopular": true,
           "isPremium": true,
-          "name": "Shahi Khajur Paan Mukhwas",
+          "name": "Shahi Khajur Pan Mukhwas",
           "variants": {
             "gm": {
               "250g": {
@@ -79,7 +79,7 @@
             "Coriander Seeds",
             "Dry Coconuts"
           ],
-          "name": "Paan Coconut Ladoo",
+          "name": "Pan Coconut Ladoo",
           "variants": {
             "sachet": {
               "10 pieces": {
@@ -113,7 +113,7 @@
             "Dry Coconut Flacks",
             "Chanothi Leaves"
           ],
-          "name": "Chanothi Paan Mukhwas",
+          "name": "Chanothi Pan Mukhwas",
           "variants": {
             "gm": {
               "250g": {
@@ -159,7 +159,7 @@
             "Tukda",
             "Coriander Seeds"
           ],
-          "name": "Green Paan Mukhwas",
+          "name": "Green Pan Mukhwas",
           "variants": {
             "gm": {
               "250g": {
@@ -210,7 +210,7 @@
             "Seeds",
             "Cherry"
           ],
-          "name": "Paan Cherry Mix",
+          "name": "Pan Cherry Mix",
           "variants": {
             "gm": {
               "250g": {
