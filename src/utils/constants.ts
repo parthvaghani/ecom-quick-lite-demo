@@ -56,6 +56,7 @@ export const ROUTES = {
 
   APP_URL: "",
   CATEGORIES: "/categories",
+  PRODUCTS: "/products",
 } as const;
 
 export const IGNORE_NAV = [

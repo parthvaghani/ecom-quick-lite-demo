@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, Sparkles, Instagram, Mail, Phone } from "lucide-react";
+import { Menu, Sparkles, Instagram, Mail, Phone, ShoppingBag } from "lucide-react";
 import { appConfig } from "@/appConfig";
 import { Button } from "@/components/ui/button";
 import {
@@ -70,11 +70,10 @@ export function Navbar() {
       <div className={`h-16 w-full`}></div>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
             ? "mx-auto max-w-8xl rounded-b-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
             : "bg-white dark:bg-gray-900"
-        }`}
+          }`}
       >
         <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-8xl">
           <div className="flex justify-between h-16">
@@ -102,9 +101,13 @@ export function Navbar() {
                     <Sparkles className="h-4 w-4" />
                     Feature
                   </NavLink> */}
+              <NavLink href={ROUTES.PRODUCTS}>
+                <ShoppingBag className="h-4 w-4" />
+                Products
+              </NavLink>
               <NavLink href={ROUTES.CATEGORIES}>
                 <Sparkles className="h-4 w-4" />
-                Our Mukhwas Collection
+                Collection
               </NavLink>
               <NavLink href="https://www.instagram.com/aavkar_mukhwas">
                 <Instagram className="h-4 w-4" />
@@ -161,9 +164,14 @@ export function Navbar() {
                     <span>{appConfig.title}®</span>
                   </SheetTitle>
                   <div className="flex flex-col space-y-2 mt-8 bg-background text-primary">
+                    <MobileNavLink href={ROUTES.PRODUCTS}>
+                      <ShoppingBag className="h-4 w-4" />
+                      Products
+                    </MobileNavLink>
+
                     <MobileNavLink href="/categories">
                       <Sparkles className="h-4 w-4" />
-                      Our Mukhwas Collection
+                      Collection
                     </MobileNavLink>
 
                     <MobileNavLink href="https://www.instagram.com/aavkar_mukhwas">
