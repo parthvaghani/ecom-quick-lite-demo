@@ -218,6 +218,7 @@ function ProductCard({
                     </p>
                     {price && (
                         <div className="mb-4">
+                            <span className="text-md text-muted-foreground">Starts at</span>{" "}
                             <span className="text-lg font-bold text-primary">₹{price}</span>
                         </div>
                     )}
