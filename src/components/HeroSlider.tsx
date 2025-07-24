@@ -16,15 +16,15 @@ const HeroSlider = () => {
       id: 1,
       bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop.png",
       smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile.png",
-      href: "/pan-varieties",
-      alt: "Pan Varieties",
+      href: "/categories",
+      alt: "Categories",
     },
     {
       id: 2,
       bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop2.png",
       smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile2.png",
-      href: "/pan-varieties",
-      alt: "Pan Varieties",
+      href: "/categories",
+      alt: "Categories",
     },
   ];
 
