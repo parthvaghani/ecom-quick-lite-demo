@@ -21,8 +21,8 @@ const HeroSlider = () => {
     },
     {
       id: 2,
-      bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop.png",
-      smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile.png",
+      bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop2.png",
+      smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile2.png",
       href: "/pan-varieties",
       alt: "Pan Varieties",
     },
