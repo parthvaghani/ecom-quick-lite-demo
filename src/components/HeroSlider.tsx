@@ -28,14 +28,7 @@ const HeroSlider = () => {
       smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile2.png",
       href: "/categories",
       alt: "Categories",
-    },
-    {
-      id: 2,
-      bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop2.png",
-      smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile2.png",
-      href: "/categories",
-      alt: "Categories",
-    },
+    }
   ];
   const slidesCount = slides.length;
 
