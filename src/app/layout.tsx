@@ -37,6 +37,10 @@ export const metadata: Metadata = {
         alt: "Aavkar Mukhwas",
       },
     ],
+    siteName: "Aavkar Mukhwas",
+    url: "https://aavkarmukhwas.com",
+    emails: "sales@aavkarmukhwas.com",
+    phoneNumbers:"+918128826764"
   },
 };
 
