@@ -75,13 +75,19 @@ export function Footer() {
             </div>
 
             {/* Developer Credit */}
-            <div className="flex items-center space-x-2 text-sm text-white/80">
+            <div className="flex flex-col md:flex-row items-center md:space-y-0 gap-2 text-sm text-white/80 font-semibold">
               <span>Developed by</span>
               <a
                 href="https://ripplestacks.com"
                 className="font-semibold text-white hover:text-white/80 transition-colors"
               >
-                RIPPLESTACKS TEAM 💚
+                RIPPLESTACKS
+              </a>
+              <a
+                href="tel:+916353528830"
+                className="font-semibold text-white hover:text-white/80 transition-colors"
+              >
+                +916353528830 💚
               </a>
             </div>
           </div>

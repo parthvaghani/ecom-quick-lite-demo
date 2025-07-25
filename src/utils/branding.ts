@@ -12,9 +12,8 @@ export const logBranding = () => {
     "box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)",
   ].join(";");
 
-  const message = `┌───────────────────────────────────────────┐
-│     Built with 💚💚💚 by Ripplestacks      │
-│     https://ripplestacks.com              │
-└───────────────────────────────────────────┘`;
+  const message = `│     Built with 💚💚💚 by Ripplestacks      │
+│     Call @ +916353528830                  │
+│     https://ripplestacks.com              │`;
   console.log(`%c${message}`, styles);
 };
