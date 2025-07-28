@@ -17,3 +17,5 @@ export * from "./IngredientsGuide";
 export * from "./Category";
 export * from "./PromotionalProductsBanner";
 export * from "./select";
+export * from "./textarea";
+export * from "./dialog";
