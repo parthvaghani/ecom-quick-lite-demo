@@ -8,6 +8,7 @@ import { PromotionalProductsBanner } from "@/components/ui/PromotionalProductsBa
 import dynamic from "next/dynamic";
 import FullScreenLoader from "@/components/FullScreenLoader";
 import HeroSlider from "@/components/HeroSlider";
+import { ReviewSection } from "../review";
 
 const ProductDetailsSection = dynamic(
   () => import("@/components").then((mod) => mod.ProductDetailsSection),
@@ -113,6 +114,8 @@ export function LandingPage() {
       </section>
       {/* FAQ Section */}
       {appConfig.help.visible && <FAQSection />}
+      <ReviewSection />
+
     </div>
   );
 }
