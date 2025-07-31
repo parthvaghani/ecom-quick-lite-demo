@@ -20,14 +20,10 @@ type SubCategory = {
     isPremium?: boolean;
     variants?: {
         gm?: {
-            [key: string]: {
-                price: number;
-            };
+            [key: string]: { price: number; } | undefined;
         };
         kg?: {
-            [key: string]: {
-                price: number;
-            };
+            [key: string]: { price: number; } | undefined;
         };
     };
 };
@@ -135,7 +131,7 @@ function getFirstPrice(variants?: SubCategory['variants']): string | undefined {
         const gmKeys = Object.keys(variants.gm);
         if (gmKeys.length > 0) {
             const key = gmKeys[0];
-            return variants.gm[key].price.toString();
+            return variants?.gm[key]?.price.toString();
         }
     }
 
@@ -144,7 +140,7 @@ function getFirstPrice(variants?: SubCategory['variants']): string | undefined {
         const kgKeys = Object.keys(variants.kg);
         if (kgKeys.length > 0) {
             const key = kgKeys[0];
-            return variants.kg[key].price.toString();
+            return variants?.kg[key]?.price.toString();
         }
     }
 

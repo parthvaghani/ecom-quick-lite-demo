@@ -917,11 +917,11 @@
           "name": "Beet Root Amla Mukhwas",
           "variants": {
             "gm": {
-              "200g": {
-                "price": 400
+              "250g": {
+                "price": 500
               },
-              "400g": {
-                "price": 800
+              "500g": {
+                "price": 1000
               }
             },
             "kg": {
