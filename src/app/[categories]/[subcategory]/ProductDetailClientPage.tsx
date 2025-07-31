@@ -86,7 +86,7 @@ export default function ProductDetailClientPage({
         name: product.name,
         category: product.category,
         variants: product.variants as
-          | Record<string, Record<string, { price: number; discount?: number }>>
+          | Record<string, Record<string, { price: number; discount?: number; }>>
           | undefined,
       },
       getCurrentCategory() || undefined
@@ -146,7 +146,7 @@ export default function ProductDetailClientPage({
   }, [product.variants]);
 
   const allVariants = useMemo(() => {
-    const variants: { group: string; value: string; details: PriceInfo }[] = [];
+    const variants: { group: string; value: string; details: PriceInfo; }[] = [];
     if (product.variants) {
       for (const group in product.variants) {
         const variantGroup = product.variants[group as keyof Variants];
@@ -306,11 +306,10 @@ export default function ProductDetailClientPage({
                 {validImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`relative w-20 h-20 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 ${
-                      index === selectedImageIndex
-                        ? "ring-2 ring-primary ring-offset-2"
-                        : "hover:opacity-80"
-                    }`}
+                    className={`relative w-20 h-20 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 ${index === selectedImageIndex
+                      ? "ring-2 ring-primary ring-offset-2"
+                      : "hover:opacity-80"
+                      }`}
                     onClick={() => setSelectedImageIndex(index)}
                   >
                     <ImageWithFallback
@@ -367,38 +366,33 @@ export default function ProductDetailClientPage({
                     </Select>
                   </div>
                 )}
-
-                <div className="flex items-center flex-wrap gap-x-3 mb-4">
-                  {selectedVariant.details.discount &&
-                  selectedVariant.details.discount > 0 ? (
-                    <>
-                      <span className="text-2xl font-bold text-primary">
-                        ₹
-                        {selectedVariant.details.price -
-                          selectedVariant.details.discount}
-                      </span>
-                      <span className="text-base text-muted-foreground line-through">
-                        ₹{selectedVariant.details.price}
-                      </span>
-                      <Badge
-                        variant="destructive"
-                        className="font-semibold text-sm"
-                      >
-                        {Math.round(
-                          (selectedVariant.details.discount /
-                            selectedVariant.details.price) *
+                  <div className="space-y-3">
+                    <div className="flex items-baseline gap-3">
+                      {selectedVariant.details.discount && selectedVariant.details.discount > 0 ? (
+                        <>
+                          <span className="text-3xl font-bold text-primary">₹{selectedVariant.details.price - selectedVariant.details.discount}</span>
+                          <span className="text-xl text-gray-400 line-through">₹{selectedVariant.details.price}</span>
+                        </>
+                      ) : (
+                        <span className="text-2xl font-bold text-primary">₹{selectedVariant.details.price}</span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-3">
+                      {selectedVariant.details.discount && selectedVariant.details.discount > 0 && (
+                        <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                          Save {Math.round(
+                            (selectedVariant.details.discount /
+                              selectedVariant.details.price) *
                             100
-                        )}
-                        % OFF
-                      </Badge>
-                    </>
-                  ) : (
-                    <span className="text-2xl font-bold text-primary">
-                      ₹{selectedVariant.details.price}
-                    </span>
-                  )}
-                </div>
-
+                          )}
+                          % OFF
+                        </span>
+                      )}
+                      <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                        + Shipping charges
+                      </span>
+                    </div>
+                  </div>
                 {shippingConfig && (
                   <div className="space-y-1">
                     <label className="text-sm font-medium text-muted-foreground">
@@ -478,9 +472,9 @@ export default function ProductDetailClientPage({
                       category: product.category,
                       variants: product.variants as
                         | Record<
-                            string,
-                            Record<string, { price: number; discount?: number }>
-                          >
+                          string,
+                          Record<string, { price: number; discount?: number; }>
+                        >
                         | undefined,
                     },
                     currentCategory

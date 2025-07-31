@@ -217,10 +217,19 @@ function ProductCard({
                         {description}
                     </p>
                     {price && (
-                        <div className="mb-4">
-                            <span className="text-md text-muted-foreground">Starts at</span>{" "}
-                            <span className="text-lg font-bold text-primary">₹{price}</span>
-                        </div>
+                        <>
+                            <div className="mb-4 flex gap-1.5 items-center">
+                                <span className="text-md font-bold text-primary">Starts at</span>{" "}
+                                <span className="text-md font-bold text-primary">₹{price}</span>
+                                <div className="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">
+                                    + Shipping
+                                </div>
+                            </div>
+                            {/* <div className="mb-4 flex items-center gap-1">
+                                <span className="text-lg font-bold text-primary pb-0.5">+</span>
+                                <span className="text-xs font-bold text-primary">Shipping Charge</span>
+                            </div> */}
+                        </>
                     )}
                     <div className="mt-auto pt-4 border-t border-primary/20 relative z-10 flex items-center justify-between">
                         <button
