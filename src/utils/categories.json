@@ -621,11 +621,17 @@
           "name": "Roasted Seeds & Dryfruits",
           "variants": {
             "gm": {
-              "200g": {
-                "price": 220
+              "250": {
+                "price": 360
               },
-              "400g": {
-                "price": 420
+              "500g": {
+                "price": 720
+              }
+            },
+            "kg": {
+              "1kg": {
+                "discount": 40,
+                "price": 1440
               }
             }
           }
@@ -966,11 +972,8 @@
           "name": "Home Made Natural Multivitamin Protien Powder",
           "variants": {
             "gm": {
-              "250": {
-                "price": 310
-              },
-              "500g": {
-                "price": 620
+              "200": {
+                "price": 300
               }
             },
             "kg": {
