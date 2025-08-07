@@ -40,10 +40,10 @@
           "name": "Shahi Khajur Pan",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 240
               },
-              "500g": {
+              "500gm": {
                 "price": 480
               }
             },
@@ -82,10 +82,10 @@
           "name": "Pan Coconut Ladoo",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 210
               },
-              "500g": {
+              "500gm": {
                 "price": 420
               }
             },
@@ -123,10 +123,10 @@
           "name": "Chanothi Pan",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 200
               },
-              "500g": {
+              "500gm": {
                 "price": 400
               }
             },
@@ -170,10 +170,10 @@
           "name": "Green Pan Mukhwas",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 120
               },
-              "500g": {
+              "500gm": {
                 "price": 240
               }
             },
@@ -220,10 +220,10 @@
           "name": "Pan Cherry Mix",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 130
               },
-              "500g": {
+              "500gm": {
                 "price": 260
               }
             },
@@ -268,10 +268,10 @@
           "name": "Premium Til (Sesame Seed)",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 130
               },
-              "500g": {
+              "500gm": {
                 "price": 260
               }
             },
@@ -306,10 +306,10 @@
           "name": "Suvadana Coconuts (Toparu) Mukhwas",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 240
               },
-              "500g": {
+              "500gm": {
                 "price": 480
               }
             },
@@ -343,10 +343,10 @@
           "name": "Crunchy Til Coconut",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 160
               },
-              "500g": {
+              "500gm": {
                 "price": 320
               }
             },
@@ -379,10 +379,10 @@
           "name": "Coated Til Dhanadal Mix",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 150
               },
-              "500g": {
+              "500gm": {
                 "price": 300
               }
             },
@@ -420,10 +420,10 @@
           "name": "Seed Til Alsi",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 190
               },
-              "500g": {
+              "500gm": {
                 "price": 380
               }
             },
@@ -462,10 +462,10 @@
           "name": "Regular Mukhwas",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 140
               },
-              "500g": {
+              "500gm": {
                 "price": 280
               }
             },
@@ -496,10 +496,10 @@
           "name": "Sweet Tinimini Til Dhanadal",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 140
               },
-              "500g": {
+              "500gm": {
                 "price": 280
               }
             },
@@ -534,10 +534,10 @@
           "name": "Special Jaipuri Mukhwas",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 150
               },
-              "500g": {
+              "500gm": {
                 "price": 300
               }
             },
@@ -581,10 +581,10 @@
           "name": "Roasted Nuts Coconut",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 400
               },
-              "500g": {
+              "500gm": {
                 "price": 800
               }
             },
@@ -621,10 +621,10 @@
           "name": "Roasted Seeds & Dryfruits",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 360
               },
-              "500g": {
+              "500gm": {
                 "price": 720
               }
             },
@@ -663,10 +663,10 @@
           "name": "Chia Quinoa Berries",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 390
               },
-              "500g": {
+              "500gm": {
                 "price": 780
               }
             },
@@ -703,10 +703,10 @@
           "name": "Multi Seeds",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 260
               },
-              "500g": {
+              "500gm": {
                 "price": 520
               }
             },
@@ -747,10 +747,10 @@
           "name": "Seeds Dry Fruits",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 360
               },
-              "500g": {
+              "500gm": {
                 "price": 720
               }
             },
@@ -787,10 +787,10 @@
           "name": "Roasted Alsi",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 110
               },
-              "500g": {
+              "500gm": {
                 "price": 220
               }
             },
@@ -825,10 +825,10 @@
           "name": "Roasted Green Wheat Mukhwas",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 150
               },
-              "500g": {
+              "500gm": {
                 "price": 300
               }
             },
@@ -878,10 +878,10 @@
           "name": "Healthy Nuts & Barries Mix",
           "variants": {
             "gm": {
-              "250": {
+              "250gm": {
                 "price": 340
               },
-              "500g": {
+              "500gm": {
                 "price": 680
               }
             },
@@ -923,10 +923,10 @@
           "name": "Beet Root Amla Mukhwas",
           "variants": {
             "gm": {
-              "250g": {
+              "250gm": {
                 "price": 500
               },
-              "500g": {
+              "500gm": {
                 "price": 1000
               }
             },
@@ -967,12 +967,14 @@
             "Chickpea dal",
             "Pumpkin seeds",
             "Melon seeds",
-            "Sunflower seeds"
+            "Sunflower seeds",
+            "Walnuts",
+            "sakkar"
           ],
           "name": "Home Made Natural Multivitamin Protien Powder",
           "variants": {
             "gm": {
-              "200": {
+              "200gm": {
                 "price": 300
               }
             },

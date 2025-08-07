@@ -393,6 +393,8 @@ export const appConfig = {
         "Pumpkin seeds",
         "Melon seeds",
         "Sunflower seeds",
+        "Walnuts",
+        "sakkar"
       ],
       benefits: [
         "Full of natural proteins, vitamins minerals & antioxidants",
@@ -740,7 +742,7 @@ export const publicPaths = [
 ];
 
 // URL redirects
-export const redirects: { [key: string]: string } = {
+export const redirects: { [key: string]: string; } = {
   "/home": "/dashboard",
   "/admin": "/admin/dashboard",
 };
