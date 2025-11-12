@@ -35,6 +35,7 @@ export const getCurrentProduct = (): string | null => {
 
 // Page view tracking with enhanced data
 // DISABLED: Analytics disabled for demo site
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const trackPageView = (_additionalData?: Record<string, unknown>) => {
   // Analytics disabled - no-op
   return;
@@ -54,6 +55,7 @@ export const trackPageView = (_additionalData?: Record<string, unknown>) => {
 
 // Category/Collection page tracking
 // DISABLED: Analytics disabled for demo site
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const trackCategoryView = (_categoryName: string, _categoryId: string) => {
   // Analytics disabled - no-op
   return;
@@ -78,6 +80,7 @@ export const trackCategoryView = (_categoryName: string, _categoryId: string) =>
 
 // Product view tracking
 // DISABLED: Analytics disabled for demo site
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export const trackProductView = (
   _product: {
     name: string;
@@ -91,6 +94,7 @@ export const trackProductView = (
 ) => {
   // Analytics disabled - no-op
   return;
+/* eslint-enable @typescript-eslint/no-unused-vars */
   /* Original code - commented out for demo site
   if (typeof window === "undefined" || !window.gtag) return;
 
@@ -117,12 +121,14 @@ export const trackProductView = (
 
 // WhatsApp tracking with enhanced data
 // DISABLED: Analytics disabled for demo site
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export const trackWhatsAppClick = (
   _buttonType: "floating" | "category_card" | "product_card",
   _context: Record<string, unknown> = {}
 ) => {
   // Analytics disabled - no-op
   return;
+/* eslint-enable @typescript-eslint/no-unused-vars */
   /* Original code - commented out for demo site
   if (typeof window === "undefined" || !window.gtag) return;
 
@@ -153,6 +159,7 @@ export const trackFloatingWhatsAppClick = () => {
 
 // Category card WhatsApp button tracking
 // DISABLED: Analytics disabled for demo site
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const trackCategoryCardWhatsAppClick = (_category: {
   name: string;
   category: string;
@@ -170,6 +177,7 @@ export const trackCategoryCardWhatsAppClick = (_category: {
 
 // Product card WhatsApp button tracking
 // DISABLED: Analytics disabled for demo site
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export const trackProductCardWhatsAppClick = (
   _product: {
     name: string;
@@ -186,6 +194,7 @@ export const trackProductCardWhatsAppClick = (
 ) => {
   // Analytics disabled - no-op
   return;
+/* eslint-enable @typescript-eslint/no-unused-vars */
   /* Original code - commented out for demo site
   const basePrice = product.variants?.gm?.["250g"]?.price || 0;
 
