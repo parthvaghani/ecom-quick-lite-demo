@@ -35,7 +35,7 @@ export const getCurrentProduct = (): string | null => {
 
 // Page view tracking with enhanced data
 // DISABLED: Analytics disabled for demo site
-export const trackPageView = (additionalData?: Record<string, unknown>) => {
+export const trackPageView = (_additionalData?: Record<string, unknown>) => {
   // Analytics disabled - no-op
   return;
   /* Original code - commented out for demo site
@@ -54,7 +54,7 @@ export const trackPageView = (additionalData?: Record<string, unknown>) => {
 
 // Category/Collection page tracking
 // DISABLED: Analytics disabled for demo site
-export const trackCategoryView = (categoryName: string, categoryId: string) => {
+export const trackCategoryView = (_categoryName: string, _categoryId: string) => {
   // Analytics disabled - no-op
   return;
   /* Original code - commented out for demo site
@@ -79,7 +79,7 @@ export const trackCategoryView = (categoryName: string, categoryId: string) => {
 // Product view tracking
 // DISABLED: Analytics disabled for demo site
 export const trackProductView = (
-  product: {
+  _product: {
     name: string;
     category: string;
     variants?: Record<
@@ -87,7 +87,7 @@ export const trackProductView = (
       Record<string, { price: number; discount?: number }>
     >;
   },
-  categoryName?: string
+  _categoryName?: string
 ) => {
   // Analytics disabled - no-op
   return;
@@ -118,8 +118,8 @@ export const trackProductView = (
 // WhatsApp tracking with enhanced data
 // DISABLED: Analytics disabled for demo site
 export const trackWhatsAppClick = (
-  buttonType: "floating" | "category_card" | "product_card",
-  context: Record<string, unknown> = {}
+  _buttonType: "floating" | "category_card" | "product_card",
+  _context: Record<string, unknown> = {}
 ) => {
   // Analytics disabled - no-op
   return;
@@ -153,7 +153,7 @@ export const trackFloatingWhatsAppClick = () => {
 
 // Category card WhatsApp button tracking
 // DISABLED: Analytics disabled for demo site
-export const trackCategoryCardWhatsAppClick = (category: {
+export const trackCategoryCardWhatsAppClick = (_category: {
   name: string;
   category: string;
 }) => {
@@ -171,7 +171,7 @@ export const trackCategoryCardWhatsAppClick = (category: {
 // Product card WhatsApp button tracking
 // DISABLED: Analytics disabled for demo site
 export const trackProductCardWhatsAppClick = (
-  product: {
+  _product: {
     name: string;
     category: string;
     variants?: Record<
@@ -179,7 +179,7 @@ export const trackProductCardWhatsAppClick = (
       Record<string, { price: number; discount?: number }>
     >;
   },
-  category?: {
+  _category?: {
     name: string;
     category: string;
   }

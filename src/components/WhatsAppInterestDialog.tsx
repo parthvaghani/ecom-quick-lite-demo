@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import categoriesJson from "@/utils/categories.json";
 import Image from "next/image";
 import { X, Search, Sparkles, ArrowRight } from "lucide-react";
@@ -96,6 +96,11 @@ export function WhatsAppInterestDialog({
       .slice(0, 8);
   }, [query, allProducts]);
 
+  const handleSelect = useCallback((product: ProductSearchItem) => {
+    setSelectedProduct(product);
+    setQuery("");
+  }, []);
+
   // Handle keyboard navigation
   useEffect(() => {
     if (!open) return;
@@ -115,16 +120,11 @@ export function WhatsAppInterestDialog({
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [selectedIndex, filtered, open]);
+  }, [selectedIndex, filtered, open, onClose, handleSelect]);
 
   useEffect(() => {
     setSelectedIndex(-1);
   }, [query]);
-
-  const handleSelect = (product: ProductSearchItem) => {
-    setSelectedProduct(product);
-    setQuery("");
-  };
 
   // Prepare variant options
   const variantOptions = useMemo(() => {

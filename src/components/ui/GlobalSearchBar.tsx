@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import categoriesJson from "@/utils/categories.json";
 import { useRouter } from "next/navigation";
 import { Search, X, ArrowRight, Sparkles } from "lucide-react";
@@ -74,6 +74,12 @@ function GlobalSearchBarModal({ onClose }: { onClose: () => void }) {
       .slice(0, 8); // Limit results for better UX
   }, [query, allProducts]);
 
+  const handleSelect = useCallback((product: ProductSearchItem) => {
+    onClose();
+    setQuery("");
+    router.push(`/${product.category}/${product.subcategory}`);
+  }, [onClose, router]);
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -93,18 +99,12 @@ function GlobalSearchBarModal({ onClose }: { onClose: () => void }) {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [selectedIndex, filtered]);
+  }, [selectedIndex, filtered, onClose, handleSelect]);
 
   // Reset selected index when query changes
   useEffect(() => {
     setSelectedIndex(-1);
   }, [query]);
-
-  const handleSelect = (product: ProductSearchItem) => {
-    onClose();
-    setQuery("");
-    router.push(`/${product.category}/${product.subcategory}`);
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-[10vh]">
