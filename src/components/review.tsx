@@ -45,7 +45,7 @@ export function ReviewSection() {
   }, []);
 
   const handleSendSuggestion = () => {
-    const whatsappNumber = "+918128826764";
+    const whatsappNumber = "+916353528830";
     const message = `Hello,\nMy Suggestion:\n${suggestionText}`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
@@ -54,7 +54,7 @@ export function ReviewSection() {
   };
 
   const handleReviewSubmit = () => {
-    const whatsappNumber = "+918128826764";
+    const whatsappNumber = "+916353528830";
     const productTitle = reviewCategory ? reviewCategory : "(Not specified)";
     const message = `Product Review\nProduct Title: ${productTitle}\nReview: ${reviewText}\nStars: ${rating}`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

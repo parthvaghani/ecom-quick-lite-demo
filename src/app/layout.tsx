@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Footer, Navbar, ThemeProvider } from "@/components";
-import Script from "next/script";
+// import Script from "next/script"; // Commented out - analytics disabled for demo site
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrandingLogger } from "@/components/ui/BrandingLogger";
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Aavkar Mukhwas",
     url: "https://aavkarmukhwas.com",
     emails: "sales@aavkarmukhwas.com",
-    phoneNumbers:"+918128826764"
+    phoneNumbers:"+916353528830"
   },
 };
 
@@ -52,8 +52,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Analytics disabled for demo site */}
         {/* Google Tag Manager */}
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SWFHK3JPQK"
           strategy="afterInteractive"
         />
@@ -77,7 +78,7 @@ export default function RootLayout({
               product_name: (window.location.pathname.match(/\\/product\\/([^\\/]+)/) || [])[1] || null,
             });
           `}
-        </Script>
+        </Script> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}

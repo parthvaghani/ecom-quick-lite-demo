@@ -285,7 +285,7 @@ export default function CategoryClientPage({
   );
 }
 
-const WHATSAPP_NUMBER = "918128826764";
+const WHATSAPP_NUMBER = "916353528830";
 
 function SubCategoryProductCard({
   name,

@@ -6,7 +6,7 @@ import { Sparkles, ImageIcon, MessageSquare, Eye } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 
-const WHATSAPP_NUMBER = "918128826764";
+const WHATSAPP_NUMBER = "916353528830";
 
 // Define types based on the structure in categories.json
 type SubCategory = {

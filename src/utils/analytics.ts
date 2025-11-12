@@ -34,7 +34,11 @@ export const getCurrentProduct = (): string | null => {
 };
 
 // Page view tracking with enhanced data
+// DISABLED: Analytics disabled for demo site
 export const trackPageView = (additionalData?: Record<string, unknown>) => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   if (typeof window === "undefined" || !window.gtag) return;
 
   window.gtag("event", "page_view", {
@@ -45,10 +49,15 @@ export const trackPageView = (additionalData?: Record<string, unknown>) => {
     product_name: getCurrentProduct(),
     ...additionalData,
   });
+  */
 };
 
 // Category/Collection page tracking
+// DISABLED: Analytics disabled for demo site
 export const trackCategoryView = (categoryName: string, categoryId: string) => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   if (typeof window === "undefined" || !window.gtag) return;
 
   window.gtag("event", "view_item_list", {
@@ -64,9 +73,11 @@ export const trackCategoryView = (categoryName: string, categoryId: string) => {
       },
     ],
   });
+  */
 };
 
 // Product view tracking
+// DISABLED: Analytics disabled for demo site
 export const trackProductView = (
   product: {
     name: string;
@@ -78,6 +89,9 @@ export const trackProductView = (
   },
   categoryName?: string
 ) => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   if (typeof window === "undefined" || !window.gtag) return;
 
   const basePrice = product.variants?.gm?.["250g"]?.price || 0;
@@ -98,13 +112,18 @@ export const trackProductView = (
       },
     ],
   });
+  */
 };
 
 // WhatsApp tracking with enhanced data
+// DISABLED: Analytics disabled for demo site
 export const trackWhatsAppClick = (
   buttonType: "floating" | "category_card" | "product_card",
   context: Record<string, unknown> = {}
 ) => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   if (typeof window === "undefined" || !window.gtag) return;
 
   window.gtag("event", "whatsapp_chat_started", {
@@ -117,28 +136,40 @@ export const trackWhatsAppClick = (
     user_agent: navigator.userAgent,
     ...context,
   });
+  */
 };
 
 // Floating WhatsApp button tracking
+// DISABLED: Analytics disabled for demo site
 export const trackFloatingWhatsAppClick = () => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   trackWhatsAppClick("floating", {
     current_page: window.location.pathname,
   });
+  */
 };
 
 // Category card WhatsApp button tracking
+// DISABLED: Analytics disabled for demo site
 export const trackCategoryCardWhatsAppClick = (category: {
   name: string;
   category: string;
 }) => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   trackWhatsAppClick("category_card", {
     category_name: category.name,
     category_id: category.category,
     current_page: window.location.pathname,
   });
+  */
 };
 
 // Product card WhatsApp button tracking
+// DISABLED: Analytics disabled for demo site
 export const trackProductCardWhatsAppClick = (
   product: {
     name: string;
@@ -153,6 +184,9 @@ export const trackProductCardWhatsAppClick = (
     category: string;
   }
 ) => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   const basePrice = product.variants?.gm?.["250g"]?.price || 0;
 
   trackWhatsAppClick("product_card", {
@@ -163,10 +197,15 @@ export const trackProductCardWhatsAppClick = (
     product_price: basePrice,
     current_page: window.location.pathname,
   });
+  */
 };
 
 // Initialize analytics tracking
+// DISABLED: Analytics disabled for demo site
 export const initializeAnalytics = () => {
+  // Analytics disabled - no-op
+  return;
+  /* Original code - commented out for demo site
   if (typeof window === "undefined") return;
 
   // Track initial page view
@@ -190,4 +229,5 @@ export const initializeAnalytics = () => {
   window.addEventListener("popstate", () => {
     setTimeout(() => trackPageView(), 100);
   });
+  */
 };

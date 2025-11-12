@@ -14,6 +14,7 @@ import {
 import { ROUTES } from "@/utils/constants";
 import Image from "next/image";
 import { SearchIconButton } from "@/components/ui/GlobalSearchBar";
+import { Badge } from "@/components/ui/badge";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -89,9 +90,17 @@ export function Navbar() {
                   height={40}
                   className="rounded-full"
                 />
-                <span className="text-lg sm:text-xl text-primary">
-                  {appConfig.title}®
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg sm:text-xl text-primary">
+                    {appConfig.title}®
+                  </span>
+                  <Badge 
+                    variant="outline" 
+                    className="text-[10px] px-1.5 py-0.5 border-orange-500 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/30 font-bold uppercase tracking-wider"
+                  >
+                    DEMO
+                  </Badge>
+                </div>
               </Link>
             </div>
 
@@ -109,7 +118,7 @@ export function Navbar() {
                 <Sparkles className="h-4 w-4" />
                 Collection
               </NavLink>
-              <NavLink href="https://www.instagram.com/aavkar_mukhwas">
+              <NavLink href="https://www.instagram.com/ripplestacks">
                 <Instagram className="h-4 w-4" />
                 Instagram
               </NavLink>
@@ -119,7 +128,7 @@ export function Navbar() {
                 Email Support
               </NavLink>
 
-              <NavLink href="tel:+918128826764">
+              <NavLink href="tel:+916353528830">
                 <Phone className="h-4 w-4" />
                 Call Us
               </NavLink>
@@ -161,7 +170,15 @@ export function Navbar() {
                       height={32}
                       className="rounded-full"
                     />
-                    <span>{appConfig.title}®</span>
+                    <div className="flex items-center gap-2">
+                      <span>{appConfig.title}®</span>
+                      <Badge 
+                        variant="outline" 
+                        className="text-[10px] px-1.5 py-0.5 border-orange-500 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/30 font-bold uppercase tracking-wider"
+                      >
+                        DEMO
+                      </Badge>
+                    </div>
                   </SheetTitle>
                   <div className="flex flex-col space-y-2 mt-8 bg-background text-primary">
                     <MobileNavLink href={ROUTES.PRODUCTS}>
@@ -174,7 +191,7 @@ export function Navbar() {
                       Collection
                     </MobileNavLink>
 
-                    <MobileNavLink href="https://www.instagram.com/aavkar_mukhwas">
+                    <MobileNavLink href="https://www.instagram.com/ripplestacks">
                       <Instagram className="h-4 w-4" />
                       Instagram
                     </MobileNavLink>
@@ -184,9 +201,9 @@ export function Navbar() {
                       Email Support
                     </MobileNavLink>
 
-                    <MobileNavLink href="tel:+918128826764">
+                    <MobileNavLink href="tel:+916353528830">
                       <Phone className="h-4 w-4" />
-                      Call Us (+91 81288 26764)
+                      Call Us (+91 63535 28830 )
                     </MobileNavLink>
                   </div>
                 </SheetContent>

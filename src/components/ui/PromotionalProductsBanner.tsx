@@ -20,7 +20,7 @@ interface SubCategory {
   badge?: string;
 }
 
-const WHATSAPP_NUMBER = "918128826764";
+const WHATSAPP_NUMBER = "916353528830";
 
 export function PromotionalProductsBanner() {
   const [filter, setFilter] = useState<"premium" | "popular">("popular");

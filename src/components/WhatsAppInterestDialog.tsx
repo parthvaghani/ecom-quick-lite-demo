@@ -147,7 +147,7 @@ export function WhatsAppInterestDialog({
   }, [selectedProduct]);
 
   // WhatsApp message logic
-  const phoneNumber = "+918128826764";
+  const phoneNumber = "+916353528830";
   const message = useMemo(() => {
     if (selectedProduct) {
       let msg = `Hi, I'm interested in the product: ${selectedProduct.name}`;
@@ -294,7 +294,7 @@ export function WhatsAppInterestDialog({
                         className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold shadow-lg transition-all duration-200"
                         onClick={() =>
                           window.open(
-                            `https://wa.me/+918128826764?text=${encodeURIComponent(
+                            `https://wa.me/+916353528830?text=${encodeURIComponent(
                               "Hi, I'm interested in your mukhwas collection."
                             )}`,
                             "_blank",

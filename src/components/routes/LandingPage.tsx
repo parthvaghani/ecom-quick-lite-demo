@@ -86,7 +86,7 @@ export function LandingPage() {
             <div className="relative inline-block group">
               <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-primary to-brand-green-dark opacity-50 group-hover:opacity-70 blur transition duration-200" />
               <Link
-                href={`https://wa.me/918128826764?text=Hi, I'm interested in your mukhwas collection`}
+                href={`https://wa.me/916353528830?text=Hi, I'm interested in your mukhwas collection`}
                 className="relative inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-primary to-brand-green-dark rounded-lg hover:from-primary/90 hover:to-brand-green-dark/90 transition-all duration-200 hover:-translate-y-0.5"
               >
                 Contact Us

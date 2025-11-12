@@ -11,7 +11,7 @@ export const appConfig = {
     address:
       "Plot No 26, Swastik Raw House, Near Shivdhara Circle, D Mart Road, Mota Varachha, Surat 394101 Gujarat",
     location: "Surat, Gujarat, India",
-    phone: "+91 81288 26764",
+    phone: "+91 63535 28830 ",
     contact: "Sangeeta D. Vaghani, Pinal C Miyani, Hina A. Kakadiya",
     updatedAt: {
       privacy: "June 1, 2025",
@@ -421,7 +421,7 @@ export const appConfig = {
             question: "Do you offer wholesale pricing?",
             displayInLanding: true,
             answer:
-              "Yes! We offer competitive wholesale rates for bulk orders. Contact us at +91 81288 26764 for wholesale pricing.",
+              "Yes! We offer competitive wholesale rates for bulk orders. Contact us at +91 63535 28830  for wholesale pricing.",
           },
           {
             question: "What is the quality of your mukhwas?",
@@ -438,7 +438,7 @@ export const appConfig = {
             question: "How do I place an order?",
             displayInLanding: false,
             answer:
-              "Contact us directly via WhatsApp at +91 81288 26764 or email sales@aavkarmukhwas.com with your requirements.",
+              "Contact us directly via WhatsApp at +91 63535 28830  or email sales@aavkarmukhwas.com with your requirements.",
           },
           {
             question: "Do you ship across India?",
@@ -700,8 +700,8 @@ export const appConfig = {
     ],
   },
   contact: {
-    whatsapp: "+918128826764",
-    phone: "+918128826764",
+    whatsapp: "+916353528830",
+    phone: "+916353528830",
     email: "sales@aavkarmukhwas.com",
     address:
       "Plot No 26, Swastik Raw House, Near Shivdhara Circle, D Mart Road, Mota Varachha, Surat 394101 Gujarat",

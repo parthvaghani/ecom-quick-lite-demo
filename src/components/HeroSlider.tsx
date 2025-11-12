@@ -17,18 +17,18 @@ const HeroSlider = () => {
   const slides = [
     {
       id: 1,
-      bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop.png",
-      smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile.png",
+      bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop2.png",
+      smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile2.png",
       href: "/categories",
       alt: "Categories",
     },
     {
       id: 2,
-      bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop2.png",
-      smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile2.png",
+      bgImage: "https://aavkarmukhwas.github.io/images/hero/herodesktop.png",
+      smBgImage: "https://aavkarmukhwas.github.io/images/hero/heromobile.png",
       href: "/categories",
       alt: "Categories",
-    }
+    },
   ];
   const slidesCount = slides.length;
 

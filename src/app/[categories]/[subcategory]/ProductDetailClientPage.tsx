@@ -25,7 +25,7 @@ import {
   trackProductCardWhatsAppClick,
 } from "@/utils/analytics";
 
-const WHATSAPP_NUMBER = "918128826764";
+const WHATSAPP_NUMBER = "916353528830";
 
 interface PriceInfo {
   price: number;
